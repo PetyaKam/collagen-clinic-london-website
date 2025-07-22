@@ -31,6 +31,8 @@ h1, h2, h3, h4 {
     margin-bottom: 1rem;
     text-align: center;
     color: #1a1a1a;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
 }
 
 .section-subtitle {
@@ -186,6 +188,7 @@ h1, h2, h3, h4 {
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.1;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .hero-subtitle {
@@ -246,6 +249,14 @@ h1, h2, h3, h4 {
     border-radius: 12px;
     position: relative;
     overflow: hidden;
+}
+
+.hero-image-photo {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
 .image-overlay {
@@ -309,6 +320,14 @@ h1, h2, h3, h4 {
     border-radius: 12px;
     position: relative;
     overflow: hidden;
+}
+
+.about-image-photo {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 /* Services Section */
@@ -428,7 +447,7 @@ h1, h2, h3, h4 {
     color: #1a1a1a;
     margin-bottom: 1rem;
     text-align: center;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .category-description {
@@ -541,10 +560,28 @@ h1, h2, h3, h4 {
     overflow: hidden;
 }
 
+.founder-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.founder-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 .founder-name {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     color: #1a1a1a;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
 }
 
 .founder-title {
