@@ -100,18 +100,21 @@ h1, h2, h3, h4 {
     margin: 0 auto;
 }
 
-.nav-logo h1 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    color: #1a1a1a;
+.logo-image {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
 }
 
-.nav-subtitle {
-    font-size: 0.8rem;
-    color: #d4af37;
-    font-weight: 500;
-    letter-spacing: 1px;
+@media (max-width: 768px) {
+    .logo-image {
+        height: 35px;
+    }
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
 }
 
 .nav-menu {
@@ -670,12 +673,11 @@ h1, h2, h3, h4 {
     font-size: 1.2rem;
 }
 
-.footer-tagline {
-    color: #d4af37;
-    font-size: 0.9rem;
+.footer-logo {
+    height: 40px;
+    width: auto;
     margin-bottom: 1rem;
-    font-weight: 500;
-    letter-spacing: 1px;
+    object-fit: contain;
 }
 
 .footer-section h4 {
