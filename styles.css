@@ -255,6 +255,7 @@ h1, h2, h3, h4 {
     width: 100%;
     height: 500px;
     object-fit: cover;
+    object-position: center center;
     border-radius: 12px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
@@ -640,6 +641,23 @@ h1, h2, h3, h4 {
     line-height: 1.6;
 }
 
+.service-image-container {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.service-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-image:hover {
+    transform: scale(1.02);
+}
+
 /* Technology Section */
 .technology {
     padding: 100px 0;
@@ -684,6 +702,32 @@ h1, h2, h3, h4 {
 .founders {
     padding: 100px 0;
     background: #f8f8f8;
+}
+
+.team-section {
+    margin: 80px 0;
+}
+
+.team-section:first-child {
+    margin-top: 0;
+}
+
+.team-section:last-child {
+    margin-bottom: 0;
+}
+
+.team-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.team-header .section-title {
+    margin-bottom: 1rem;
+}
+
+.team-header .section-subtitle {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .founders-grid {
