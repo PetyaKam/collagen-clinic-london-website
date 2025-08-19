@@ -94,18 +94,28 @@ contactForm?.addEventListener('submit', function(e) {
     submitBtn.textContent = 'Submitting...';
     submitBtn.disabled = true;
     
-    // Simulate form submission (replace with actual API call)
-    setTimeout(() => {
+    // Submit to Netlify
+    fetch('/', {
+        method: 'POST',
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
+    })
+    .then(() => {
         showNotification('Thank you for your inquiry! We\'ll contact you within 24 hours.', 'success');
         this.reset();
         formInputs.forEach(input => {
             input.parentElement.classList.remove('focused');
         });
-        
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        showNotification('Sorry, there was an error submitting your form. Please try again or call us directly.', 'error');
+    })
+    .finally(() => {
         // Reset button
         submitBtn.textContent = originalBtnText;
         submitBtn.disabled = false;
-    }, 2000);
+    });
 });
 
 // Notification system

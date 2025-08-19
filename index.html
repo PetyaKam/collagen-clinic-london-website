@@ -954,7 +954,11 @@
                     </div>
                 </div>
                 
-                <form class="contact-form">
+                <form class="contact-form" name="consultation-booking" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <!-- Hidden field for spam protection -->
+                    <p style="display: none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
                     <div class="form-group">
                         <input type="text" id="name" name="name" required>
                         <label for="name">Full Name</label>
