@@ -596,23 +596,16 @@ Please let me know your available consultation times. Thank you!`;
 function initializeUrgencyCounter() {
     const slotsElement = document.getElementById('slots-remaining');
     if (slotsElement) {
-        // Start with 1 slot for special intro offer
-        let slots = 1;
-        slotsElement.textContent = slots;
+        // Keep it at 1 slot for special intro offer - no countdown needed
+        slotsElement.textContent = '1';
         
-        // Decrease slots every 2-5 minutes
+        // Add occasional flash effect to draw attention
         setInterval(() => {
-            if (slots > 1) {
-                slots--;
-                slotsElement.textContent = slots;
-                
-                // Add flash effect when slots decrease
-                slotsElement.style.animation = 'flash 0.5s ease-in-out';
-                setTimeout(() => {
-                    slotsElement.style.animation = '';
-                }, 500);
-            }
-        }, Math.random() * 180000 + 120000); // 2-5 minutes
+            slotsElement.style.animation = 'flash 0.5s ease-in-out';
+            setTimeout(() => {
+                slotsElement.style.animation = '';
+            }, 500);
+        }, 10000); // Flash every 10 seconds
     }
 }
 
