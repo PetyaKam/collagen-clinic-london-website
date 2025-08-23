@@ -413,4 +413,91 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-}); 
+});
+
+// Medesk Integration Functions
+function loadMedeskWidget() {
+    const widgetContainer = document.getElementById('medesk-booking-widget');
+    const placeholder = widgetContainer.querySelector('.booking-placeholder');
+    
+    // Add loading state
+    placeholder.innerHTML = `
+        <div class="booking-placeholder-content">
+            <div class="loading-spinner"></div>
+            <h3>Loading Booking System...</h3>
+            <p>Please wait while we prepare your booking experience</p>
+        </div>
+    `;
+    
+    // Add loading spinner styles dynamically
+    if (!document.getElementById('spinner-styles')) {
+        const style = document.createElement('style');
+        style.id = 'spinner-styles';
+        style.textContent = `
+            .loading-spinner {
+                width: 40px;
+                height: 40px;
+                border: 4px solid #f3f3f3;
+                border-top: 4px solid #d4af37;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+                margin: 0 auto 1rem;
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
+    // Replace with actual Medesk widget after 1 second
+    setTimeout(() => {
+        insertMedeskWidget();
+    }, 1000);
+}
+
+function insertMedeskWidget() {
+    const widgetContainer = document.getElementById('medesk-booking-widget');
+    
+    // TODO: Replace this with your actual Medesk embed code
+    const medeskEmbedCode = `
+        <div class="medesk-widget-placeholder">
+            <div style="padding: 2rem; text-align: center; background: #f8f9fa; border-radius: 12px;">
+                <h3 style="color: #d4af37; margin-bottom: 1rem;">🔧 Medesk Integration Ready</h3>
+                <p style="margin-bottom: 2rem; color: #666;">
+                    Please provide your Medesk embed code to complete the integration.<br>
+                    You can find this in your Medesk account under Settings → Online Booking.
+                </p>
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #d4af37; text-align: left; font-family: monospace; font-size: 0.9rem; color: #333;">
+                    <strong>Expected format:</strong><br>
+                    &lt;iframe src="https://your-clinic.medesk.com/booking" width="100%" height="600"&gt;&lt;/iframe&gt;<br><br>
+                    <em>Or</em><br><br>
+                    &lt;script src="https://your-clinic.medesk.com/widget.js"&gt;&lt;/script&gt;
+                </div>
+                <button onclick="showContactForm()" style="margin-top: 1rem; background: #d4af37; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 6px; cursor: pointer;">
+                    Use Contact Form Instead
+                </button>
+            </div>
+        </div>
+    `;
+    
+    widgetContainer.innerHTML = medeskEmbedCode;
+}
+
+function showContactForm() {
+    const widgetContainer = document.getElementById('medesk-booking-widget');
+    const contactForm = document.querySelector('.contact-form');
+    
+    // Hide widget container
+    widgetContainer.style.display = 'none';
+    
+    // Show contact form
+    if (contactForm) {
+        contactForm.scrollIntoView({ behavior: 'smooth' });
+        const nameField = contactForm.querySelector('#name');
+        if (nameField) {
+            nameField.focus();
+        }
+    }
+} 
