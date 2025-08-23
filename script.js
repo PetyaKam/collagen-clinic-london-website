@@ -360,4 +360,57 @@ document.addEventListener('DOMContentLoaded', () => {
             serviceSelect.parentElement.classList.add('focused');
         }
     }
+});
+
+// Enhanced Package Pre-selection Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle package button clicks with better UX
+    document.querySelectorAll('[data-package]').forEach(button => {
+        button.addEventListener('click', function(e) {
+            const packageType = this.getAttribute('data-package');
+            
+            // Add loading state to button
+            this.style.transform = 'scale(0.95)';
+            this.style.opacity = '0.8';
+            
+            setTimeout(() => {
+                this.style.transform = '';
+                this.style.opacity = '';
+                
+                // Pre-select the package in the form
+                const serviceSelect = document.getElementById('service');
+                if (serviceSelect) {
+                    serviceSelect.value = packageType;
+                    
+                    // Add visual feedback with golden highlight
+                    serviceSelect.style.border = '2px solid #d4af37';
+                    serviceSelect.style.boxShadow = '0 0 10px rgba(212, 175, 55, 0.3)';
+                    
+                    // Focus on first name field for better UX
+                    const nameField = document.getElementById('name');
+                    if (nameField) {
+                        nameField.focus();
+                    }
+                    
+                    // Remove highlight after 3 seconds
+                    setTimeout(() => {
+                        serviceSelect.style.border = '';
+                        serviceSelect.style.boxShadow = '';
+                    }, 3000);
+                }
+            }, 200);
+        });
+    });
+    
+    // Add booking urgency indicators
+    const packageCards = document.querySelectorAll('.package-card');
+    packageCards.forEach(card => {
+        const button = card.querySelector('.package-btn');
+        if (button) {
+            // Add subtle pulsing animation to premium package
+            if (card.classList.contains('premium')) {
+                button.style.animation = 'pulse-gold 2s infinite';
+            }
+        }
+    });
 }); 
