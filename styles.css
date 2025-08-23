@@ -579,13 +579,7 @@ h1, h2, h3, h4 {
         font-size: 14px !important;
     }
     
-    .sticky-btn-text {
-        display: none !important;
-    }
-    
-    .sticky-btn-icon {
-        font-size: 20px !important;
-    }
+
 }
 
 .services-grid {
@@ -1838,10 +1832,7 @@ h1, h2, h3, h4 {
     font-weight: 600;
 }
 
-.sticky-btn-icon {
-    font-size: 18px;
-    animation: bounce 2s infinite;
-}
+
 
 @keyframes slideInFromRight {
     from {
