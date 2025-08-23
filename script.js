@@ -578,19 +578,4 @@ Please let me know your available consultation times. Thank you!`;
     window.open(whatsappUrl, '_blank');
 }
 
-function showContactForm() {
-    const widgetContainer = document.getElementById('medesk-booking-widget');
-    const contactForm = document.querySelector('.contact-form');
-    
-    // Hide widget container
-    widgetContainer.style.display = 'none';
-    
-    // Show contact form
-    if (contactForm) {
-        contactForm.scrollIntoView({ behavior: 'smooth' });
-        const nameField = contactForm.querySelector('#name');
-        if (nameField) {
-            nameField.focus();
-        }
-    }
-} 
+// Contact form removed - using WhatsApp booking system 
