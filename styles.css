@@ -567,6 +567,25 @@ h1, h2, h3, h4 {
         padding: 0.6rem;
         font-size: 0.8rem;
     }
+    
+    /* Sticky button mobile adjustments */
+    .sticky-book-btn {
+        right: 10px !important;
+        bottom: 20px !important;
+    }
+    
+    .sticky-btn {
+        padding: 12px 16px !important;
+        font-size: 14px !important;
+    }
+    
+    .sticky-btn-text {
+        display: none !important;
+    }
+    
+    .sticky-btn-icon {
+        font-size: 20px !important;
+    }
 }
 
 .services-grid {
@@ -1779,6 +1798,72 @@ h1, h2, h3, h4 {
     font-weight: 600;
     color: #4caf50;
     font-size: 0.9rem;
+}
+
+/* Sticky Book Appointment Button */
+.sticky-book-btn {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    animation: slideInFromRight 0.5s ease-out;
+}
+
+.sticky-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #d4af37, #f4e6a1);
+    color: white;
+    padding: 16px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.sticky-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.6);
+    background: linear-gradient(135deg, #f4e6a1, #d4af37);
+}
+
+.sticky-btn-text {
+    font-weight: 600;
+}
+
+.sticky-btn-icon {
+    font-size: 18px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100px) translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) translateY(-50%);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-3px);
+    }
+    60% {
+        transform: translateY(-2px);
+    }
 }
 
 /* Booking success states */
