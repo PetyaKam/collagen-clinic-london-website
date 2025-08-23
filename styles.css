@@ -521,6 +521,52 @@ h1, h2, h3, h4 {
         font-size: 1rem !important;
         padding: 1rem 1.5rem !important;
     }
+    
+    /* Mobile conversion optimizations */
+    .urgency-banner {
+        padding: 0.8rem 1rem;
+        margin: 1rem 0;
+    }
+    
+    .urgency-content {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .urgency-text {
+        font-size: 1rem;
+    }
+    
+    .social-proof {
+        padding: 3rem 0;
+    }
+    
+    .social-proof-header h2 {
+        font-size: 2rem;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .trust-indicators {
+        gap: 2rem;
+    }
+    
+    .trust-number {
+        font-size: 2rem;
+    }
+    
+    .current-price {
+        font-size: 2rem;
+    }
+    
+    .package-guarantee,
+    .package-bonus {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
 }
 
 .services-grid {
@@ -1519,6 +1565,209 @@ h1, h2, h3, h4 {
     min-height: 600px;
     border: none;
     border-radius: 16px;
+}
+
+/* Urgency Banner */
+.urgency-banner {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    animation: pulse-urgency 2s infinite;
+}
+
+.urgency-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.urgency-icon {
+    font-size: 1.5rem;
+    animation: flash 1.5s infinite;
+}
+
+.urgency-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.urgency-cta {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+@keyframes pulse-urgency {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+@keyframes flash {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0.5; }
+}
+
+/* Social Proof Section */
+.social-proof {
+    background: #f8f9fa;
+    padding: 5rem 0;
+}
+
+.social-proof-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.social-proof-header h2 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.social-proof-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-rating {
+    margin-bottom: 1rem;
+}
+
+.stars {
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.testimonial-author strong {
+    color: #1a1a1a;
+    font-size: 1.1rem;
+}
+
+.testimonial-author span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.trust-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.trust-item {
+    text-align: center;
+}
+
+.trust-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+}
+
+.trust-label {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Enhanced Package Styling */
+.package-price {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.current-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #d4af37;
+    display: block;
+}
+
+.value-comparison {
+    font-size: 1rem;
+    color: #888;
+    text-decoration: line-through;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.package-guarantee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: rgba(212, 175, 55, 0.1);
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.guarantee-icon {
+    font-size: 1.2rem;
+}
+
+.guarantee-text {
+    font-weight: 600;
+    color: #d4af37;
+    font-size: 0.9rem;
+}
+
+.package-bonus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: rgba(76, 175, 80, 0.1);
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.bonus-icon {
+    font-size: 1.2rem;
+}
+
+.bonus-text {
+    font-weight: 600;
+    color: #4caf50;
+    font-size: 0.9rem;
 }
 
 /* Booking success states */

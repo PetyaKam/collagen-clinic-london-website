@@ -592,4 +592,55 @@ Please let me know your available consultation times. Thank you!`;
     window.open(whatsappUrl, '_blank');
 }
 
+// Dynamic Urgency Counter
+function initializeUrgencyCounter() {
+    const slotsElement = document.getElementById('slots-remaining');
+    if (slotsElement) {
+        // Start with 3-7 slots randomly
+        let slots = Math.floor(Math.random() * 5) + 3;
+        slotsElement.textContent = slots;
+        
+        // Decrease slots every 2-5 minutes
+        setInterval(() => {
+            if (slots > 1) {
+                slots--;
+                slotsElement.textContent = slots;
+                
+                // Add flash effect when slots decrease
+                slotsElement.style.animation = 'flash 0.5s ease-in-out';
+                setTimeout(() => {
+                    slotsElement.style.animation = '';
+                }, 500);
+            }
+        }, Math.random() * 180000 + 120000); // 2-5 minutes
+    }
+}
+
+// Enhanced Booking Analytics
+function trackBookingIntent(packageType) {
+    // Track user engagement
+    console.log(`Booking intent: ${packageType}`);
+    
+    // You can add Google Analytics or other tracking here
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'booking_intent', {
+            'package_type': packageType,
+            'value': packageType === 'complete' ? 1000 : 150
+        });
+    }
+}
+
+// Initialize all conversion optimizations
+document.addEventListener('DOMContentLoaded', function() {
+    initializeUrgencyCounter();
+    
+    // Track booking button clicks
+    document.querySelectorAll('.btn-whatsapp').forEach(button => {
+        button.addEventListener('click', function() {
+            const packageType = this.getAttribute('data-package');
+            trackBookingIntent(packageType);
+        });
+    });
+});
+
 // Contact form removed - using WhatsApp booking system 
