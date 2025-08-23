@@ -596,8 +596,8 @@ Please let me know your available consultation times. Thank you!`;
 function initializeUrgencyCounter() {
     const slotsElement = document.getElementById('slots-remaining');
     if (slotsElement) {
-        // Start with 3-7 slots randomly
-        let slots = Math.floor(Math.random() * 5) + 3;
+        // Start with 1 slot for special intro offer
+        let slots = 1;
         slotsElement.textContent = slots;
         
         // Decrease slots every 2-5 minutes
