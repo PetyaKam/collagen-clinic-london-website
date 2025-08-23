@@ -494,6 +494,24 @@ h1, h2, h3, h4 {
     .package-card.premium:hover {
         transform: translateY(-5px);
     }
+    
+    /* WhatsApp booking mobile styles */
+    .whatsapp-book-btn {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .service-details strong {
+        font-size: 1rem;
+    }
+    
+    .whatsapp-icon {
+        font-size: 1.3rem;
+    }
+    
+    .booking-widget-container {
+        margin: 0 auto 2rem;
+    }
 }
 
 .services-grid {
@@ -1366,6 +1384,81 @@ h1, h2, h3, h4 {
 .booking-placeholder-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* WhatsApp Booking Button Styles */
+.whatsapp-book-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 1.5rem;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    width: 100%;
+    font-family: inherit;
+}
+
+.whatsapp-book-btn:hover {
+    border-color: #25D366;
+    background: #f8fff8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+}
+
+.whatsapp-book-btn.diagnostic:hover {
+    border-color: #d4af37;
+    background: #fffdf7;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+.whatsapp-book-btn.complete:hover {
+    border-color: #d4af37;
+    background: linear-gradient(135deg, #fffdf7, #ffffff);
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+}
+
+.service-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 1rem;
+}
+
+.service-details strong {
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.service-details .price {
+    color: #d4af37;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.whatsapp-icon {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+.whatsapp-book-btn:hover .whatsapp-icon {
+    animation: bounce 0.6s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+    80% {
+        transform: translateY(-2px);
+    }
 }
 
 /* Medesk widget iframe styling */

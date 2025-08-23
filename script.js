@@ -460,29 +460,122 @@ function loadMedeskWidget() {
 function insertMedeskWidget() {
     const widgetContainer = document.getElementById('medesk-booking-widget');
     
-    // TODO: Replace this with your actual Medesk embed code
-    const medeskEmbedCode = `
-        <div class="medesk-widget-placeholder">
-            <div style="padding: 2rem; text-align: center; background: #f8f9fa; border-radius: 12px;">
-                <h3 style="color: #d4af37; margin-bottom: 1rem;">🔧 Medesk Integration Ready</h3>
-                <p style="margin-bottom: 2rem; color: #666;">
-                    Please provide your Medesk embed code to complete the integration.<br>
-                    You can find this in your Medesk account under Settings → Online Booking.
+    // WhatsApp booking system
+    const whatsappBookingCode = `
+        <div class="whatsapp-booking-widget">
+            <div style="padding: 2rem; text-align: center; background: linear-gradient(135deg, #f8f9fa, #ffffff); border-radius: 12px;">
+                <h3 style="color: #d4af37; margin-bottom: 1rem;">📱 Instant WhatsApp Booking</h3>
+                <p style="margin-bottom: 2rem; color: #666; font-size: 1.1rem;">
+                    Book your appointment instantly via WhatsApp<br>
+                    Get immediate confirmation and personalized service
                 </p>
-                <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #d4af37; text-align: left; font-family: monospace; font-size: 0.9rem; color: #333;">
-                    <strong>Expected format:</strong><br>
-                    &lt;iframe src="https://your-clinic.medesk.com/booking" width="100%" height="600"&gt;&lt;/iframe&gt;<br><br>
-                    <em>Or</em><br><br>
-                    &lt;script src="https://your-clinic.medesk.com/widget.js"&gt;&lt;/script&gt;
+                
+                <div class="whatsapp-booking-options" style="display: flex; flex-direction: column; gap: 1rem; max-width: 500px; margin: 0 auto;">
+                    <button onclick="bookViaWhatsApp('diagnostic')" class="whatsapp-book-btn diagnostic">
+                        <span class="service-icon">💎</span>
+                        <div class="service-details">
+                            <strong>Skin Diagnostic Package</strong>
+                            <span class="price">£150</span>
+                        </div>
+                        <span class="whatsapp-icon">💬</span>
+                    </button>
+                    
+                    <button onclick="bookViaWhatsApp('complete')" class="whatsapp-book-btn complete">
+                        <span class="service-icon">🌟</span>
+                        <div class="service-details">
+                            <strong>Complete Health Package</strong>
+                            <span class="price">£1,000</span>
+                        </div>
+                        <span class="whatsapp-icon">💬</span>
+                    </button>
+                    
+                    <button onclick="bookViaWhatsApp('consultation')" class="whatsapp-book-btn consultation">
+                        <span class="service-icon">📋</span>
+                        <div class="service-details">
+                            <strong>Initial Consultation</strong>
+                            <span class="price">Enquire</span>
+                        </div>
+                        <span class="whatsapp-icon">💬</span>
+                    </button>
                 </div>
-                <button onclick="showContactForm()" style="margin-top: 1rem; background: #d4af37; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 6px; cursor: pointer;">
-                    Use Contact Form Instead
-                </button>
+                
+                <div style="margin-top: 2rem; padding: 1rem; background: rgba(212, 175, 55, 0.1); border-radius: 8px; border-left: 4px solid #d4af37;">
+                    <p style="margin: 0; color: #666; font-size: 0.9rem;">
+                        <strong>📞 Direct Contact:</strong> +447427746836<br>
+                        <em>Available Monday - Friday: 9:00 AM - 6:00 PM</em>
+                    </p>
+                </div>
             </div>
         </div>
     `;
     
-    widgetContainer.innerHTML = medeskEmbedCode;
+    widgetContainer.innerHTML = whatsappBookingCode;
+}
+
+// WhatsApp Booking Function
+function bookViaWhatsApp(packageType) {
+    const phoneNumber = '447427746836';
+    let message = '';
+    
+    switch(packageType) {
+        case 'diagnostic':
+            message = `Hi! I'd like to book the Skin Diagnostic Package (£150). 
+
+This includes:
+• Initial Consultation
+• VISIA Scan Age-Analysis
+• QOVES Scan AI Aesthetics Analysis
+• Observ Skin Imaging
+• 100 skin markers
+• Comprehensive report with personalised recommendations
+
+Please let me know your available appointments. Thank you!`;
+            break;
+            
+        case 'complete':
+            message = `Hi! I'm interested in booking the Complete Health Package (£1,000).
+
+This comprehensive package includes:
+• All Skin Diagnostic services
+• Glycation Age Analysis
+• Ultrasound Imaging Collagen Age
+• Total Body Surface Area Skin Age
+• Blood Panel (120 biomarkers)
+• Fitness Assessment (VO2 MAX, grip strength, spirometry)
+• Complete health & longevity protocol
+
+Could you please share available appointment times? Thank you!`;
+            break;
+            
+        case 'consultation':
+            message = `Hi! I'd like to book an Initial Consultation at Collagen Clinic London.
+
+I'm interested in learning more about your skin diagnostic services and would like to discuss my specific needs.
+
+Please let me know your available consultation times. Thank you!`;
+            break;
+            
+        default:
+            message = `Hi! I'd like to book an appointment at Collagen Clinic London. Please let me know your available times. Thank you!`;
+    }
+    
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Add visual feedback
+    const clickedButton = event.target.closest('.whatsapp-book-btn');
+    if (clickedButton) {
+        clickedButton.style.transform = 'scale(0.95)';
+        clickedButton.style.opacity = '0.8';
+        
+        setTimeout(() => {
+            clickedButton.style.transform = '';
+            clickedButton.style.opacity = '';
+        }, 200);
+    }
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
 }
 
 function showContactForm() {
