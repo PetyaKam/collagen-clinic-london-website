@@ -243,7 +243,36 @@
                 <h3 class="category-title">Treatments</h3>
                 <p class="category-description">Evidence-based therapeutic interventions for skin rejuvenation and aesthetic enhancement</p>
                 
-                <div class="services-grid">
+                <!-- Treatment Categories -->
+                <div class="treatment-categories">
+                    <div class="category-tabs">
+                        <button class="category-tab active" data-category="rejuvenation">Rejuvenation</button>
+                        <button class="category-tab" data-category="laser">Laser Treatments</button>
+                        <button class="category-tab" data-category="contouring">Body Contouring</button>
+                        <button class="category-tab" data-category="injectables">Injectables</button>
+                    </div>
+                </div>
+                
+                <!-- Treatment Cards Showcase -->
+                <div class="treatments-showcase">
+                    <div class="treatment-category-grid active" data-category="rejuvenation">
+                        <div class="treatment-card" onclick="showTreatmentDetail('tixel')">
+                            <div class="treatment-image">
+                                <img src="Images/treat.jpg" alt="TIXEL Treatment" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">TIXEL</h3>
+                                <p class="treatment-subtitle">Skin Rejuvenation</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Minimal Downtime</span>
+                                    <span class="highlight-tag">Fractional Technology</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services-grid" style="display: none;">
                     <div class="service-item">
                         <h4>Candela GentleMax Pro Plus</h4>
                         <p>Advanced dual-wavelength laser system combining Alexandrite and Nd:YAG technologies for treating pigmented lesions, vascular conditions, and unwanted hair with superior safety and efficacy.</p>

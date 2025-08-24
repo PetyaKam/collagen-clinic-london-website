@@ -623,9 +623,114 @@ function trackBookingIntent(packageType) {
     }
 }
 
+// Treatment Categories Functionality
+function initializeTreatmentTabs() {
+    const categoryTabs = document.querySelectorAll('.category-tab');
+    const categoryGrids = document.querySelectorAll('.treatment-category-grid');
+    
+    categoryTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            
+            // Remove active class from all tabs
+            categoryTabs.forEach(t => t.classList.remove('active'));
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Hide all category grids
+            categoryGrids.forEach(grid => {
+                grid.classList.remove('active');
+            });
+            
+            // Show selected category grid
+            const targetGrid = document.querySelector(`[data-category="${category}"].treatment-category-grid`);
+            if (targetGrid) {
+                targetGrid.classList.add('active');
+            }
+        });
+    });
+}
+
+// Treatment Detail Modal (Similar to Dr. Lamiche)
+function showTreatmentDetail(treatmentId) {
+    const treatments = {
+        'tixel': {
+            name: 'TIXEL Skin Rejuvenation',
+            image: 'Images/treat.jpg',
+            description: 'Revolutionary fractional technology using controlled thermal energy for skin resurfacing, wrinkle reduction, and texture improvement with minimal downtime.',
+            benefits: [
+                'Minimal downtime compared to traditional fractional treatments',
+                'Precise thermal control for optimal results',
+                'Suitable for all skin types',
+                'Stimulates natural collagen production',
+                'Improves skin texture and tone'
+            ],
+            process: 'Treatment involves controlled thermal energy delivery through heated titanium tips, creating micro-injuries that stimulate natural healing and collagen production.',
+            link: 'treatments/tixel-rejuvenation.html'
+        },
+        'genesis': {
+            name: 'Genesis Laser Rejuvenation',
+            image: 'Images/treat.jpg',
+            description: 'Non-invasive laser treatment for skin tone improvement, pore reduction, and collagen stimulation, delivering natural-looking results with no downtime.',
+            benefits: [
+                'No downtime required',
+                'Immediate skin tone improvement',
+                'Reduces pore size',
+                'Stimulates collagen production',
+                'Safe for all skin types'
+            ],
+            process: 'Gentle laser energy heats dermal tissues, promoting collagen synthesis and improving overall skin quality through controlled thermal effect.',
+            link: 'treatments/genesis-rejuvenation.html'
+        }
+        // Add more treatments as needed
+    };
+    
+    const treatment = treatments[treatmentId];
+    if (!treatment) return;
+    
+    // Create and show modal (simplified version)
+    const modal = document.createElement('div');
+    modal.className = 'treatment-modal-overlay';
+    modal.innerHTML = `
+        <div class="treatment-modal">
+            <div class="modal-header">
+                <h2>${treatment.name}</h2>
+                <span class="close-modal" onclick="closeTreatmentModal()">&times;</span>
+            </div>
+            <div class="modal-content">
+                <img src="${treatment.image}" alt="${treatment.name}" class="modal-image">
+                <div class="modal-info">
+                    <p class="modal-description">${treatment.description}</p>
+                    <div class="modal-benefits">
+                        <h4>Key Benefits:</h4>
+                        <ul>${treatment.benefits.map(benefit => `<li>${benefit}</li>`).join('')}</ul>
+                    </div>
+                    <p class="modal-process">${treatment.process}</p>
+                    <div class="modal-actions">
+                        <button onclick="bookViaWhatsApp('consultation')" class="btn-primary">Book Consultation</button>
+                        <a href="${treatment.link}" class="btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    document.body.style.overflow = 'hidden';
+}
+
+function closeTreatmentModal() {
+    const modal = document.querySelector('.treatment-modal-overlay');
+    if (modal) {
+        modal.remove();
+        document.body.style.overflow = 'auto';
+    }
+}
+
 // Initialize all conversion optimizations
 document.addEventListener('DOMContentLoaded', function() {
     initializeUrgencyCounter();
+    initializeTreatmentTabs();
     
     // Track booking button clicks
     document.querySelectorAll('.btn-whatsapp').forEach(button => {
