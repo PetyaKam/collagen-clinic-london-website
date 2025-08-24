@@ -1171,6 +1171,158 @@ h1, h2, h3, h4 {
     border-radius: 50%;
 }
 
+/* Featured founder styling */
+.featured-founder {
+    border: 2px solid #d4af37;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(244, 230, 161, 0.05));
+    position: relative;
+}
+
+.featured-founder::before {
+    content: "⭐ FEATURED";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: linear-gradient(135deg, #d4af37, #f4e6a1);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+/* Mission quote styling */
+.founder-mission {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: rgba(212, 175, 55, 0.1);
+    border-left: 4px solid #d4af37;
+    border-radius: 8px;
+}
+
+.mission-quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Credentials styling */
+.founder-credentials {
+    margin: 1.5rem 0;
+}
+
+.founder-credentials h4 {
+    color: #d4af37;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.credentials-list {
+    list-style: none;
+    padding: 0;
+}
+
+.credentials-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    font-size: 0.95rem;
+}
+
+.credentials-list li:last-child {
+    border-bottom: none;
+}
+
+.credentials-list strong {
+    color: #d4af37;
+}
+
+/* Media features styling */
+.media-features {
+    margin: 1.5rem 0;
+}
+
+.media-features h4 {
+    color: #d4af37;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.media-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.media-outlet {
+    background: rgba(212, 175, 55, 0.1);
+    color: #d4af37;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Trust Badges Section */
+.trust-badges {
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.trust-content {
+    text-align: center;
+}
+
+.trust-content h3 {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.trust-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    background: white;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.trust-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+.trust-icon {
+    font-size: 1.5rem;
+}
+
+.trust-item span:last-child {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+}
+
 .founder-name {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
