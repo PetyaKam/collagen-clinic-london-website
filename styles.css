@@ -1172,25 +1172,11 @@ h1, h2, h3, h4 {
     border-radius: 50%;
 }
 
-/* Featured founder styling */
-.featured-founder {
+/* Enhanced founder card styling */
+.founder-card {
     border: 2px solid #d4af37;
     background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(244, 230, 161, 0.05));
     position: relative;
-}
-
-.featured-founder::before {
-    content: "⭐ FEATURED";
-    position: absolute;
-    top: -10px;
-    left: 20px;
-    background: linear-gradient(135deg, #d4af37, #f4e6a1);
-    color: white;
-    padding: 0.3rem 1rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    z-index: 1;
 }
 
 /* Mission quote styling */
