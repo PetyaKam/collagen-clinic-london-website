@@ -651,65 +651,187 @@ function initializeTreatmentTabs() {
     });
 }
 
-// Treatment Detail Modal (Similar to Dr. Lamiche)
+// Treatment Detail Modal (Dr. Lamiche Style)
 function showTreatmentDetail(treatmentId) {
     const treatments = {
         'tixel': {
-            name: 'TIXEL Skin Rejuvenation',
+            name: 'TIXEL',
+            fullName: 'TIXEL Skin Rejuvenation',
             image: 'Images/treat.jpg',
-            description: 'Revolutionary fractional technology using controlled thermal energy for skin resurfacing, wrinkle reduction, and texture improvement with minimal downtime.',
-            benefits: [
-                'Minimal downtime compared to traditional fractional treatments',
-                'Precise thermal control for optimal results',
-                'Suitable for all skin types',
-                'Stimulates natural collagen production',
-                'Improves skin texture and tone'
+            tagline: 'Revolutionary fractional technology for comprehensive skin rejuvenation.',
+            subtitle: 'Pain DOWN, Effect UP',
+            mainDescription: 'The TIXEL treatment uses thermo-mechanical fractional technology to create controlled micro-injuries, stimulating natural healing and collagen production for comprehensive skin renewal.',
+            whoTitle: 'Recommended candidates for TIXEL',
+            whoCandidates: [
+                'Those who want to improve fine lines and wrinkles',
+                'Those who want to improve acne scars and skin texture',
+                'Those who want to minimize pore size and improve skin elasticity',
+                'Those seeking skin rejuvenation with minimal downtime'
             ],
-            process: 'Treatment involves controlled thermal energy delivery through heated titanium tips, creating micro-injuries that stimulate natural healing and collagen production.',
+            howTitle: 'How TIXEL Works',
+            howDescription: 'TIXEL uses heated titanium tips to deliver controlled thermal energy to the skin.',
+            howDetails: 'Unlike traditional fractional lasers, TIXEL uses thermo-mechanical technology with heated titanium tips that create precise micro-injuries in the skin. This stimulates the body\'s natural healing response, promoting collagen production and skin renewal while maintaining optimal safety and comfort.',
             link: 'treatments/tixel-rejuvenation.html'
         },
         'genesis': {
-            name: 'Genesis Laser Rejuvenation',
+            name: 'Genesis',
+            fullName: 'Genesis Laser Rejuvenation',
             image: 'Images/treat.jpg',
-            description: 'Non-invasive laser treatment for skin tone improvement, pore reduction, and collagen stimulation, delivering natural-looking results with no downtime.',
-            benefits: [
-                'No downtime required',
-                'Immediate skin tone improvement',
-                'Reduces pore size',
-                'Stimulates collagen production',
-                'Safe for all skin types'
+            tagline: 'Non-invasive laser treatment for immediate skin improvement.',
+            subtitle: 'No Downtime, Immediate Results',
+            mainDescription: 'Genesis laser treatment promotes collagen synthesis and improves skin texture through gentle heating of dermal tissues, suitable for all skin types with no downtime required.',
+            whoTitle: 'Recommended candidates for Genesis',
+            whoCandidates: [
+                'Those who want immediate skin tone improvement',
+                'Those who want to reduce pore size',
+                'Those seeking collagen stimulation without downtime',
+                'Those with sensitive skin requiring gentle treatment'
             ],
-            process: 'Gentle laser energy heats dermal tissues, promoting collagen synthesis and improving overall skin quality through controlled thermal effect.',
+            howTitle: 'How Genesis Works',
+            howDescription: 'Genesis uses gentle laser energy to heat dermal tissues and stimulate collagen production.',
+            howDetails: 'The Genesis laser delivers controlled thermal energy to the dermis, promoting natural collagen synthesis and improving overall skin quality. The treatment is comfortable and requires no downtime, making it ideal for patients seeking immediate results.',
             link: 'treatments/genesis-rejuvenation.html'
+        },
+        'ultraformer': {
+            name: 'UltraFormer III',
+            fullName: 'UltraFormer III HIFU',
+            image: 'Images/treat.jpg',
+            tagline: 'High-Intensity Focused Ultrasound for non-surgical lifting.',
+            subtitle: 'Non-Surgical Lifting, Deep Results',
+            mainDescription: 'UltraFormer III uses HIFU technology to deliver precise thermal energy to multiple tissue depths for comprehensive facial lifting and tightening without surgery.',
+            whoTitle: 'Recommended candidates for UltraFormer III',
+            whoCandidates: [
+                'Those who want non-surgical skin lifting',
+                'Those concerned about sagging skin and loss of elasticity',
+                'Those who want to improve facial contours',
+                'Those seeking deep tissue tightening without surgery'
+            ],
+            howTitle: 'How UltraFormer III Works',
+            howDescription: 'UltraFormer III uses High-Intensity Focused Ultrasound to target multiple tissue depths.',
+            howDetails: 'The UltraFormer III delivers precise ultrasound energy to specific depths in the skin and underlying tissues, creating thermal coagulation points that stimulate collagen production and tissue contraction for lifting and tightening effects.',
+            link: 'treatments/ultraformer-iii.html'
+        },
+        'gentlemax': {
+            name: 'GentleMax Pro Plus',
+            fullName: 'Candela GentleMax Pro Plus',
+            image: 'Images/treat.jpg',
+            tagline: 'Advanced dual-wavelength laser system for comprehensive treatments.',
+            subtitle: 'Two Wavelengths, Superior Results',
+            mainDescription: 'GentleMax Pro Plus combines Alexandrite and Nd:YAG laser technologies for treating pigmented lesions, vascular conditions, and unwanted hair with superior safety and efficacy.',
+            whoTitle: 'Recommended candidates for GentleMax Pro Plus',
+            whoCandidates: [
+                'Those seeking permanent hair reduction on all skin types',
+                'Those with pigmented lesions and sun damage',
+                'Those with vascular conditions like spider veins',
+                'Those wanting versatile laser treatment options'
+            ],
+            howTitle: 'How GentleMax Pro Plus Works',
+            howDescription: 'Dual-wavelength system using 755nm Alexandrite and 1064nm Nd:YAG lasers.',
+            howDetails: 'The system combines two powerful wavelengths: 755nm Alexandrite for lighter skin types and pigmented lesions, and 1064nm Nd:YAG for darker skin types and deeper vascular lesions. This dual approach ensures optimal results across all skin types.',
+            link: 'treatments/candela-gentlemax-pro-plus.html'
+        },
+        'lasemd': {
+            name: 'LaseMD Ultra',
+            fullName: 'Lutronic LaseMD Ultra',
+            image: 'Images/treat.jpg',
+            tagline: 'Advanced fractional thulium laser for customizable treatments.',
+            subtitle: 'Customizable Intensity, Precise Results',
+            mainDescription: 'LaseMD Ultra uses fractional thulium laser technology for comprehensive skin resurfacing, pigmentation correction, and anti-aging treatments with customizable intensity levels.',
+            whoTitle: 'Recommended candidates for LaseMD Ultra',
+            whoCandidates: [
+                'Those with age spots and sun damage',
+                'Those seeking skin resurfacing with minimal downtime',
+                'Those with pigmentation disorders',
+                'Those wanting customizable treatment intensity'
+            ],
+            howTitle: 'How LaseMD Ultra Works',
+            howDescription: 'Fractional thulium laser creates controlled micro-channels for skin renewal.',
+            howDetails: 'The 1927nm thulium laser creates microscopic channels in the skin, removing damaged tissue and stimulating natural healing processes. The fractional approach ensures faster recovery while achieving significant improvements in skin quality.',
+            link: 'treatments/lutronic-lasemd-ultra.html'
+        },
+        'coolview': {
+            name: 'CoolView',
+            fullName: 'CoolView Vascular Laser',
+            image: 'Images/treat.jpg',
+            tagline: 'Precision vascular treatment with advanced cooling.',
+            subtitle: 'Precision Targeting, Enhanced Comfort',
+            mainDescription: 'CoolView uses advanced laser technology with cooling systems to target spider veins, broken capillaries, and vascular lesions with maximum precision and comfort.',
+            whoTitle: 'Recommended candidates for CoolView',
+            whoCandidates: [
+                'Those with spider veins and broken capillaries',
+                'Those with facial redness and rosacea',
+                'Those with vascular lesions',
+                'Those seeking precise vascular treatments'
+            ],
+            howTitle: 'How CoolView Works',
+            howDescription: 'Advanced laser system with integrated cooling for vascular treatments.',
+            howDetails: 'CoolView combines precise laser energy with advanced cooling technology to selectively target vascular lesions while protecting surrounding tissue. The integrated cooling system ensures maximum comfort during treatment.',
+            link: 'treatments/coolview-vascular-laser.html'
         }
-        // Add more treatments as needed
     };
     
     const treatment = treatments[treatmentId];
     if (!treatment) return;
     
-    // Create and show modal (simplified version)
+    // Create Dr. Lamiche style modal
     const modal = document.createElement('div');
     modal.className = 'treatment-modal-overlay';
     modal.innerHTML = `
-        <div class="treatment-modal">
+        <div class="treatment-modal lamiche-style">
             <div class="modal-header">
-                <h2>${treatment.name}</h2>
+                <div class="treatment-title-section">
+                    <h1 class="treatment-main-title">${treatment.name}</h1>
+                    <h2 class="treatment-full-title">${treatment.fullName.toUpperCase()}</h2>
+                    <p class="treatment-tagline">${treatment.tagline}</p>
+                    <div class="treatment-subtitle-highlight">
+                        <strong>${treatment.subtitle}</strong>
+                    </div>
+                </div>
                 <span class="close-modal" onclick="closeTreatmentModal()">&times;</span>
             </div>
+            
             <div class="modal-content">
-                <img src="${treatment.image}" alt="${treatment.name}" class="modal-image">
-                <div class="modal-info">
-                    <p class="modal-description">${treatment.description}</p>
-                    <div class="modal-benefits">
-                        <h4>Key Benefits:</h4>
-                        <ul>${treatment.benefits.map(benefit => `<li>${benefit}</li>`).join('')}</ul>
+                <div class="treatment-main-description">
+                    <p>${treatment.mainDescription}</p>
+                </div>
+                
+                <div class="treatment-image-section">
+                    <img src="${treatment.image}" alt="${treatment.name}" class="modal-image">
+                </div>
+                
+                <div class="treatment-sections">
+                    <div class="treatment-section who-section">
+                        <div class="section-header">
+                            <h3 class="section-title">WHO</h3>
+                        </div>
+                        <h4 class="section-subtitle">${treatment.whoTitle}</h4>
+                        <div class="candidates-list">
+                            ${treatment.whoCandidates.map(candidate => `
+                                <div class="candidate-item">
+                                    <span class="candidate-bullet">•</span>
+                                    <span class="candidate-text">${candidate}</span>
+                                </div>
+                            `).join('')}
+                        </div>
                     </div>
-                    <p class="modal-process">${treatment.process}</p>
-                    <div class="modal-actions">
-                        <button onclick="bookViaWhatsApp('consultation')" class="btn-primary">Book Consultation</button>
-                        <a href="${treatment.link}" class="btn-secondary">Learn More</a>
+                    
+                    <div class="treatment-section how-section">
+                        <div class="section-header">
+                            <h3 class="section-title">HOW</h3>
+                        </div>
+                        <h4 class="section-subtitle">${treatment.howTitle}</h4>
+                        <div class="how-description">
+                            <p class="how-main">${treatment.howDescription}</p>
+                            <div class="how-details">
+                                <p>${treatment.howDetails}</p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                
+                <div class="modal-actions">
+                    <button onclick="bookViaWhatsApp('consultation')" class="btn-primary book-consultation-btn">Book Consultation</button>
+                    <a href="${treatment.link}" class="btn-secondary learn-more-btn">Learn More</a>
                 </div>
             </div>
         </div>
