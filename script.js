@@ -863,4 +863,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Contact form removed - using WhatsApp booking system 
+// Contact form removed - using WhatsApp booking system
+// Dr. Lamiche style treatment modals active 
