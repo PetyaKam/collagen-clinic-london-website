@@ -767,6 +767,101 @@ function showTreatmentDetail(treatmentId) {
             howDescription: 'Advanced laser system with integrated cooling for vascular treatments.',
             howDetails: 'CoolView combines precise laser energy with advanced cooling technology to selectively target vascular lesions while protecting surrounding tissue. The integrated cooling system ensures maximum comfort during treatment.',
             link: 'treatments/coolview-vascular-laser.html'
+        },
+        'exilis-fat': {
+            name: 'Exilis Fat Reduction',
+            fullName: 'Exilis Fat Reduction',
+            image: 'Images/treat.jpg',
+            tagline: 'Non-invasive fat reduction with radiofrequency technology.',
+            subtitle: 'Targeted Fat Reduction, No Surgery',
+            mainDescription: 'Exilis Fat Reduction uses focused radiofrequency energy to heat and destroy fat cells while tightening skin, providing comprehensive body contouring without surgery.',
+            whoTitle: 'Recommended candidates for Exilis Fat Reduction',
+            whoCandidates: [
+                'Those with stubborn fat deposits resistant to diet and exercise',
+                'Those seeking non-surgical body contouring',
+                'Those wanting simultaneous fat reduction and skin tightening',
+                'Those looking for minimal downtime treatments'
+            ],
+            howTitle: 'How Exilis Fat Reduction Works',
+            howDescription: 'Radiofrequency energy targets fat cells while protecting surrounding tissue.',
+            howDetails: 'Exilis delivers controlled radiofrequency energy to heat subcutaneous fat tissue to therapeutic temperatures. This process destroys fat cells while stimulating collagen production for skin tightening, resulting in improved body contours and skin quality.',
+            link: 'treatments/exilis-fat-reduction.html'
+        },
+        'exilis-tightening': {
+            name: 'Exilis Tightening',
+            fullName: 'Exilis Skin Tightening',
+            image: 'Images/treat.jpg',
+            tagline: 'Advanced radiofrequency for skin tightening and rejuvenation.',
+            subtitle: 'Tighten Skin, Restore Elasticity',
+            mainDescription: 'Exilis Tightening uses precise radiofrequency technology to stimulate collagen production and tighten loose skin on face and body areas without surgery.',
+            whoTitle: 'Recommended candidates for Exilis Tightening',
+            whoCandidates: [
+                'Those with loose or sagging skin',
+                'Those seeking non-surgical skin tightening',
+                'Those wanting to improve skin elasticity and firmness',
+                'Those looking for gradual, natural-looking results'
+            ],
+            howTitle: 'How Exilis Tightening Works',
+            howDescription: 'Controlled radiofrequency energy stimulates deep collagen remodeling.',
+            howDetails: 'Exilis delivers precise radiofrequency energy to heat dermal and subdermal layers, triggering the body\'s natural healing response. This stimulates new collagen and elastin production, resulting in tighter, more youthful-looking skin over time.',
+            link: 'treatments/exilis-tightening.html'
+        },
+        'exilis-ultra': {
+            name: 'Exilis Ultra 360',
+            fullName: 'Exilis Ultra 360 Body Contouring',
+            image: 'Images/treat.jpg',
+            tagline: 'Revolutionary 360-degree radiofrequency for comprehensive body sculpting.',
+            subtitle: 'Complete Body Transformation, Advanced Technology',
+            mainDescription: 'Exilis Ultra 360 combines radiofrequency and ultrasound technologies for comprehensive body contouring, fat reduction, and skin tightening in a single advanced treatment.',
+            whoTitle: 'Recommended candidates for Exilis Ultra 360',
+            whoCandidates: [
+                'Those seeking comprehensive body contouring',
+                'Those wanting both fat reduction and skin tightening',
+                'Those looking for advanced non-surgical body sculpting',
+                'Those desiring 360-degree treatment coverage'
+            ],
+            howTitle: 'How Exilis Ultra 360 Works',
+            howDescription: 'Dual-technology system combining radiofrequency and ultrasound energy.',
+            howDetails: 'Exilis Ultra 360 utilizes both monopolar radiofrequency and focused ultrasound to target multiple tissue layers simultaneously. The 360-degree applicators ensure uniform treatment coverage, maximizing fat reduction and skin tightening results across treated areas.',
+            link: 'treatments/exilis-ultra-360.html'
+        },
+        'dermal-fillers': {
+            name: 'Dermal Fillers',
+            fullName: 'Premium Dermal Fillers',
+            image: 'Images/treat.jpg',
+            tagline: 'Restore volume and enhance facial contours with premium hyaluronic acid.',
+            subtitle: 'Instant Results, Natural Enhancement',
+            mainDescription: 'Premium dermal fillers using advanced hyaluronic acid formulations to restore facial volume, smooth wrinkles, and enhance natural beauty with immediate, long-lasting results.',
+            whoTitle: 'Recommended candidates for Dermal Fillers',
+            whoCandidates: [
+                'Those seeking to restore lost facial volume',
+                'Those wanting to smooth lines and wrinkles',
+                'Those looking to enhance lip volume and definition',
+                'Those desiring natural-looking facial rejuvenation'
+            ],
+            howTitle: 'How Dermal Fillers Work',
+            howDescription: 'Hyaluronic acid gel injections restore volume and stimulate collagen.',
+            howDetails: 'Premium dermal fillers contain cross-linked hyaluronic acid that integrates with natural tissue to restore volume and hydration. The treatment stimulates natural collagen production while providing immediate volumizing effects that can last 12-18 months.',
+            link: 'treatments/dermal-fillers.html'
+        },
+        'tixeltox': {
+            name: 'TixelTox',
+            fullName: 'TixelTox Combination Treatment',
+            image: 'Images/treat.jpg',
+            tagline: 'Revolutionary combination of TIXEL resurfacing with precision toxin treatment.',
+            subtitle: 'Dual Action, Maximum Results',
+            mainDescription: 'TixelTox combines the power of TIXEL fractional resurfacing with strategic toxin placement for comprehensive facial rejuvenation and wrinkle reduction.',
+            whoTitle: 'Recommended candidates for TixelTox',
+            whoCandidates: [
+                'Those seeking comprehensive facial rejuvenation',
+                'Those with both dynamic and static wrinkles',
+                'Those wanting maximum anti-aging results',
+                'Those looking for advanced combination treatments'
+            ],
+            howTitle: 'How TixelTox Works',
+            howDescription: 'Combines TIXEL fractional technology with precision neurotoxin treatment.',
+            howDetails: 'TixelTox integrates TIXEL\'s thermo-mechanical fractional resurfacing to improve skin texture and quality, with strategically placed neurotoxin injections to address dynamic wrinkles. This dual approach provides comprehensive facial rejuvenation with enhanced, longer-lasting results.',
+            link: 'treatments/tixeltox.html'
         }
     };
     
