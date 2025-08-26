@@ -657,7 +657,7 @@ function showTreatmentDetail(treatmentId) {
         'tixel': {
             name: 'TIXEL',
             fullName: 'TIXEL Skin Rejuvenation',
-            image: 'Images/treat.jpg',
+            image: 'Images/tixel.jpg',
             tagline: 'Revolutionary fractional technology for comprehensive skin rejuvenation.',
             subtitle: 'Pain DOWN, Effect UP',
             mainDescription: 'The TIXEL treatment uses thermo-mechanical fractional technology to create controlled micro-injuries, stimulating natural healing and collagen production for comprehensive skin renewal.',
@@ -676,7 +676,7 @@ function showTreatmentDetail(treatmentId) {
         'genesis': {
             name: 'Genesis',
             fullName: 'Genesis Laser Rejuvenation',
-            image: 'Images/treat.jpg',
+            image: 'Images/cutera.webp',
             tagline: 'Non-invasive laser treatment for immediate skin improvement.',
             subtitle: 'No Downtime, Immediate Results',
             mainDescription: 'Genesis laser treatment promotes collagen synthesis and improves skin texture through gentle heating of dermal tissues, suitable for all skin types with no downtime required.',
@@ -695,7 +695,7 @@ function showTreatmentDetail(treatmentId) {
         'ultraformer': {
             name: 'UltraFormer III',
             fullName: 'UltraFormer III HIFU',
-            image: 'Images/treat.jpg',
+            image: 'Images/hifu.png',
             tagline: 'High-Intensity Focused Ultrasound for non-surgical lifting.',
             subtitle: 'Non-Surgical Lifting, Deep Results',
             mainDescription: 'UltraFormer III uses HIFU technology to deliver precise thermal energy to multiple tissue depths for comprehensive facial lifting and tightening without surgery.',
@@ -714,7 +714,7 @@ function showTreatmentDetail(treatmentId) {
         'gentlemax': {
             name: 'GentleMax Pro Plus',
             fullName: 'Candela GentleMax Pro Plus',
-            image: 'Images/treat.jpg',
+            image: 'Images/candela.png',
             tagline: 'Advanced dual-wavelength laser system for comprehensive treatments.',
             subtitle: 'Two Wavelengths, Superior Results',
             mainDescription: 'GentleMax Pro Plus combines Alexandrite and Nd:YAG laser technologies for treating pigmented lesions, vascular conditions, and unwanted hair with superior safety and efficacy.',
@@ -733,7 +733,7 @@ function showTreatmentDetail(treatmentId) {
         'lasemd': {
             name: 'LaseMD Ultra',
             fullName: 'Lutronic LaseMD Ultra',
-            image: 'Images/treat.jpg',
+            image: 'Images/lutronic.jpg',
             tagline: 'Advanced fractional thulium laser for customizable treatments.',
             subtitle: 'Customizable Intensity, Precise Results',
             mainDescription: 'LaseMD Ultra uses fractional thulium laser technology for comprehensive skin resurfacing, pigmentation correction, and anti-aging treatments with customizable intensity levels.',
@@ -752,7 +752,7 @@ function showTreatmentDetail(treatmentId) {
         'coolview': {
             name: 'CoolView',
             fullName: 'CoolView Vascular Laser',
-            image: 'Images/treat.jpg',
+            image: 'Images/cutera.webp',
             tagline: 'Precision vascular treatment with advanced cooling.',
             subtitle: 'Precision Targeting, Enhanced Comfort',
             mainDescription: 'CoolView uses advanced laser technology with cooling systems to target spider veins, broken capillaries, and vascular lesions with maximum precision and comfort.',
@@ -771,7 +771,7 @@ function showTreatmentDetail(treatmentId) {
         'exilis-fat': {
             name: 'Exilis Fat Reduction',
             fullName: 'Exilis Fat Reduction',
-            image: 'Images/treat.jpg',
+            image: 'Images/exilis.png',
             tagline: 'Non-invasive fat reduction with radiofrequency technology.',
             subtitle: 'Targeted Fat Reduction, No Surgery',
             mainDescription: 'Exilis Fat Reduction uses focused radiofrequency energy to heat and destroy fat cells while tightening skin, providing comprehensive body contouring without surgery.',
@@ -790,7 +790,7 @@ function showTreatmentDetail(treatmentId) {
         'exilis-tightening': {
             name: 'Exilis Tightening',
             fullName: 'Exilis Skin Tightening',
-            image: 'Images/treat.jpg',
+            image: 'Images/exilis.png',
             tagline: 'Advanced radiofrequency for skin tightening and rejuvenation.',
             subtitle: 'Tighten Skin, Restore Elasticity',
             mainDescription: 'Exilis Tightening uses precise radiofrequency technology to stimulate collagen production and tighten loose skin on face and body areas without surgery.',
@@ -809,7 +809,7 @@ function showTreatmentDetail(treatmentId) {
         'exilis-ultra': {
             name: 'Exilis Ultra 360',
             fullName: 'Exilis Ultra 360 Body Contouring',
-            image: 'Images/treat.jpg',
+            image: 'Images/exilis.png',
             tagline: 'Revolutionary 360-degree radiofrequency for comprehensive body sculpting.',
             subtitle: 'Complete Body Transformation, Advanced Technology',
             mainDescription: 'Exilis Ultra 360 combines radiofrequency and ultrasound technologies for comprehensive body contouring, fat reduction, and skin tightening in a single advanced treatment.',
@@ -828,7 +828,7 @@ function showTreatmentDetail(treatmentId) {
         'dermal-fillers': {
             name: 'Dermal Fillers',
             fullName: 'Premium Dermal Fillers',
-            image: 'Images/treat.jpg',
+            image: 'Images/science.jpg',
             tagline: 'Restore volume and enhance facial contours with premium hyaluronic acid.',
             subtitle: 'Instant Results, Natural Enhancement',
             mainDescription: 'Premium dermal fillers using advanced hyaluronic acid formulations to restore facial volume, smooth wrinkles, and enhance natural beauty with immediate, long-lasting results.',
@@ -847,7 +847,7 @@ function showTreatmentDetail(treatmentId) {
         'tixeltox': {
             name: 'TixelTox',
             fullName: 'TixelTox Combination Treatment',
-            image: 'Images/treat.jpg',
+            image: 'Images/tixel.jpg',
             tagline: 'Revolutionary combination of TIXEL resurfacing with precision toxin treatment.',
             subtitle: 'Dual Action, Maximum Results',
             mainDescription: 'TixelTox combines the power of TIXEL fractional resurfacing with strategic toxin placement for comprehensive facial rejuvenation and wrinkle reduction.',
