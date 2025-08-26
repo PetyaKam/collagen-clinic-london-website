@@ -1281,6 +1281,7 @@ h1, h2, h3, h4 {
     cursor: pointer;
     transition: all 0.3s ease;
     min-width: 150px;
+    font-family: 'Inter', sans-serif;
 }
 
 .category-tab:hover {
@@ -1337,8 +1338,10 @@ h1, h2, h3, h4 {
 .treatment-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
     transition: transform 0.3s ease;
+    background: #f8f9fa;
 }
 
 .treatment-card:hover .treatment-img {
@@ -1355,12 +1358,14 @@ h1, h2, h3, h4 {
     font-weight: 700;
     color: #1a1a1a;
     margin-bottom: 0.5rem;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .treatment-subtitle {
     color: #666;
     font-size: 1rem;
     margin-bottom: 1rem;
+    font-family: 'Inter', sans-serif;
 }
 
 .treatment-highlights {
@@ -1377,6 +1382,7 @@ h1, h2, h3, h4 {
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 600;
+    font-family: 'Inter', sans-serif;
 }
 
 /* Dr. Lamiche Style Treatment Modal */
@@ -1427,6 +1433,7 @@ h1, h2, h3, h4 {
     margin: 0 0 0.5rem 0;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-family: 'Playfair Display', serif;
 }
 
 .treatment-full-title {
@@ -1435,6 +1442,7 @@ h1, h2, h3, h4 {
     color: white;
     margin: 0 0 1rem 0;
     letter-spacing: 1px;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .treatment-tagline {
@@ -1442,6 +1450,7 @@ h1, h2, h3, h4 {
     color: #ccc;
     margin: 0 0 1.5rem 0;
     line-height: 1.4;
+    font-family: 'Inter', sans-serif;
 }
 
 .treatment-subtitle-highlight {
@@ -1452,6 +1461,7 @@ h1, h2, h3, h4 {
     display: inline-block;
     font-size: 1rem;
     font-weight: 600;
+    font-family: 'Inter', sans-serif;
 }
 
 /* Close button styling */
