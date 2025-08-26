@@ -900,6 +900,63 @@ function showTreatmentDetail(treatmentId) {
             howDescription: 'Combines TIXEL fractional technology with precision neurotoxin treatment.',
             howDetails: 'TixelTox integrates TIXEL\'s thermo-mechanical fractional resurfacing to improve skin texture and quality, with strategically placed neurotoxin injections to address dynamic wrinkles. This dual approach provides comprehensive facial rejuvenation with enhanced, longer-lasting results.',
             link: 'treatments/tixeltox.html'
+        },
+        'rejuran': {
+            name: 'Rejuran',
+            fullName: 'Rejuran Polynucleotide Treatment',
+            image: 'Images/science.jpg',
+            tagline: 'Polynucleotide skin healer for comprehensive skin repair and regeneration.',
+            subtitle: 'DNA Repair Technology, Natural Healing',
+            mainDescription: 'Rejuran contains polynucleotides derived from salmon DNA that promote natural skin healing and regeneration, stimulating collagen production and improving skin elasticity for comprehensive skin repair.',
+            whoTitle: 'Recommended candidates for Rejuran',
+            whoCandidates: [
+                'Those with damaged or aging skin',
+                'Those with acne scars and skin texture issues',
+                'Those seeking natural skin healing and repair',
+                'Those wanting to improve skin elasticity and firmness'
+            ],
+            howTitle: 'How Rejuran Works',
+            howDescription: 'Polynucleotides from salmon DNA stimulate natural healing and collagen production.',
+            howDetails: 'Rejuran uses polynucleotides (PN) derived from salmon DNA that are biocompatible with human tissue. These molecules promote cellular regeneration, stimulate collagen and elastin production, and enhance the skin\'s natural healing processes, resulting in improved texture, reduced scarring, and enhanced overall skin quality.',
+            link: 'treatments/rejuran.html'
+        },
+        'profhilo': {
+            name: 'Profhilo',
+            fullName: 'Profhilo Bio-Remodelling Treatment',
+            image: 'Images/science.jpg',
+            tagline: 'High-concentration hyaluronic acid for deep hydration and bio-remodelling.',
+            subtitle: 'Bio-Remodelling Technology, Deep Hydration',
+            mainDescription: 'Profhilo is a revolutionary bio-remodelling treatment using high-concentration hyaluronic acid to provide deep skin hydration, stimulate collagen and elastin production, and improve skin firmness and elasticity.',
+            whoTitle: 'Recommended candidates for Profhilo',
+            whoCandidates: [
+                'Those experiencing skin laxity and loss of firmness',
+                'Those with dry or dehydrated skin',
+                'Those seeking overall skin quality enhancement',
+                'Those wanting natural-looking skin improvement'
+            ],
+            howTitle: 'How Profhilo Works',
+            howDescription: 'High-concentration hyaluronic acid provides bio-remodelling and deep hydration.',
+            howDetails: 'Profhilo contains one of the highest concentrations of hyaluronic acid available, which spreads naturally through the skin tissue. This unique formulation stimulates collagen and elastin production while providing intense hydration, resulting in improved skin tone, texture, and overall quality.',
+            link: 'treatments/profhilo.html'
+        },
+        'peels': {
+            name: 'Chemical Peels',
+            fullName: 'Professional Chemical Peels',
+            image: 'Images/science.jpg',
+            tagline: 'Advanced chemical exfoliation for skin resurfacing and renewal.',
+            subtitle: 'Controlled Exfoliation, Skin Renewal',
+            mainDescription: 'Professional chemical peels use carefully selected acids to remove damaged skin layers, stimulate cellular turnover, and reveal smoother, more radiant skin with improved texture and tone.',
+            whoTitle: 'Recommended candidates for Chemical Peels',
+            whoCandidates: [
+                'Those with sun damage and pigmentation issues',
+                'Those with acne scars and uneven skin texture',
+                'Those seeking skin rejuvenation and renewal',
+                'Those with fine lines and surface wrinkles'
+            ],
+            howTitle: 'How Chemical Peels Work',
+            howDescription: 'Controlled chemical exfoliation removes damaged skin layers and stimulates renewal.',
+            howDetails: 'Chemical peels use various acids (glycolic, salicylic, TCA) to create controlled exfoliation of the skin. This process removes damaged surface layers, stimulates cellular turnover, and promotes the growth of new, healthier skin cells, resulting in improved texture, tone, and overall skin appearance.',
+            link: 'treatments/chemical-peels.html'
         }
     };
     
