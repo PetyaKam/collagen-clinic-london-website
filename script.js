@@ -828,7 +828,7 @@ function showTreatmentDetail(treatmentId) {
         'dermal-fillers': {
             name: 'Dermal Fillers',
             fullName: 'Premium Dermal Fillers',
-            image: 'Images/science.jpg',
+            image: 'Images/filler.jpg',
             tagline: 'Restore volume and enhance facial contours with premium hyaluronic acid.',
             subtitle: 'Instant Results, Natural Enhancement',
             mainDescription: 'Premium dermal fillers using advanced hyaluronic acid formulations to restore facial volume, smooth wrinkles, and enhance natural beauty with immediate, long-lasting results.',
@@ -843,6 +843,44 @@ function showTreatmentDetail(treatmentId) {
             howDescription: 'Hyaluronic acid gel injections restore volume and stimulate collagen.',
             howDetails: 'Premium dermal fillers contain cross-linked hyaluronic acid that integrates with natural tissue to restore volume and hydration. The treatment stimulates natural collagen production while providing immediate volumizing effects that can last 12-18 months.',
             link: 'treatments/dermal-fillers.html'
+        },
+        'botox': {
+            name: 'Botox',
+            fullName: 'Botox Neurotoxin Treatment',
+            image: 'Images/botox.webp',
+            tagline: 'FDA-approved neurotoxin for dynamic wrinkle reduction and muscle relaxation.',
+            subtitle: 'Proven Results, Minimal Downtime',
+            mainDescription: 'Botox is a purified neurotoxin that temporarily relaxes facial muscles to reduce the appearance of dynamic wrinkles, providing a smoother, more youthful appearance with minimal downtime.',
+            whoTitle: 'Recommended candidates for Botox',
+            whoCandidates: [
+                'Those with dynamic wrinkles from facial expressions',
+                'Those seeking preventative anti-aging treatment',
+                'Those with forehead lines, crow\'s feet, or frown lines',
+                'Those looking for non-surgical wrinkle reduction'
+            ],
+            howTitle: 'How Botox Works',
+            howDescription: 'Botulinum toxin temporarily blocks nerve signals to targeted facial muscles.',
+            howDetails: 'Botox works by temporarily blocking nerve signals that cause muscle contractions. When injected into specific facial muscles, it prevents them from contracting, which smooths out dynamic wrinkles and prevents new ones from forming. Results typically last 3-6 months.',
+            link: 'treatments/botox.html'
+        },
+        'julaine': {
+            name: 'Julaine',
+            fullName: 'Julaine Premium Dermal Filler',
+            image: 'Images/julaine.jpg',
+            tagline: 'Advanced hyaluronic acid filler for superior volume restoration and facial contouring.',
+            subtitle: 'Premium Quality, Long-Lasting Results',
+            mainDescription: 'Julaine is a premium hyaluronic acid-based dermal filler designed for superior volume restoration, facial contouring, and wrinkle correction with advanced cross-linking technology for longer-lasting results.',
+            whoTitle: 'Recommended candidates for Julaine',
+            whoCandidates: [
+                'Those seeking premium volume restoration',
+                'Those wanting enhanced facial contouring',
+                'Those looking for long-lasting filler results',
+                'Those desiring natural-looking facial enhancement'
+            ],
+            howTitle: 'How Julaine Works',
+            howDescription: 'Advanced hyaluronic acid with superior cross-linking technology for optimal results.',
+            howDetails: 'Julaine utilizes advanced cross-linking technology to create a premium hyaluronic acid gel that integrates seamlessly with natural tissue. This advanced formulation provides superior volume restoration, enhanced longevity, and natural-looking results that can last 12-18 months.',
+            link: 'treatments/julaine.html'
         },
         'tixeltox': {
             name: 'TixelTox',
