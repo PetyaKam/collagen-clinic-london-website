@@ -1520,25 +1520,13 @@ h1, h2, h3, h4 {
 }
 
 .section-header {
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
 }
 
-.section-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #d4af37;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
 
-.section-subtitle {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #333;
-    margin: 0 0 2rem 0;
-    line-height: 1.4;
-}
+
+
 
 /* WHO Section */
 .candidates-list {
