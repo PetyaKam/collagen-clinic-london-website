@@ -902,9 +902,9 @@ function showTreatmentDetail(treatmentId) {
             link: 'treatments/tixeltox.html'
         },
         'rejuran': {
-            name: 'Rejuran',
+            name: 'Rejuran Polynucleotides',
             fullName: 'Rejuran Polynucleotide Treatment',
-            image: 'Images/science.jpg',
+            image: 'Images/rejuran.jpeg',
             tagline: 'Polynucleotide skin healer for comprehensive skin repair and regeneration.',
             subtitle: 'DNA Repair Technology, Natural Healing',
             mainDescription: 'Rejuran contains polynucleotides derived from salmon DNA that promote natural skin healing and regeneration, stimulating collagen production and improving skin elasticity for comprehensive skin repair.',
@@ -923,7 +923,7 @@ function showTreatmentDetail(treatmentId) {
         'profhilo': {
             name: 'Profhilo',
             fullName: 'Profhilo Bio-Remodelling Treatment',
-            image: 'Images/science.jpg',
+            image: 'Images/profhilo.png',
             tagline: 'High-concentration hyaluronic acid for deep hydration and bio-remodelling.',
             subtitle: 'Bio-Remodelling Technology, Deep Hydration',
             mainDescription: 'Profhilo is a revolutionary bio-remodelling treatment using high-concentration hyaluronic acid to provide deep skin hydration, stimulate collagen and elastin production, and improve skin firmness and elasticity.',
@@ -942,7 +942,7 @@ function showTreatmentDetail(treatmentId) {
         'peels': {
             name: 'Chemical Peels',
             fullName: 'Professional Chemical Peels',
-            image: 'Images/science.jpg',
+            image: 'Images/peel.png',
             tagline: 'Advanced chemical exfoliation for skin resurfacing and renewal.',
             subtitle: 'Controlled Exfoliation, Skin Renewal',
             mainDescription: 'Professional chemical peels use carefully selected acids to remove damaged skin layers, stimulate cellular turnover, and reveal smoother, more radiant skin with improved texture and tone.',
@@ -957,6 +957,25 @@ function showTreatmentDetail(treatmentId) {
             howDescription: 'Controlled chemical exfoliation removes damaged skin layers and stimulates renewal.',
             howDetails: 'Chemical peels use various acids (glycolic, salicylic, TCA) to create controlled exfoliation of the skin. This process removes damaged surface layers, stimulates cellular turnover, and promotes the growth of new, healthier skin cells, resulting in improved texture, tone, and overall skin appearance.',
             link: 'treatments/chemical-peels.html'
+        },
+        'exosomes': {
+            name: 'Exosomes',
+            fullName: 'Exosome Regenerative Therapy',
+            image: 'Images/exosomes.jpeg',
+            tagline: 'Advanced regenerative medicine using nano-sized cellular messengers for skin rejuvenation.',
+            subtitle: 'Cell Communication Technology, Natural Regeneration',
+            mainDescription: 'Exosome therapy utilizes nano-sized vesicles that facilitate cell-to-cell communication, promoting natural regeneration, reducing inflammation, and enhancing collagen synthesis for comprehensive skin rejuvenation.',
+            whoTitle: 'Recommended candidates for Exosomes',
+            whoCandidates: [
+                'Those seeking advanced regenerative treatments',
+                'Those with aging skin and loss of elasticity',
+                'Those wanting natural skin rejuvenation and repair',
+                'Those looking for cutting-edge anti-aging solutions'
+            ],
+            howTitle: 'How Exosomes Work',
+            howDescription: 'Nano-sized vesicles facilitate cell-to-cell communication and promote natural regeneration.',
+            howDetails: 'Exosomes are nano-sized extracellular vesicles that carry growth factors, proteins, and genetic material between cells. When applied to the skin, they enhance cellular communication, stimulate collagen and elastin production, reduce inflammation, and promote tissue repair and regeneration for comprehensive anti-aging benefits.',
+            link: 'treatments/exosomes.html'
         }
     };
     
