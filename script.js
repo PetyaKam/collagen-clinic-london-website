@@ -768,62 +768,100 @@ function showTreatmentDetail(treatmentId) {
             howDetails: 'CoolView combines precise laser energy with advanced cooling technology to selectively target vascular lesions while protecting surrounding tissue. The integrated cooling system ensures maximum comfort during treatment.',
             link: 'treatments/coolview-vascular-laser.html'
         },
-        'exilis-fat': {
-            name: 'Exilis Fat Reduction',
-            fullName: 'Exilis Fat Reduction',
-            image: 'Images/exilis.png',
-            tagline: 'Non-invasive fat reduction with radiofrequency technology.',
-            subtitle: 'Targeted Fat Reduction, No Surgery',
-            mainDescription: 'Exilis Fat Reduction uses focused radiofrequency energy to heat and destroy fat cells while tightening skin, providing comprehensive body contouring without surgery.',
-            whoTitle: 'Recommended candidates for Exilis Fat Reduction',
+        'exion-face': {
+            name: 'EXION Face',
+            fullName: 'EXION Face Rejuvenation',
+            image: 'Images/exion-face.jpg',
+            tagline: 'Advanced facial rejuvenation with BTL technology.',
+            subtitle: 'Non-Invasive Facial Tightening',
+            mainDescription: 'EXION Face combines radiofrequency and targeted energy delivery to provide comprehensive facial rejuvenation, skin tightening, and wrinkle reduction without surgery or downtime.',
+            whoTitle: 'Recommended candidates for EXION Face',
+            whoCandidates: [
+                'Those with mild to moderate facial aging signs',
+                'Those seeking non-surgical facial rejuvenation',
+                'Those wanting to improve skin texture and tone',
+                'Those looking for comfortable treatments with no downtime'
+            ],
+            howTitle: 'How EXION Face Works',
+            howDescription: 'Advanced BTL technology delivers precise energy for optimal facial rejuvenation.',
+            howDetails: 'EXION Face utilizes BTL\'s advanced radiofrequency technology to deliver controlled thermal energy to facial tissues, stimulating collagen production and tissue remodeling for natural-looking facial rejuvenation and skin tightening.',
+            link: 'treatments/exion-face.html'
+        },
+        'exion-body': {
+            name: 'EXION Body',
+            fullName: 'EXION Body Contouring',
+            image: 'Images/exion-body.jpg',
+            tagline: 'Revolutionary body contouring and fat reduction.',
+            subtitle: 'Advanced Body Sculpting Technology',
+            mainDescription: 'EXION Body delivers powerful radiofrequency energy for effective fat reduction and skin tightening across various body areas, providing comprehensive body contouring results.',
+            whoTitle: 'Recommended candidates for EXION Body',
             whoCandidates: [
                 'Those with stubborn fat deposits resistant to diet and exercise',
                 'Those seeking non-surgical body contouring',
-                'Those wanting simultaneous fat reduction and skin tightening',
-                'Those looking for minimal downtime treatments'
+                'Those wanting skin tightening with fat reduction',
+                'Those looking for effective body sculpting treatments'
             ],
-            howTitle: 'How Exilis Fat Reduction Works',
-            howDescription: 'Radiofrequency energy targets fat cells while protecting surrounding tissue.',
-            howDetails: 'Exilis delivers controlled radiofrequency energy to heat subcutaneous fat tissue to therapeutic temperatures. This process destroys fat cells while stimulating collagen production for skin tightening, resulting in improved body contours and skin quality.',
-            link: 'treatments/exilis-fat-reduction.html'
+            howTitle: 'How EXION Body Works',
+            howDescription: 'Powerful radiofrequency technology targets fat cells and tightens skin.',
+            howDetails: 'EXION Body uses BTL\'s advanced radiofrequency technology to heat adipose tissue to therapeutic temperatures, causing fat cell destruction while simultaneously stimulating collagen production for improved skin tightening and body contouring.',
+            link: 'treatments/exion-body.html'
         },
-        'exilis-tightening': {
-            name: 'Exilis Tightening',
-            fullName: 'Exilis Skin Tightening',
-            image: 'Images/exilis.png',
-            tagline: 'Advanced radiofrequency for skin tightening and rejuvenation.',
-            subtitle: 'Tighten Skin, Restore Elasticity',
-            mainDescription: 'Exilis Tightening uses precise radiofrequency technology to stimulate collagen production and tighten loose skin on face and body areas without surgery.',
-            whoTitle: 'Recommended candidates for Exilis Tightening',
+        'exion-fractional': {
+            name: 'EXION Fractional',
+            fullName: 'EXION Fractional Skin Resurfacing',
+            image: 'Images/exion-fractional.jpg',
+            tagline: 'Fractional radiofrequency for skin texture improvement.',
+            subtitle: 'Advanced Skin Resurfacing Technology',
+            mainDescription: 'EXION Fractional delivers precise fractional radiofrequency energy to improve skin texture, reduce fine lines, and enhance overall skin quality with minimal downtime.',
+            whoTitle: 'Recommended candidates for EXION Fractional',
             whoCandidates: [
-                'Those with loose or sagging skin',
-                'Those seeking non-surgical skin tightening',
-                'Those wanting to improve skin elasticity and firmness',
-                'Those looking for gradual, natural-looking results'
+                'Those with skin texture concerns and irregularities',
+                'Those seeking fine line and wrinkle reduction',
+                'Those wanting to improve skin tone and clarity',
+                'Those looking for advanced skin resurfacing treatments'
             ],
-            howTitle: 'How Exilis Tightening Works',
-            howDescription: 'Controlled radiofrequency energy stimulates deep collagen remodeling.',
-            howDetails: 'Exilis delivers precise radiofrequency energy to heat dermal and subdermal layers, triggering the body\'s natural healing response. This stimulates new collagen and elastin production, resulting in tighter, more youthful-looking skin over time.',
-            link: 'treatments/exilis-tightening.html'
+            howTitle: 'How EXION Fractional Works',
+            howDescription: 'Fractional RF energy creates controlled micro-zones for skin renewal.',
+            howDetails: 'EXION Fractional uses fractional radiofrequency technology to create controlled thermal zones in the skin, triggering natural healing processes that stimulate collagen production and improve skin texture, tone, and overall quality.',
+            link: 'treatments/exion-fractional.html'
         },
-        'exilis-ultra': {
-            name: 'Exilis Ultra 360',
-            fullName: 'Exilis Ultra 360 Body Contouring',
-            image: 'Images/exilis.png',
-            tagline: 'Revolutionary 360-degree radiofrequency for comprehensive body sculpting.',
-            subtitle: 'Complete Body Transformation, Advanced Technology',
-            mainDescription: 'Exilis Ultra 360 combines radiofrequency and ultrasound technologies for comprehensive body contouring, fat reduction, and skin tightening in a single advanced treatment.',
-            whoTitle: 'Recommended candidates for Exilis Ultra 360',
+        'exion-forma': {
+            name: 'EXION Forma',
+            fullName: 'EXION Forma Deep Heating',
+            image: 'Images/exion-forma.jpg',
+            tagline: 'Comfortable deep tissue heating for collagen stimulation.',
+            subtitle: 'Temperature-Controlled RF Technology',
+            mainDescription: 'EXION Forma provides comfortable, temperature-controlled radiofrequency heating to stimulate deep collagen production and improve skin elasticity without discomfort.',
+            whoTitle: 'Recommended candidates for EXION Forma',
             whoCandidates: [
-                'Those seeking comprehensive body contouring',
-                'Those wanting both fat reduction and skin tightening',
-                'Those looking for advanced non-surgical body sculpting',
-                'Those desiring 360-degree treatment coverage'
+                'Those seeking comfortable skin tightening treatments',
+                'Those with sensitive skin requiring gentle procedures',
+                'Those wanting gradual, natural-looking results',
+                'Those looking for relaxing anti-aging treatments'
             ],
-            howTitle: 'How Exilis Ultra 360 Works',
-            howDescription: 'Dual-technology system combining radiofrequency and ultrasound energy.',
-            howDetails: 'Exilis Ultra 360 utilizes both monopolar radiofrequency and focused ultrasound to target multiple tissue layers simultaneously. The 360-degree applicators ensure uniform treatment coverage, maximizing fat reduction and skin tightening results across treated areas.',
-            link: 'treatments/exilis-ultra-360.html'
+            howTitle: 'How EXION Forma Works',
+            howDescription: 'Temperature-controlled RF ensures comfortable and effective treatment.',
+            howDetails: 'EXION Forma uses advanced temperature monitoring and control to deliver optimal radiofrequency energy levels, ensuring comfortable treatment while maximizing collagen stimulation and skin tightening benefits.',
+            link: 'treatments/exion-forma.html'
+        },
+        'exion-morpheus': {
+            name: 'EXION Morpheus8',
+            fullName: 'EXION Morpheus8 RF Microneedling',
+            image: 'Images/exion-morpheus.jpg',
+            tagline: 'Revolutionary fractional RF microneedling technology.',
+            subtitle: 'Deep Tissue Remodeling',
+            mainDescription: 'EXION Morpheus8 combines fractional radiofrequency with microneedling to deliver energy deep into the skin for comprehensive tissue remodeling and dramatic skin rejuvenation.',
+            whoTitle: 'Recommended candidates for EXION Morpheus8',
+            whoCandidates: [
+                'Those with deeper skin concerns and aging signs',
+                'Those seeking dramatic skin transformation',
+                'Those wanting to address acne scarring',
+                'Those looking for advanced skin remodeling treatments'
+            ],
+            howTitle: 'How EXION Morpheus8 Works',
+            howDescription: 'Fractional RF microneedling delivers energy deep into tissue layers.',
+            howDetails: 'EXION Morpheus8 uses fractional radiofrequency delivered through ultra-fine microneedles to penetrate deep into the skin, creating controlled thermal zones that stimulate extensive collagen and elastin production for comprehensive skin remodeling.',
+            link: 'treatments/exion-morpheus8.html'
         },
         'dermal-fillers': {
             name: 'Dermal Fillers',
