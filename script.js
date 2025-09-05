@@ -770,11 +770,11 @@ function showTreatmentDetail(treatmentId) {
         },
         'exion-face': {
             name: 'EXION Face',
-            fullName: 'EXION Face Rejuvenation',
+            fullName: 'EXION Face Skin Tightening',
             image: 'Images/exion-face.jpg',
-            tagline: 'Advanced facial rejuvenation with BTL technology.',
+            tagline: 'Advanced facial skin tightening with BTL technology.',
             subtitle: 'Non-Invasive Facial Tightening',
-            mainDescription: 'EXION Face combines radiofrequency and targeted energy delivery to provide comprehensive facial rejuvenation, skin tightening, and wrinkle reduction without surgery or downtime.',
+            mainDescription: 'EXION Face combines radiofrequency and targeted energy delivery to provide comprehensive facial skin tightening, firming, and wrinkle reduction without surgery or downtime.',
             whoTitle: 'Recommended candidates for EXION Face',
             whoCandidates: [
                 'Those with mild to moderate facial aging signs',
@@ -783,8 +783,8 @@ function showTreatmentDetail(treatmentId) {
                 'Those looking for comfortable treatments with no downtime'
             ],
             howTitle: 'How EXION Face Works',
-            howDescription: 'Advanced BTL technology delivers precise energy for optimal facial rejuvenation.',
-            howDetails: 'EXION Face utilizes BTL\'s advanced radiofrequency technology to deliver controlled thermal energy to facial tissues, stimulating collagen production and tissue remodeling for natural-looking facial rejuvenation and skin tightening.',
+            howDescription: 'Advanced BTL technology delivers precise energy for optimal facial skin tightening.',
+            howDetails: 'EXION Face utilizes BTL\'s advanced radiofrequency technology to deliver controlled thermal energy to facial tissues, stimulating collagen production and tissue remodeling for natural-looking facial skin tightening and firming.',
             link: 'treatments/exion-face.html'
         },
         'exion-body': {
