@@ -1175,8 +1175,8 @@ h1, h2, h3, h4 {
 
 .founders-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
 
 .founder-card {
@@ -2646,9 +2646,14 @@ h1, h2, h3, h4 {
     }
 }
 
-/* Tablet responsive for testimonials */
+/* Tablet responsive for testimonials and team */
 @media (max-width: 1024px) and (min-width: 769px) {
     .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .founders-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
