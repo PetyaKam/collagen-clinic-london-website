@@ -216,8 +216,16 @@ h1, h2, h3, h4 {
 .founder-credentials {
     font-size: 1.1rem;
     color: #666;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
     line-height: 1.4;
+}
+
+.founder-media {
+    font-size: 0.95rem;
+    color: #888;
+    margin-bottom: 0;
+    line-height: 1.3;
+    font-style: italic;
 }
 
 .hero-title {
@@ -2559,5 +2567,73 @@ h1, h2, h3, h4 {
     
     .contact-form {
         padding: 1.5rem;
+    }
+}
+/* Hero Image Overlay */
+.hero-image-container {
+    position: relative;
+    width: 100%;
+}
+
+.founder-image-overlay {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    backdrop-filter: blur(10px);
+}
+
+.founder-hero-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #d4af37;
+}
+
+.founder-overlay-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.founder-overlay-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    margin-bottom: 0.2rem;
+}
+
+.founder-overlay-title {
+    font-size: 0.75rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .founder-image-overlay {
+        bottom: 10px;
+        right: 10px;
+        padding: 0.75rem;
+        gap: 0.5rem;
+    }
+    
+    .founder-hero-photo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .founder-overlay-name {
+        font-size: 0.8rem;
+    }
+    
+    .founder-overlay-title {
+        font-size: 0.7rem;
     }
 }
