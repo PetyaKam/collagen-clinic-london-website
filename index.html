@@ -162,78 +162,190 @@
                 <div class="treatments-showcase">
                     <!-- Skin Diagnostics Category -->
                     <div class="treatment-category-grid active" data-category="skin-diagnostics">
-                    <div class="service-item">
-                            <h4>VISIA Scan for Skin Age</h4>
-                            <p>Multi-spectral facial imaging analysing pores, texture, brown spots, red areas, UV damage, and wrinkles to provide objective skin age assessment.</p>
-                    </div>
-                    
-                    <div class="service-item">
-                            <h4>SYLTON Observ520</h4>
-                            <p>Multi-spectral facial imaging system utilizing polarized and cross-polarized light to reveal subsurface skin conditions, vascular patterns, and pigmentation irregularities.</p>
-                    </div>
-                    
-                    <div class="service-item">
-                            <h4>QOVES Scan AI Aesthetics Analysis</h4>
-                            <p>Artificial intelligence-powered facial analysis identifying aesthetic concerns and providing objective measurements for treatment planning and monitoring.</p>
-                    </div>
-                    
-                    <div class="service-item">
-                            <h4>Ultrasound Imaging Collagen Age</h4>
-                            <p>High-frequency ultrasound technology measuring dermal thickness, collagen density, and skin elasticity to determine biological age of skin tissues.</p>
-                    </div>
-                    
-                    <div class="service-item">
-                            <h4>Total Body Surface Area Skin Age</h4>
-                            <p>Systematic assessment of skin aging parameters across different body regions to create comprehensive maps of biological skin age distribution.</p>
-                    </div>
-                    
-                    <div class="service-item">
-                            <h4>Glycation Skin Stiffness Age</h4>
-                            <p>Non-invasive measurement of advanced glycation end products in skin tissues, providing insights into metabolic aging and skin elasticity changes.</p>
-                    </div>
-                    
-                    <div class="service-item">
-                            <h4>Hair Age Analysis</h4>
-                            <p>Advanced assessment of hair follicle health, density, and aging markers to determine biological age of scalp and hair, providing insights into overall health and aging processes.</p>
-                    </div>
+                        <div class="treatment-card" onclick="showTreatmentDetail('visia-scan')">
+                            <div class="treatment-image">
+                                <img src="Images/visia-scan.jpg" alt="VISIA Skin Analysis System" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">VISIA Scan</h3>
+                                <p class="treatment-subtitle">Skin Age Analysis</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Multi-Spectral</span>
+                                    <span class="highlight-tag">UV Damage Detection</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('observ520')">
+                            <div class="treatment-image">
+                                <img src="Images/observ520.jpg" alt="SYLTON Observ520 Imaging" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">SYLTON Observ520</h3>
+                                <p class="treatment-subtitle">Multi-Spectral Imaging</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Polarized Light</span>
+                                    <span class="highlight-tag">Subsurface Analysis</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('qoves-ai')">
+                            <div class="treatment-image">
+                                <img src="Images/qoves-ai.jpg" alt="QOVES AI Aesthetics Analysis" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">QOVES AI</h3>
+                                <p class="treatment-subtitle">Aesthetics Analysis</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">AI-Powered</span>
+                                    <span class="highlight-tag">Exclusive to CC</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('ultrasound-imaging')">
+                            <div class="treatment-image">
+                                <img src="Images/ultrasound-collagen.jpg" alt="Ultrasound Collagen Imaging" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">Ultrasound Imaging</h3>
+                                <p class="treatment-subtitle">Collagen Age Analysis</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">High-Frequency</span>
+                                    <span class="highlight-tag">Dermal Thickness</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('body-surface-analysis')">
+                            <div class="treatment-image">
+                                <img src="Images/body-surface-analysis.jpg" alt="Total Body Surface Area Analysis" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">Body Surface Analysis</h3>
+                                <p class="treatment-subtitle">Total Area Assessment</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Comprehensive</span>
+                                    <span class="highlight-tag">Age Mapping</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('glycation-analysis')">
+                            <div class="treatment-image">
+                                <img src="Images/glycation-analysis.jpg" alt="Glycation Skin Stiffness Analysis" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">Glycation Analysis</h3>
+                                <p class="treatment-subtitle">Skin Stiffness Age</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Non-Invasive</span>
+                                    <span class="highlight-tag">AGE Detection</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
                     <!-- Holistic Diagnostics Category -->
                     <div class="treatment-category-grid" data-category="holistic-diagnostics">
-                    <div class="service-item">
-                            <h4>InBody Analysis</h4>
-                            <p>Bioelectrical impedance analysis measuring body composition, muscle mass, fat distribution, and metabolic parameters. Provides precise assessment of overall health status and body composition changes.</p>
-                    </div>
-                    
-                    <div class="service-item">
-                            <h4>InBody Stadiometer</h4>
-                            <p>Precise height measurement system integrated with body composition analysis, providing accurate anthropometric data for comprehensive health evaluation.</p>
-                    </div>
-                    
-                    <div class="service-item">
-                            <h4>InBody Y Scope</h4>
-                            <p>Advanced body composition analyser utilising multiple frequencies to assess muscle quality, cellular health, and phase angle measurements for detailed metabolic insights.</p>
-                    </div>
-                    
-                    <div class="service-item">
-                            <h4>World's Most Advanced Blood Pressure Cuff</h4>
-                            <p>State-of-the-art blood pressure monitoring technology providing the most accurate cardiovascular health assessment with advanced diagnostic capabilities.</p>
-                    </div>
-                    
-                    <div class="service-item">
-                            <h4>Cardiocoach VO2 MAX</h4>
-                            <p>Metabolic testing system measuring oxygen consumption and carbon dioxide production to assess cardiovascular fitness, metabolic efficiency, and exercise capacity.</p>
-                    </div>
-                    
-                    <div class="service-item">
-                            <h4>VALD Strength Testing</h4>
-                            <p>Objective measurement of muscle strength, power, and functional movement patterns using dynamometry technology for comprehensive musculoskeletal assessment.</p>
-                    </div>
-                    
-                    <div class="service-item">
-                            <h4>Spirometry</h4>
-                            <p>Pulmonary function testing measuring lung capacity, airflow rates, and breathing patterns to assess respiratory health and function.</p>
-                    </div>
+                        <div class="treatment-card" onclick="showTreatmentDetail('inbody-analysis')">
+                            <div class="treatment-image">
+                                <img src="Images/inbody-analysis.jpg" alt="InBody Body Composition Analysis" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">InBody Analysis</h3>
+                                <p class="treatment-subtitle">Body Composition</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Bioimpedance</span>
+                                    <span class="highlight-tag">Muscle Mass</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('inbody-stadiometer')">
+                            <div class="treatment-image">
+                                <img src="Images/inbody-stadiometer.jpg" alt="InBody Stadiometer Height Measurement" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">InBody Stadiometer</h3>
+                                <p class="treatment-subtitle">Precise Height Measurement</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Anthropometric</span>
+                                    <span class="highlight-tag">Integrated</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('inbody-yscope')">
+                            <div class="treatment-image">
+                                <img src="Images/inbody-yscope.jpg" alt="InBody Y Scope Advanced Analysis" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">InBody Y Scope</h3>
+                                <p class="treatment-subtitle">Advanced Body Composition</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Multi-Frequency</span>
+                                    <span class="highlight-tag">Phase Angle</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('blood-pressure')">
+                            <div class="treatment-image">
+                                <img src="Images/advanced-bp-cuff.jpg" alt="Advanced Blood Pressure Monitor" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">Advanced BP Monitor</h3>
+                                <p class="treatment-subtitle">Cardiovascular Assessment</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">State-of-Art</span>
+                                    <span class="highlight-tag">Diagnostic</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('cardiocoach-vo2')">
+                            <div class="treatment-image">
+                                <img src="Images/cardiocoach-vo2.jpg" alt="Cardiocoach VO2 MAX Testing" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">Cardiocoach VO2</h3>
+                                <p class="treatment-subtitle">Metabolic Testing</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">VO2 MAX</span>
+                                    <span class="highlight-tag">Fitness Assessment</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('vald-strength')">
+                            <div class="treatment-image">
+                                <img src="Images/vald-strength.jpg" alt="VALD Strength Testing Equipment" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">VALD Strength</h3>
+                                <p class="treatment-subtitle">Muscle Testing</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Dynamometry</span>
+                                    <span class="highlight-tag">Objective</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('spirometry')">
+                            <div class="treatment-image">
+                                <img src="Images/spirometry.jpg" alt="Spirometry Pulmonary Function Testing" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">Spirometry</h3>
+                                <p class="treatment-subtitle">Pulmonary Function</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Lung Capacity</span>
+                                    <span class="highlight-tag">Respiratory</span>
+                                </div>
+                            </div>
+                        </div>
                 </div>
                 </div>
                 
