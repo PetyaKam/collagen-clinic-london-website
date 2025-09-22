@@ -2228,8 +2228,8 @@ h1, h2, h3, h4 {
 
 .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     margin-bottom: 3rem;
 }
 
@@ -2643,5 +2643,13 @@ h1, h2, h3, h4 {
     
     .founder-overlay-title {
         font-size: 0.7rem;
+    }
+}
+
+/* Tablet responsive for testimonials */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 }
