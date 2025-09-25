@@ -180,7 +180,7 @@ h1, h2, h3, h4 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: start;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -234,7 +234,6 @@ h1, h2, h3, h4 {
     margin-bottom: 1.5rem;
     line-height: 1.1;
     font-family: 'Cormorant Garamond', serif;
-    white-space: nowrap;
 }
 
 .hero-subtitle {
@@ -286,6 +285,7 @@ h1, h2, h3, h4 {
 
 .hero-image {
     position: relative;
+    margin-top: 8rem;
 }
 
 .hero-image-placeholder {
@@ -2515,6 +2515,10 @@ h1, h2, h3, h4 {
     
     .hero-stats {
         justify-content: center;
+    }
+    
+    .hero-image {
+        margin-top: 2rem;
     }
     
     .about-content {
