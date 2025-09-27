@@ -489,7 +489,7 @@ function insertMedeskWidget() {
                         <span class="service-icon">💎</span>
                         <div class="service-details">
                             <strong>Skin Diagnostic Package</strong>
-                            <span class="price">£150</span>
+                            <span class="price">£250</span>
                         </div>
                         <span class="whatsapp-icon">💬</span>
                     </button>
@@ -498,7 +498,7 @@ function insertMedeskWidget() {
                         <span class="service-icon">🌟</span>
                         <div class="service-details">
                             <strong>Complete Health Package</strong>
-                            <span class="price">£1,000</span>
+                            <span class="price">£1,500</span>
                         </div>
                         <span class="whatsapp-icon">💬</span>
                     </button>
@@ -533,12 +533,13 @@ function bookViaWhatsApp(packageType) {
     
     switch(packageType) {
         case 'diagnostic':
-            message = `Hi! I'd like to book the Skin Diagnostic Package (£150). 
+            message = `Hi! I'd like to book the Skin Diagnostic Package (£250). 
 
 This includes:
 • Initial Consultation
 • VISIA Scan Age-Analysis
 • QOVES Scan AI Aesthetics Analysis
+• Glycation Age Analysis
 • Observ Skin Imaging
 • 100 skin markers
 • Comprehensive report with personalised recommendations
@@ -547,12 +548,11 @@ Please let me know your available appointments. Thank you!`;
             break;
             
         case 'complete':
-            message = `Hi! I'm interested in booking the Complete Health Package (£1,000).
+            message = `Hi! I'm interested in booking the Complete Health Package (£1,500).
 
 This comprehensive package includes:
 • All Skin Diagnostic services
 • Glycation Age Analysis
-• Ultrasound Imaging Collagen Age
 • Total Body Surface Area Skin Age
 • Blood Panel (120 biomarkers)
 • Fitness Assessment (VO2 MAX, grip strength, spirometry)
@@ -618,7 +618,7 @@ function trackBookingIntent(packageType) {
     if (typeof gtag !== 'undefined') {
         gtag('event', 'booking_intent', {
             'package_type': packageType,
-            'value': packageType === 'complete' ? 1000 : 150
+            'value': packageType === 'complete' ? 1500 : 250
         });
     }
 }
