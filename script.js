@@ -920,25 +920,6 @@ function showTreatmentDetail(treatmentId) {
             howDetails: 'Julaine utilizes advanced cross-linking technology to create a premium hyaluronic acid gel that integrates seamlessly with natural tissue. This advanced formulation provides superior volume restoration, enhanced longevity, and natural-looking results that can last 12-18 months.',
             link: 'treatments/julaine.html'
         },
-        'tixeltox': {
-            name: 'TixelTox',
-            fullName: 'TixelTox Combination Treatment',
-            image: 'Images/tixel.jpg',
-            tagline: 'Revolutionary combination of TIXEL resurfacing with precision toxin treatment.',
-            subtitle: 'Dual Action, Maximum Results',
-            mainDescription: 'TixelTox combines the power of TIXEL fractional resurfacing with strategic toxin placement for comprehensive facial rejuvenation and wrinkle reduction.',
-            whoTitle: 'Recommended candidates for TixelTox',
-            whoCandidates: [
-                'Those seeking comprehensive facial rejuvenation',
-                'Those with both dynamic and static wrinkles',
-                'Those wanting maximum anti-aging results',
-                'Those looking for advanced combination treatments'
-            ],
-            howTitle: 'How TixelTox Works',
-            howDescription: 'Combines TIXEL fractional technology with precision neurotoxin treatment.',
-            howDetails: 'TixelTox integrates TIXEL\'s thermo-mechanical fractional resurfacing to improve skin texture and quality, with strategically placed neurotoxin injections to address dynamic wrinkles. This dual approach provides comprehensive facial rejuvenation with enhanced, longer-lasting results.',
-            link: 'treatments/tixeltox.html'
-        },
         'rejuran': {
             name: 'Rejuran Polynucleotides',
             fullName: 'Rejuran Polynucleotide Treatment',
@@ -958,24 +939,24 @@ function showTreatmentDetail(treatmentId) {
             howDetails: 'Rejuran uses polynucleotides (PN) derived from salmon DNA that are biocompatible with human tissue. These molecules promote cellular regeneration, stimulate collagen and elastin production, and enhance the skin\'s natural healing processes, resulting in improved texture, reduced scarring, and enhanced overall skin quality.',
             link: 'treatments/rejuran.html'
         },
-        'profhilo': {
-            name: 'Profhilo',
-            fullName: 'Profhilo Bio-Remodelling Treatment',
-            image: 'Images/profhilo.png',
-            tagline: 'High-concentration hyaluronic acid for deep hydration and bio-remodelling.',
-            subtitle: 'Bio-Remodelling Technology, Deep Hydration',
-            mainDescription: 'Profhilo is a revolutionary bio-remodelling treatment using high-concentration hyaluronic acid to provide deep skin hydration, stimulate collagen and elastin production, and improve skin firmness and elasticity.',
-            whoTitle: 'Recommended candidates for Profhilo',
+        'sculptra': {
+            name: 'Sculptra',
+            fullName: 'Sculptra Aesthetic Collagen Stimulator',
+            image: 'Images/Sculptra-Ploly-L-Milchsaure.jpg.webp',
+            tagline: 'Poly-L-lactic acid collagen stimulator for gradual, natural-looking volume restoration.',
+            subtitle: 'Gradual Results, Long-Lasting Volume',
+            mainDescription: 'Sculptra is a unique injectable treatment that uses poly-L-lactic acid to stimulate your body\'s natural collagen production, providing gradual, natural-looking volume restoration that can last up to 2 years.',
+            whoTitle: 'Recommended candidates for Sculptra',
             whoCandidates: [
-                'Those experiencing skin laxity and loss of firmness',
-                'Those with dry or dehydrated skin',
-                'Those seeking overall skin quality enhancement',
-                'Those wanting natural-looking skin improvement'
+                'Those with facial volume loss and hollow areas',
+                'Those seeking gradual, natural-looking results',
+                'Those wanting long-lasting facial rejuvenation',
+                'Those with deep facial folds and wrinkles'
             ],
-            howTitle: 'How Profhilo Works',
-            howDescription: 'High-concentration hyaluronic acid provides bio-remodelling and deep hydration.',
-            howDetails: 'Profhilo contains one of the highest concentrations of hyaluronic acid available, which spreads naturally through the skin tissue. This unique formulation stimulates collagen and elastin production while providing intense hydration, resulting in improved skin tone, texture, and overall quality.',
-            link: 'treatments/profhilo.html'
+            howTitle: 'How Sculptra Works',
+            howDescription: 'Poly-L-lactic acid stimulates natural collagen production for gradual volume restoration.',
+            howDetails: 'Sculptra contains poly-L-lactic acid (PLLA), a biocompatible synthetic material that stimulates your body\'s natural collagen production. Over several months, the PLLA microparticles are absorbed while stimulating collagen synthesis, gradually restoring facial volume and improving skin thickness for natural-looking, long-lasting results.',
+            link: 'treatments/sculptra.html'
         },
         'peels': {
             name: 'Chemical Peels',
@@ -999,7 +980,7 @@ function showTreatmentDetail(treatmentId) {
         'exosomes': {
             name: 'Exosomes',
             fullName: 'Exosome Regenerative Therapy',
-            image: 'Images/exosomes.jpeg',
+            image: 'Images/exosomes rose new.webp',
             tagline: 'Advanced regenerative medicine using nano-sized cellular messengers for skin rejuvenation.',
             subtitle: 'Cell Communication Technology, Natural Regeneration',
             mainDescription: 'Exosome therapy utilizes nano-sized vesicles that facilitate cell-to-cell communication, promoting natural regeneration, reducing inflammation, and enhancing collagen synthesis for comprehensive skin rejuvenation.',
