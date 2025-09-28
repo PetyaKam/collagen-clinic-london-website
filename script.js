@@ -858,7 +858,7 @@ function showTreatmentDetail(treatmentId) {
             whatResults: 'Results to Expect: Initial effects visible within 3-5 days, with full results apparent in 10-14 days. Benefits include smoothed forehead lines, reduced crow\'s feet, diminished frown lines, lifted brow position, and prevention of new wrinkle formation. Results typically last 3-4 months, with some patients experiencing longer duration with regular treatments.',
             whoTitle: 'Who is a Good Candidate?',
             whoCandidates: [
-                'Adults aged 18-65 with dynamic wrinkles caused by muscle movement',
+                'Adults with dynamic wrinkles caused by muscle movement',
                 'Those with forehead lines, crow\'s feet, or glabellar (frown) lines',
                 'Individuals seeking preventative anti-aging treatments',
                 'Patients wanting non-surgical wrinkle reduction with minimal downtime',
@@ -872,24 +872,25 @@ function showTreatmentDetail(treatmentId) {
         },
         'julaine': {
             name: 'Julaine',
-            fullName: 'Julaine Premium Hyaluronic Acid Dermal Filler',
+            fullName: 'JULÄINE™ PLLA Collagen Regenerator',
             image: 'Images/julaine.jpg',
-            tagline: 'Next-generation hyaluronic acid technology for superior volume restoration and facial sculpting.',
+            tagline: 'Swedish biomaterial science innovation for active regeneration and natural anti-aging.',
             subtitle: 'What is it?',
-            mainDescription: 'Julaine is a premium, next-generation hyaluronic acid dermal filler utilizing advanced cross-linking technology and optimal molecular weight distribution. Developed with cutting-edge manufacturing processes, Julaine provides superior volume restoration, enhanced longevity, and natural integration with facial tissues. This premium filler is designed for patients seeking the highest quality aesthetic outcomes with extended durability.',
-            whatResults: 'Results to Expect: Immediate volume restoration with optimal results visible within 2 weeks. Benefits include superior facial volume enhancement, natural-looking contouring and sculpting, improved skin hydration and texture, long-lasting results (12-24 months), and enhanced facial harmony. The premium formulation provides more predictable and longer-lasting outcomes compared to standard fillers.',
+            mainDescription: 'JULÄINE™ is a revolutionary PLLA (Poly-L-Lactic Acid) based medical device designed to help preserve your own natural youthfulness through active regeneration. Developed by Nordberg Medical with over 15 years of research in biomaterial science, JULÄINE™ is a superior collagen regenerator produced with high purity biomaterials to activate your skin biology and preserve your own beauty safely, effectively, and with long-term results.',
+            whatResults: 'Results to Expect: Immediate skin glow effect visible after injection, with progressive improvement over several weeks as collagen production increases. Benefits include natural skin quality improvement, prevention and rejuvenation through skin tightening, enhanced skin biology activation, long-lasting collagen stimulation, and subtle natural-looking results. The patented technology provides continuous stimulation of collagen production with sustained outcomes.',
             whoTitle: 'Who is a Good Candidate?',
             whoCandidates: [
-                'Discerning patients seeking premium aesthetic outcomes',
-                'Those requiring significant volume restoration or facial sculpting',
-                'Individuals wanting maximum longevity from their investment',
-                'Patients with previous filler experience seeking superior results',
-                'Those requiring complex facial contouring or reconstruction',
-                'Individuals with high aesthetic expectations and quality standards'
+                'Adult immune-competent individuals seeking natural anti-aging',
+                'Those with shallow to deep nasolabial folds and skin depressions',
+                'Individuals wanting to achieve their best version without overfilling',
+                'Patients seeking active regeneration and skin quality improvement',
+                'Those desiring natural results with skin tightening effects',
+                'Individuals looking for biomaterial-based collagen activation treatments',
+                'Patients wanting Swedish excellence in aesthetic medicine'
             ],
             howTitle: 'Technology and Science',
-            howDescription: 'Advanced BDDE cross-linking technology with optimized molecular weight distribution.',
-            howDetails: 'Julaine employs proprietary cross-linking technology using 1,4-butanediol diglycidyl ether (BDDE) with precisely controlled molecular weight distribution. The advanced manufacturing process creates a highly stable three-dimensional HA network with optimal viscoelastic properties. This results in superior G\' (elastic modulus) and cohesivity, providing enhanced lifting capacity and longevity. The optimized particle size distribution ensures smooth injection and natural tissue integration. Advanced purification techniques minimize residual BDDE and endotoxins, reducing inflammatory response and enhancing biocompatibility.',
+            howDescription: 'Patented Swedish PLLA biomaterial technology for active collagen regeneration.',
+            howDetails: 'JULÄINE™ utilizes patented Poly-L-Lactic Acid technology reflecting over 15 years of research by Nordberg Medical in biomaterial science. The high purity PLLA biomaterial activates natural collagen production through controlled tissue response. Made in Sweden with dedicated research, development, and manufacturing capabilities, JULÄINE™ delivers optimized biomaterial-based medical devices from molecule to finished product. The technology provides continuous stimulation of collagen synthesis, creating natural-looking rejuvenating and skin tightening effects while maintaining the highest safety profile.',
             link: 'treatments/julaine.html'
         },
         'rejuran': {
