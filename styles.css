@@ -1773,6 +1773,261 @@ h1, h2, h3, h4 {
     text-align: left;
 }
 
+/* Bespoke Combinations Section */
+.combinations {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 6rem 0;
+}
+
+.combinations-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.combinations-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skin-layers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.layer-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-top: 4px solid #c9a96e;
+}
+
+.layer-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.layer-depth {
+    color: #c9a96e;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.aging-markers {
+    margin-bottom: 4rem;
+}
+
+.aging-markers h3 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.markers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.marker-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #c9a96e;
+}
+
+.marker-item h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.modalities-section {
+    margin-bottom: 4rem;
+}
+
+.modalities-section h3 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.modality-category {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #c9a96e;
+}
+
+.modality-category h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.modality-description {
+    color: #666;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.modality-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.modality-item {
+    background: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    border: 1px solid #e9ecef;
+}
+
+.injectable-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.injectable-item {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid #c9a96e;
+}
+
+.rfm-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.rfm-type {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid #c9a96e;
+}
+
+.ultrasound-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.ultrasound-type {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid #c9a96e;
+}
+
+.ultrasound-warning {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #856404;
+    font-weight: 500;
+}
+
+.laser-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.laser-item {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid #c9a96e;
+}
+
+.combination-cta {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.combination-cta h3 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.combination-cta p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .combinations {
+        padding: 4rem 0;
+    }
+    
+    .skin-layers-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .markers-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .injectable-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .rfm-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .ultrasound-types {
+        grid-template-columns: 1fr;
+    }
+    
+    .laser-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modality-category {
+        padding: 1.5rem;
+    }
+    
+    .combination-cta {
+        padding: 2rem;
+    }
+}
+
 /* Contact Section */
 .contact {
     padding: 100px 0;
