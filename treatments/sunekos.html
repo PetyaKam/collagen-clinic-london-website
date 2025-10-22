@@ -159,6 +159,41 @@
                 </div>
             </div>
 
+            <!-- Before and After Results Section -->
+            <div class="content-section">
+                <h2 class="section-title">Treatment Results</h2>
+                <p>See the remarkable improvements achieved with Sunekos treatments:</p>
+                
+                <div class="results-gallery">
+                    <div class="result-item">
+                        <div class="before-after-container">
+                            <div class="before-after-image" onclick="openModal('../Images/WhatsApp Image 2025-10-22 at 17.47.31.jpeg', 'Before & After Sunekos - Face and Neck Treatment')">
+                                <img src="../Images/WhatsApp Image 2025-10-22 at 17.47.31.jpeg" alt="Sunekos Before and After - Face and Neck" class="result-image">
+                                <div class="result-label">Before & After Treatment</div>
+                                <div class="zoom-icon">🔍</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-item">
+                        <div class="before-after-container">
+                            <div class="before-after-image" onclick="openModal('../Images/WhatsApp Image 2025-10-22 at 17.48.23.jpeg', 'Before & After Sunekos - Full Face Treatment')">
+                                <img src="../Images/WhatsApp Image 2025-10-22 at 17.48.23.jpeg" alt="Sunekos Before and After - Full Face" class="result-image">
+                                <div class="result-label">Before & After Full Face</div>
+                                <div class="zoom-icon">🔍</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal for enlarged images -->
+                <div id="imageModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="modalImage">
+                    <div id="modalCaption"></div>
+                </div>
+            </div>
+
             <div class="content-section">
                 <h2 class="section-title">Treatment Areas</h2>
                 <p>One of the key advantages of Sunekos is its versatility across multiple body areas:</p>
@@ -391,5 +426,43 @@
     </footer>
 
     <script src="../script.js"></script>
+    <script>
+        // Modal functionality for before/after images
+        function openModal(imageSrc, caption) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+            
+            modal.style.display = 'block';
+            modalImg.src = imageSrc;
+            modalCaption.innerHTML = caption;
+            
+            // Prevent body scrolling when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            
+            // Restore body scrolling
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
