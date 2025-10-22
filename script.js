@@ -669,6 +669,7 @@ function showTreatmentDetail(treatmentId) {
         'julaine': 'treatments/julaine.html',
         'rejuran': 'treatments/rejuran.html',
         'sculptra': 'treatments/sculptra.html',
+        'sunekos': 'treatments/sunekos.html',
         'peels': 'treatments/chemical-peels.html',
         'exosomes': 'treatments/exosomes.html',
         'visia-scan': 'treatments/visia-scan.html',
