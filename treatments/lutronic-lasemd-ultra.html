@@ -188,66 +188,80 @@
                 <div class="results-gallery">
                     <div class="result-item">
                         <div class="before-after-container">
-                            <div class="before-after-image">
+                            <div class="before-after-image" onclick="openModal('../Images/WhatsApp Image 2025-10-22 at 17.15.38.jpeg', 'Before & After 3 Treatments - Pigmentation Treatment')">
                                 <img src="../Images/WhatsApp Image 2025-10-22 at 17.15.38.jpeg" alt="LaseMD Ultra Before and After - Pigmentation Treatment" class="result-image">
                                 <div class="result-label">Before & After 3 Treatments</div>
+                                <div class="zoom-icon">🔍</div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="result-item">
                         <div class="before-after-container">
-                            <div class="before-after-image">
+                            <div class="before-after-image" onclick="openModal('../Images/WhatsApp Image 2025-10-22 at 17.16.50.jpeg', 'Before & After 3 Treatments - Skin Rejuvenation')">
                                 <img src="../Images/WhatsApp Image 2025-10-22 at 17.16.50.jpeg" alt="LaseMD Ultra Before and After - Skin Rejuvenation" class="result-image">
                                 <div class="result-label">Before & After 3 Treatments</div>
+                                <div class="zoom-icon">🔍</div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="result-item">
                         <div class="before-after-container">
-                            <div class="before-after-image">
+                            <div class="before-after-image" onclick="openModal('../Images/WhatsApp Image 2025-10-22 at 17.18.17.jpeg', 'Before & After 3 Treatments - Sun Damage Treatment')">
                                 <img src="../Images/WhatsApp Image 2025-10-22 at 17.18.17.jpeg" alt="LaseMD Ultra Before and After - Sun Damage Treatment" class="result-image">
                                 <div class="result-label">Before & After 3 Treatments</div>
+                                <div class="zoom-icon">🔍</div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="result-item">
                         <div class="before-after-container">
-                            <div class="before-after-image">
+                            <div class="before-after-image" onclick="openModal('../Images/WhatsApp Image 2025-10-22 at 17.18.57.jpeg', 'Before & After 2 Treatments - Hyperpigmentation')">
                                 <img src="../Images/WhatsApp Image 2025-10-22 at 17.18.57.jpeg" alt="LaseMD Ultra Before and After - Hyperpigmentation" class="result-image">
                                 <div class="result-label">Before & After 2 Treatments</div>
+                                <div class="zoom-icon">🔍</div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="result-item">
                         <div class="before-after-container">
-                            <div class="before-after-image">
+                            <div class="before-after-image" onclick="openModal('../Images/WhatsApp Image 2025-10-22 at 17.19.52.jpeg', 'Before & After 1 Treatment - Age Spots')">
                                 <img src="../Images/WhatsApp Image 2025-10-22 at 17.19.52.jpeg" alt="LaseMD Ultra Before and After - Age Spots" class="result-image">
                                 <div class="result-label">Before & After 1 Treatment</div>
+                                <div class="zoom-icon">🔍</div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="result-item">
                         <div class="before-after-container">
-                            <div class="before-after-image">
+                            <div class="before-after-image" onclick="openModal('../Images/WhatsApp Image 2025-10-22 at 17.20.41.jpeg', 'Before & After 2 Treatments - Fine Lines')">
                                 <img src="../Images/WhatsApp Image 2025-10-22 at 17.20.41.jpeg" alt="LaseMD Ultra Before and After - Fine Lines" class="result-image">
                                 <div class="result-label">Before & After 2 Treatments</div>
+                                <div class="zoom-icon">🔍</div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="result-item">
                         <div class="before-after-container">
-                            <div class="before-after-image">
+                            <div class="before-after-image" onclick="openModal('../Images/WhatsApp Image 2025-10-22 at 17.21.59.jpeg', 'Before & After 1 Treatment - Male Patient')">
                                 <img src="../Images/WhatsApp Image 2025-10-22 at 17.21.59.jpeg" alt="LaseMD Ultra Before and After - Male Patient" class="result-image">
                                 <div class="result-label">Before & After 1 Treatment</div>
+                                <div class="zoom-icon">🔍</div>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Modal for enlarged images -->
+                <div id="imageModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="modalImage">
+                    <div id="modalCaption"></div>
                 </div>
             </div>
 
@@ -390,5 +404,43 @@
     </footer>
 
     <script src="../script.js"></script>
+    <script>
+        // Modal functionality for before/after images
+        function openModal(imageSrc, caption) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+            
+            modal.style.display = 'block';
+            modalImg.src = imageSrc;
+            modalCaption.innerHTML = caption;
+            
+            // Prevent body scrolling when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            
+            // Restore body scrolling
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
