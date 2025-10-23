@@ -552,7 +552,7 @@ function bookViaWhatsApp(packageType) {
     
     switch(packageType) {
         case 'diagnostic':
-            message = `Hi! I'd like to book the Skin Diagnostic Package (£250). 
+            message = `Hi! I'd like to book the Skin Diagnostic Package (was £560, now £250). 
 
 This includes:
 • Initial Consultation
