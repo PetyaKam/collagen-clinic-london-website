@@ -543,7 +543,7 @@ function insertMedeskWidget() {
                     <button onclick="bookViaWhatsApp('tightening')" class="whatsapp-book-btn tightening">
                         <span class="service-icon">🔬</span>
                         <div class="service-details">
-                            <strong>Tightening & Lifting Protocol</strong>
+                            <strong>Tightening Protocol</strong>
                             <span class="price">£1,600</span>
                         </div>
                         <span class="whatsapp-icon">💬</span>
