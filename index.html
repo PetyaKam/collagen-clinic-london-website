@@ -107,36 +107,49 @@
         </div>
     </section>
 
-    <!-- Bespoke Packages Section -->
-    <section id="bespoke-packages" class="bespoke-packages">
+    <!-- Service Packages Section -->
+    <section id="packages" class="packages">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Dr Zolman's Evidence-Based Protocols</h2>
-                <p class="section-subtitle">Revolutionary bespoke treatment protocols designed by Dr Oliver Zolman for comprehensive skin rejuvenation</p>
+                <h2 class="section-title">Service Packages</h2>
+                <p class="section-subtitle">Comprehensive programmes tailored to your skin optimisation goals</p>
             </div>
             
-            <div class="bespoke-packages-grid">
-                <div class="bespoke-package-card">
-                    <div class="bespoke-package-header">
-                        <h3 class="bespoke-package-title">Redness Protocol</h3>
-                        <div class="bespoke-package-price">£1,500</div>
+            <div class="packages-carousel-container">
+                <button class="carousel-btn carousel-btn-left" onclick="scrollPackages('left')">‹</button>
+                <div class="packages-grid" id="packagesGrid">
+                <!-- Dr Zolman's Evidence-Based Protocols -->
+                <div class="package-card">
+                    <div class="package-badge">🔬 Evidence-Based</div>
+                    <div class="package-header">
+                        <h3 class="package-title">Redness Protocol</h3>
+                        <div class="package-price">
+                            <span class="current-price">£1,500</span>
+                        </div>
+                        <p class="package-subtitle">Dr Zolman's evidence-based protocol for treating facial redness, rosacea, and vascular concerns</p>
                     </div>
-                    <div class="bespoke-package-features">
+                    <div class="package-features">
+                        <h4>Protocol Includes:</h4>
                         <ul>
                             <li><strong>Sunekos HA biostimulator</strong> with the world's smallest needles for minimal discomfort</li>
                             <li><strong>Excel V Genesis Laser</strong></li>
                             <li><strong>Excel V CoolView Laser</strong></li>
                         </ul>
                     </div>
-                    <a href="treatments/redness-protocol.html" class="bespoke-package-btn">Learn More</a>
+                    <a href="treatments/redness-protocol.html" class="package-btn btn-primary">Learn More</a>
                 </div>
 
-                <div class="bespoke-package-card">
-                    <div class="bespoke-package-header">
-                        <h3 class="bespoke-package-title">Pigmentation Protocol</h3>
-                        <div class="bespoke-package-price">£1,500</div>
+                <div class="package-card">
+                    <div class="package-badge">🔬 Evidence-Based</div>
+                    <div class="package-header">
+                        <h3 class="package-title">Pigmentation Protocol</h3>
+                        <div class="package-price">
+                            <span class="current-price">£1,500</span>
+                        </div>
+                        <p class="package-subtitle">Dr Zolman's evidence-based protocol for treating hyperpigmentation, sun damage, and uneven skin tone</p>
                     </div>
-                    <div class="bespoke-package-features">
+                    <div class="package-features">
+                        <h4>Protocol Includes:</h4>
                         <ul>
                             <li><strong>Sunekos HA biostimulator</strong> with the world's smallest needles for minimal discomfort</li>
                             <li><strong>LaseMD Laser with drug delivery</strong></li>
@@ -144,15 +157,20 @@
                             <li><strong>Topical Botox Long Acting</strong> (enhances pigment removal)</li>
                         </ul>
                     </div>
-                    <a href="treatments/pigmentation-protocol.html" class="bespoke-package-btn">Learn More</a>
+                    <a href="treatments/pigmentation-protocol.html" class="package-btn btn-primary">Learn More</a>
                 </div>
 
-                <div class="bespoke-package-card">
-                    <div class="bespoke-package-header">
-                        <h3 class="bespoke-package-title">Wrinkled Skin Protocol</h3>
-                        <div class="bespoke-package-price">£1,500</div>
+                <div class="package-card">
+                    <div class="package-badge">🔬 Evidence-Based</div>
+                    <div class="package-header">
+                        <h3 class="package-title">Wrinkled Skin Protocol</h3>
+                        <div class="package-price">
+                            <span class="current-price">£1,500</span>
+                        </div>
+                        <p class="package-subtitle">Dr Zolman's evidence-based protocol for treating fine lines, wrinkles, and skin texture concerns</p>
                     </div>
-                    <div class="bespoke-package-features">
+                    <div class="package-features">
+                        <h4>Protocol Includes:</h4>
                         <ul>
                             <li><strong>Sunekos HA biostimulator</strong> with the world's smallest needles for minimal discomfort</li>
                             <li><strong>Tixel ablative laser with drug delivery</strong></li>
@@ -160,15 +178,40 @@
                             <li><strong>Botox Long-Acting</strong></li>
                         </ul>
                     </div>
-                    <a href="treatments/wrinkled-skin-protocol.html" class="bespoke-package-btn">Learn More</a>
+                    <a href="treatments/wrinkled-skin-protocol.html" class="package-btn btn-primary">Learn More</a>
                 </div>
 
-                <div class="bespoke-package-card">
-                    <div class="bespoke-package-header">
-                        <h3 class="bespoke-package-title">Eye Rejuvenation Protocol</h3>
-                        <div class="bespoke-package-price">£1,500</div>
+                <div class="package-card">
+                    <div class="package-badge">🔬 Evidence-Based</div>
+                    <div class="package-header">
+                        <h3 class="package-title">Tightening & Lifting Protocol</h3>
+                        <div class="package-price">
+                            <span class="current-price">£1,500</span>
+                        </div>
+                        <p class="package-subtitle">Dr Zolman's evidence-based protocol for treating sagging skin, volume loss, and facial contouring</p>
                     </div>
-                    <div class="bespoke-package-features">
+                    <div class="package-features">
+                        <h4>Protocol Includes:</h4>
+                        <ul>
+                            <li><strong>Sunekos HA biostimulator</strong> with the world's smallest needles for minimal discomfort</li>
+                            <li><strong>Exilis radiofrequency</strong></li>
+                            <li><strong>Ultraformer in non-fat loss mode</strong> (1 session)</li>
+                        </ul>
+                    </div>
+                    <a href="treatments/tightening-lifting-protocol.html" class="package-btn btn-primary">Learn More</a>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-badge">🔬 Evidence-Based</div>
+                    <div class="package-header">
+                        <h3 class="package-title">Eye Rejuvenation Protocol</h3>
+                        <div class="package-price">
+                            <span class="current-price">£1,500</span>
+                        </div>
+                        <p class="package-subtitle">Dr Zolman's evidence-based protocol for treating eye area concerns including fine lines, dark circles, and sagging</p>
+                    </div>
+                    <div class="package-features">
+                        <h4>Protocol Includes:</h4>
                         <ul>
                             <li><strong>Sunekos HA biostimulator</strong> with the world's smallest needles for minimal discomfort</li>
                             <li><strong>LaseMD or Excel V Coolview Laser</strong> (skin-dependant)</li>
@@ -176,65 +219,31 @@
                             <li><strong>Topical Botox Long Acting</strong> (enhances collagen formation and pigment removal)</li>
                         </ul>
                     </div>
-                    <a href="treatments/eye-rejuvenation-protocol.html" class="bespoke-package-btn">Learn More</a>
+                    <a href="treatments/eye-rejuvenation-protocol.html" class="package-btn btn-primary">Learn More</a>
                 </div>
 
-                <div class="bespoke-package-card">
-                    <div class="bespoke-package-header">
-                        <h3 class="bespoke-package-title">Loss of Elasticity Protocol</h3>
-                        <div class="bespoke-package-price">£1,500</div>
+                <div class="package-card">
+                    <div class="package-badge">🔬 Evidence-Based</div>
+                    <div class="package-header">
+                        <h3 class="package-title">Hair Protocol</h3>
+                        <div class="package-price">
+                            <span class="current-price">£1,500</span>
+                        </div>
+                        <p class="package-subtitle">Dr Zolman's evidence-based protocol for treating hair loss, thinning, and scalp health using KeraLase technology</p>
                     </div>
-                    <div class="bespoke-package-features">
-                        <ul>
-                            <li><strong>Sunekos HA biostimulator</strong> with the world's smallest needles for minimal discomfort</li>
-                            <li><strong>Exilis radiofrequency</strong></li>
-                            <li><strong>Ultraformer in non-fat loss mode</strong> (1 session)</li>
-                        </ul>
-                    </div>
-                    <a href="treatments/loss-of-elasticity-protocol.html" class="bespoke-package-btn">Learn More</a>
-                </div>
-
-                <div class="bespoke-package-card">
-                    <div class="bespoke-package-header">
-                        <h3 class="bespoke-package-title">Volume Loss Protocol</h3>
-                        <div class="bespoke-package-price">Case by Case</div>
-                    </div>
-                    <div class="bespoke-package-features">
-                        <ul>
-                            <li><strong>Julaine poly-lactic acid</strong> (non-inflammatory sculptra) 2 sessions</li>
-                            <li><strong>'World's best' hyaluronic acid filler</strong> (low migration, low dislocation, low BDDE toxicity) + associated Botox for stabilisation</li>
-                        </ul>
-                    </div>
-                    <a href="treatments/volume-loss-protocol.html" class="bespoke-package-btn">Learn More</a>
-                </div>
-
-                <div class="bespoke-package-card">
-                    <div class="bespoke-package-header">
-                        <h3 class="bespoke-package-title">Skin Diagnostic & Consultation Package</h3>
-                        <div class="bespoke-package-price">£250</div>
-                    </div>
-                    <div class="bespoke-package-features">
-                        <ul>
-                            <li><strong>Multi-technology skin age evaluation</strong></li>
-                            <li><strong>Professional consultation</strong></li>
-                            <li><strong>Personalised skin protocol</strong></li>
-                        </ul>
-                    </div>
-                    <a href="javascript:void(0)" onclick="bookViaWhatsApp('diagnostic')" class="bespoke-package-btn">Book Appointment</a>
-                </div>
-
-                <div class="bespoke-package-card">
-                    <div class="bespoke-package-header">
-                        <h3 class="bespoke-package-title">Hair Protocol</h3>
-                        <div class="bespoke-package-price">£1,500</div>
-                    </div>
-                    <div class="bespoke-package-features">
+                    <div class="package-features">
+                        <h4>Protocol Includes:</h4>
                         <ul>
                             <li><strong>KeraLase Scalp Laser + drug delivery Hair Rejuvenation</strong></li>
                             <li><strong>Dr Zolman's recommended Topicals, Supplements and Medications</strong></li>
                         </ul>
                     </div>
-                    <a href="treatments/hair-protocol.html" class="bespoke-package-btn">Learn More</a>
+                    <a href="treatments/hair-protocol.html" class="package-btn btn-primary">Learn More</a>
+                </div>
+                </div>
+                <button class="carousel-btn carousel-btn-right" onclick="scrollPackages('right')">›</button>
+                <div class="carousel-indicator">
+                    <span class="indicator-text">← Swipe to see more protocols →</span>
                 </div>
             </div>
         </div>
