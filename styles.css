@@ -402,38 +402,12 @@ h1, h2, h3, h4 {
 }
 
 .packages-grid {
-    display: flex;
-    overflow-x: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     padding: 2rem 0;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    position: relative;
 }
 
-.packages-grid::-webkit-scrollbar {
-    height: 8px;
-}
-
-.packages-grid::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 4px;
-}
-
-.packages-grid::-webkit-scrollbar-thumb {
-    background: #d4af37;
-    border-radius: 4px;
-}
-
-.packages-grid::-webkit-scrollbar-thumb:hover {
-    background: #b8941f;
-}
-
-.packages-grid::-webkit-scrollbar {
-    display: none;
-}
 
 .carousel-btn {
     position: absolute;
@@ -508,8 +482,6 @@ h1, h2, h3, h4 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid #f0f0f0;
     position: relative;
-    flex: 0 0 350px;
-    min-width: 350px;
 }
 
 .package-card:hover {
@@ -635,8 +607,6 @@ h1, h2, h3, h4 {
     }
     
     .package-card {
-        flex: 0 0 300px;
-        min-width: 300px;
         padding: 2rem;
     }
     
