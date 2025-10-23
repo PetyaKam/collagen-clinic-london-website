@@ -1282,6 +1282,12 @@ h1, h2, h3, h4 {
 
 .founders-grid {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.founding-team-grid {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     max-width: 1000px;
