@@ -3633,3 +3633,178 @@ h1, h2, h3, h4 {
         font-size: 1.5rem;
     }
 }
+
+/* Sunekos Pricing Section */
+.sunekos-pricing {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.sunekos-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sunekos-pricing-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.sunekos-pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #d4af37, #b8941f);
+}
+
+.sunekos-pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: #d4af37;
+}
+
+.sunekos-pricing-card-featured {
+    border: 3px solid #d4af37;
+    transform: scale(1.05);
+}
+
+.sunekos-pricing-card-featured:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.sunekos-pricing-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: linear-gradient(135deg, #d4af37, #b8941f);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 10;
+}
+
+.sunekos-pricing-header {
+    margin-bottom: 1.5rem;
+}
+
+.sunekos-pricing-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.sunekos-pricing-price {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #d4af37;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+}
+
+.sunekos-pricing-savings {
+    font-size: 1rem;
+    color: #28a745;
+    font-weight: 600;
+    background: #e8f5e8;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.sunekos-pricing-features {
+    margin-bottom: 2rem;
+}
+
+.sunekos-pricing-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sunekos-pricing-features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.sunekos-pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.sunekos-pricing-features strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.sunekos-pricing-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #d4af37, #b8941f);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.sunekos-pricing-btn:hover {
+    background: linear-gradient(135deg, #b8941f, #9a7d1a);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Mobile responsive for Sunekos pricing */
+@media (max-width: 768px) {
+    .sunekos-pricing {
+        padding: 3rem 0;
+    }
+    
+    .sunekos-pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .sunekos-pricing-card {
+        padding: 1.5rem;
+    }
+    
+    .sunekos-pricing-card-featured {
+        transform: none;
+    }
+    
+    .sunekos-pricing-card-featured:hover {
+        transform: translateY(-5px);
+    }
+    
+    .sunekos-pricing-title {
+        font-size: 1.3rem;
+    }
+    
+    .sunekos-pricing-price {
+        font-size: 1.8rem;
+    }
+}
