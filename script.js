@@ -507,26 +507,71 @@ function insertMedeskWidget() {
                     <button onclick="bookViaWhatsApp('diagnostic')" class="whatsapp-book-btn diagnostic">
                         <span class="service-icon">💎</span>
                         <div class="service-details">
-                            <strong>Skin Diagnostic Package</strong>
+                            <strong>Skin Diagnostic & Consultation Package</strong>
                             <span class="price">£250</span>
                         </div>
                         <span class="whatsapp-icon">💬</span>
                     </button>
                     
-                    <button onclick="bookViaWhatsApp('complete')" class="whatsapp-book-btn complete">
-                        <span class="service-icon">🌟</span>
+                    <button onclick="bookViaWhatsApp('redness')" class="whatsapp-book-btn redness">
+                        <span class="service-icon">🔬</span>
                         <div class="service-details">
-                            <strong>Complete Health Package</strong>
-                            <span class="price">£1,500</span>
+                            <strong>Redness Protocol</strong>
+                            <span class="price">£1,200</span>
                         </div>
                         <span class="whatsapp-icon">💬</span>
                     </button>
                     
-                    <button onclick="bookViaWhatsApp('consultation')" class="whatsapp-book-btn consultation">
-                        <span class="service-icon">📋</span>
+                    <button onclick="bookViaWhatsApp('pigmentation')" class="whatsapp-book-btn pigmentation">
+                        <span class="service-icon">🔬</span>
                         <div class="service-details">
-                            <strong>Initial Consultation</strong>
-                            <span class="price">Enquire</span>
+                            <strong>Pigmentation Protocol</strong>
+                            <span class="price">£1,300</span>
+                        </div>
+                        <span class="whatsapp-icon">💬</span>
+                    </button>
+                    
+                    <button onclick="bookViaWhatsApp('wrinkled')" class="whatsapp-book-btn wrinkled">
+                        <span class="service-icon">🔬</span>
+                        <div class="service-details">
+                            <strong>Wrinkled Skin Protocol</strong>
+                            <span class="price">£1,800</span>
+                        </div>
+                        <span class="whatsapp-icon">💬</span>
+                    </button>
+                    
+                    <button onclick="bookViaWhatsApp('tightening')" class="whatsapp-book-btn tightening">
+                        <span class="service-icon">🔬</span>
+                        <div class="service-details">
+                            <strong>Tightening & Lifting Protocol</strong>
+                            <span class="price">£1,600</span>
+                        </div>
+                        <span class="whatsapp-icon">💬</span>
+                    </button>
+                    
+                    <button onclick="bookViaWhatsApp('eye')" class="whatsapp-book-btn eye">
+                        <span class="service-icon">🔬</span>
+                        <div class="service-details">
+                            <strong>Eye Rejuvenation Protocol</strong>
+                            <span class="price">£1,200</span>
+                        </div>
+                        <span class="whatsapp-icon">💬</span>
+                    </button>
+                    
+                    <button onclick="bookViaWhatsApp('hair')" class="whatsapp-book-btn hair">
+                        <span class="service-icon">🔬</span>
+                        <div class="service-details">
+                            <strong>Hair Protocol</strong>
+                            <span class="price">£500</span>
+                        </div>
+                        <span class="whatsapp-icon">💬</span>
+                    </button>
+                    
+                    <button onclick="bookViaWhatsApp('beard')" class="whatsapp-book-btn beard">
+                        <span class="service-icon">🔬</span>
+                        <div class="service-details">
+                            <strong>Beard Protocol</strong>
+                            <span class="price">£450</span>
                         </div>
                         <span class="whatsapp-icon">💬</span>
                     </button>
