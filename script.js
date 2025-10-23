@@ -53,6 +53,25 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Packages carousel scroll function
+function scrollPackages(direction) {
+    const packagesGrid = document.getElementById('packagesGrid');
+    if (packagesGrid) {
+        const scrollAmount = 400; // Adjust this value to control scroll distance
+        if (direction === 'left') {
+            packagesGrid.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        } else if (direction === 'right') {
+            packagesGrid.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    }
+}
+
 // Contact form handling
 const contactForm = document.querySelector('.contact-form');
 const formInputs = document.querySelectorAll('.form-group input, .form-group select, .form-group textarea');

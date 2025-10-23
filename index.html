@@ -603,7 +603,9 @@
                 <p class="section-subtitle">Comprehensive programmes tailored to your skin optimisation goals</p>
             </div>
             
-            <div class="packages-grid">
+            <div class="packages-carousel-container">
+                <button class="carousel-btn carousel-btn-left" onclick="scrollPackages('left')">‹</button>
+                <div class="packages-grid" id="packagesGrid">
                 <!-- Skin Diagnostic & Consultation Package -->
                 <div class="package-card">
                     <div class="package-badge">⭐ Most Popular</div>
@@ -760,6 +762,8 @@
                     </div>
                     <a href="treatments/hair-protocol.html" class="package-btn btn-primary">Learn More</a>
                 </div>
+                </div>
+                <button class="carousel-btn carousel-btn-right" onclick="scrollPackages('right')">›</button>
             </div>
         </div>
     </section>

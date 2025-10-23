@@ -394,12 +394,81 @@ h1, h2, h3, h4 {
     background: white;
 }
 
-.packages-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+.packages-carousel-container {
+    position: relative;
     max-width: 1400px;
     margin: 0 auto;
+}
+
+.packages-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 1rem 0;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.packages-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.packages-grid::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.packages-grid::-webkit-scrollbar-thumb {
+    background: #d4af37;
+    border-radius: 4px;
+}
+
+.packages-grid::-webkit-scrollbar-thumb:hover {
+    background: #b8941f;
+}
+
+.packages-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #d4af37;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.carousel-btn:hover {
+    background: #b8941f;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.carousel-btn-left {
+    left: -25px;
+}
+
+.carousel-btn-right {
+    right: -25px;
+}
+
+@media (max-width: 768px) {
+    .carousel-btn {
+        display: none;
+    }
 }
 
 .package-card {
@@ -410,6 +479,8 @@ h1, h2, h3, h4 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid #f0f0f0;
     position: relative;
+    flex: 0 0 350px;
+    min-width: 350px;
 }
 
 .package-card:hover {
@@ -530,8 +601,14 @@ h1, h2, h3, h4 {
 
 @media (max-width: 768px) {
     .packages-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
+        padding: 0.5rem 0;
+    }
+    
+    .package-card {
+        flex: 0 0 300px;
+        min-width: 300px;
+        padding: 2rem;
     }
     
     .package-card.premium {
