@@ -408,6 +408,12 @@ h1, h2, h3, h4 {
     padding: 2rem 0;
 }
 
+.packages-grid > .package-card:last-child {
+    grid-column: 2 / 4;
+    justify-self: center;
+    max-width: 500px;
+}
+
 
 .carousel-btn {
     position: absolute;
@@ -605,6 +611,11 @@ h1, h2, h3, h4 {
     .packages-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+    
+    .packages-grid > .package-card:last-child {
+        grid-column: 2 / 3;
+        justify-self: center;
+    }
 }
 
 @media (max-width: 900px) {
@@ -618,6 +629,12 @@ h1, h2, h3, h4 {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         padding: 0.5rem 0;
+    }
+    
+    .packages-grid > .package-card:last-child {
+        grid-column: 1;
+        justify-self: stretch;
+        max-width: 100%;
     }
     
     .package-card {
