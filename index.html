@@ -18,20 +18,78 @@
                 <li class="nav-item">
                     <a href="#home" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">Our Science</a>
+                <li class="nav-item dropdown">
+                    <a href="#about" class="nav-link">About Us <span class="dropdown-arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#about">Our Science</a></li>
+                        <li><a href="#about-us">Our Team</a></li>
+                        <li><a href="#clinic">Our Clinic</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Conditions <span class="dropdown-arrow">▾</span></a>
+                    <ul class="dropdown-menu mega-menu">
+                        <div class="mega-menu-column">
+                            <h4>Skin</h4>
+                            <li><a href="#packages">Pigmentation</a></li>
+                            <li><a href="#packages">Redness & Rosacea</a></li>
+                            <li><a href="#packages">Lines & Wrinkles</a></li>
+                            <li><a href="#packages">Loose Skin</a></li>
+                            <li><a href="#packages">Uneven Skin Tone</a></li>
+                            <li><a href="#packages">Blemished Skin</a></li>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h4>Face</h4>
+                            <li><a href="#packages">Volume Loss</a></li>
+                            <li><a href="#packages">Eye Concerns</a></li>
+                            <li><a href="#packages">Facial Contouring</a></li>
+                            <li><a href="#packages">Skin Tightening</a></li>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h4>Body & Hair</h4>
+                            <li><a href="#packages">Hair Loss</a></li>
+                            <li><a href="#packages">Beard Growth</a></li>
+                            <li><a href="#packages">Body Skin</a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#services" class="nav-link">Treatments <span class="dropdown-arrow">▾</span></a>
+                    <ul class="dropdown-menu mega-menu">
+                        <div class="mega-menu-column">
+                            <h4>Diagnostics</h4>
+                            <li><a href="#services">VISIA Scan</a></li>
+                            <li><a href="#services">QOVES AI</a></li>
+                            <li><a href="#services">Observ520</a></li>
+                            <li><a href="#services">Glycation Analysis</a></li>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h4>Lasers & Devices</h4>
+                            <li><a href="#services">Tixel Rejuvenation</a></li>
+                            <li><a href="#services">LaseMD Ultra</a></li>
+                            <li><a href="#services">Genesis Laser</a></li>
+                            <li><a href="#services">Ultraformer HIFU</a></li>
+                            <li><a href="#services">CoolView Vascular</a></li>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h4>Injectables</h4>
+                            <li><a href="#services">Sunekos</a></li>
+                            <li><a href="#services">Dermal Fillers</a></li>
+                            <li><a href="#services">Botox</a></li>
+                            <li><a href="#services">Sculptra</a></li>
+                            <li><a href="#services">Julaine</a></li>
+                            <li><a href="#services">Exosomes</a></li>
+                        </div>
+                    </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="#services" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#packages" class="nav-link">Bespoke Packages</a>
+                    <a href="#packages" class="nav-link">Packages</a>
                 </li>
                 <li class="nav-item">
                     <a href="#prices" class="nav-link">Prices</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about-us" class="nav-link">About Us</a>
+                    <a href="#contact" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a href="javascript:void(0)" onclick="bookViaWhatsApp('consultation')" class="nav-link btn-appointment">Book Appointment</a>
@@ -107,6 +165,36 @@
         </div>
     </section>
 
+    <!-- Clinic Interiors Showcase -->
+    <section id="clinic" class="clinic-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Clinic</h2>
+                <p class="section-subtitle">A calm, modern space designed for comfort, privacy and medical excellence</p>
+            </div>
+
+            <div class="clinic-carousel">
+                <button class="carousel-btn carousel-btn-left" aria-label="Previous" onclick="scrollClinic('left')">‹</button>
+                <div class="carousel-viewport" id="clinicViewport">
+                    <div class="carousel-track" id="clinicTrack">
+                        <div class="carousel-slide">
+                            <img src="Images/clinic-interior.jpg" alt="Treatment room interior" />
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="Images/clinic-exterior.jpg" alt="Clinic exterior" />
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="7c7e2f84ca3ce59e7f9d11a1fb2379d5-reception.jpg" alt="Reception area" />
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-btn-right" aria-label="Next" onclick="scrollClinic('right')">›</button>
+            </div>
+
+            <div class="carousel-dots" id="clinicDots" aria-label="Slide indicators"></div>
+        </div>
+    </section>
+
     <!-- Service Packages Section -->
     <section id="packages" class="packages">
         <div class="container">
@@ -158,7 +246,7 @@
                 <div class="package-card">
                     <div class="package-badge">🔬 Evidence-Based</div>
                     <div class="package-header">
-                        <h3 class="package-title">Wrinkles Protocol</h3>
+                        <h3 class="package-title">Skin Rejuvenation Protocol</h3>
                         <div class="package-price">
                             <span class="current-price">£1,800</span>
                         </div>
@@ -237,7 +325,7 @@
                     <div class="package-header">
                         <h3 class="package-title">Beard Protocol</h3>
                         <div class="package-price">
-                            <span class="current-price">£450</span>
+                            <span class="current-price">£400</span>
                         </div>
                         <p class="package-subtitle">treating beard growth, thickness, and facial hair health using KeraLase technology</p>
                     </div>
@@ -739,6 +827,54 @@
         </div>
     </section>
 
+    <!-- Press & News Section -->
+    <section class="press-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Press & Media</h2>
+                <p class="section-subtitle">Dr. Zolman's work has been featured in leading media outlets worldwide</p>
+            </div>
+            <div class="press-grid">
+                <div class="press-item">
+                    <div class="press-logo">
+                        <h3>BBC</h3>
+                    </div>
+                    <p class="press-description">Featured expert on longevity science and skin rejuvenation</p>
+                </div>
+                <div class="press-item">
+                    <div class="press-logo">
+                        <h3>Bloomberg</h3>
+                    </div>
+                    <p class="press-description">Insights on evidence-based aesthetic treatments</p>
+                </div>
+                <div class="press-item">
+                    <div class="press-logo">
+                        <h3>The Times</h3>
+                    </div>
+                    <p class="press-description">Revolutionary approach to skin age reversal</p>
+                </div>
+                <div class="press-item">
+                    <div class="press-logo">
+                        <h3>Guardian</h3>
+                    </div>
+                    <p class="press-description">Leading authority on regenerative medicine</p>
+                </div>
+                <div class="press-item">
+                    <div class="press-logo">
+                        <h3>GQ</h3>
+                    </div>
+                    <p class="press-description">Modern approach to men's skincare</p>
+                </div>
+                <div class="press-item">
+                    <div class="press-logo">
+                        <h3>Netflix</h3>
+                    </div>
+                    <p class="press-description">"Don't Die" Documentary 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Social Proof Section -->
     <section class="social-proof">
         <div class="container">
@@ -834,14 +970,14 @@
                             <span class="price-name">Areas include: Lips, Temple, Neckline, Chin, Jaw, Tear Trough, Cheek, Nasal Labial Folds, Marionette</span>
                             <span class="price-amount"></span>
                         </div>
-                        <div class="price-item">
-                            <span class="price-name">Sculptra (3 vials)</span>
-                            <span class="price-amount">£1,500</span>
-                        </div>
-                        <div class="price-item">
-                            <span class="price-name">Julaine (3 vials)</span>
-                            <span class="price-amount">£2,000</span>
-                        </div>
+                    <div class="price-item">
+                        <span class="price-name">Sculptra (1 vial)</span>
+                        <span class="price-amount">£500</span>
+                    </div>
+                    <div class="price-item">
+                        <span class="price-name">Julaine (1 vial)</span>
+                        <span class="price-amount">£650</span>
+                    </div>
                         <div class="price-item">
                             <span class="price-name">PRX-T33 No-peel Peel</span>
                             <span class="price-amount">£350</span>
@@ -873,6 +1009,10 @@
                             <span class="price-name">KeraLase Hair</span>
                             <span class="price-amount">£500</span>
                         </div>
+                    <div class="price-item">
+                        <span class="price-name">KeraLase Beard</span>
+                        <span class="price-amount">£400</span>
+                    </div>
                         <div class="price-item">
                             <span class="price-name">Lutronic LaseMD Ultra (Pigment, Texture) Face</span>
                             <span class="price-amount">£500</span>
@@ -1171,7 +1311,7 @@
                                 </div>
                                 <div class="service-option">
                                     <span class="service-icon">🔬</span>
-                                    <span>Wrinkles Protocol - £1,800</span>
+                                    <span>Skin Rejuvenation Protocol - £1,800</span>
                                 </div>
                                 <div class="service-option">
                                     <span class="service-icon">🔬</span>
@@ -1187,7 +1327,7 @@
                                 </div>
                                 <div class="service-option">
                                     <span class="service-icon">🔬</span>
-                                    <span>Beard Protocol - £450</span>
+                                    <span>Beard Protocol - £400</span>
                                 </div>
                                 <div class="service-option">
                                     <span class="service-icon">🔬</span>
@@ -1223,39 +1363,75 @@
         </div>
     </section>
 
+    <!-- Instagram Section -->
+    <section class="instagram-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Follow Our Journey</h2>
+                <p class="section-subtitle">Stay inspired with our latest transformations and beauty insights</p>
+            </div>
+            <div class="instagram-cta">
+                <p>📸 Follow us on Instagram <a href="https://www.instagram.com/collagenclinic.london/" target="_blank" class="instagram-handle">@collagenclinic.london</a></p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/collagenclinic.london/" target="_blank" class="social-link instagram-link">
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://wa.me/447427746836" target="_blank" class="social-link whatsapp-link">
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <img src="Images/logo CC Collagen Clinic London - бял цвят и прозрачен фон-шрифт НюЙорк голям размер (2).png" alt="Collagen Clinic London by Dr Oliver Zolman" class="footer-logo">
-
+                    <p style="color: #b8b8b8; margin-top: 1rem; line-height: 1.6;">
+                        World-leading skin rejuvenation and diagnostics clinic in the heart of London's private medical district.
+                    </p>
                 </div>
                 <div class="footer-section">
-                                        <h4>Services</h4>
+                    <h4>Conditions</h4>
                     <ul>
-                        <li><a href="#packages">Service Packages</a></li>
-                        <li><a href="#services">Diagnostics</a></li>
-                        <li><a href="#services">Treatments</a></li>
-                        <li><a href="#contact">Consultations</a></li>
+                        <li><a href="#packages">Pigmentation</a></li>
+                        <li><a href="#packages">Redness & Rosacea</a></li>
+                        <li><a href="#packages">Lines & Wrinkles</a></li>
+                        <li><a href="#packages">Volume Loss</a></li>
+                        <li><a href="#packages">Hair Loss</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Treatments</h4>
+                    <ul>
+                        <li><a href="#services">VISIA Skin Analysis</a></li>
+                        <li><a href="#services">Laser Treatments</a></li>
+                        <li><a href="#services">Injectables</a></li>
+                        <li><a href="#services">HIFU</a></li>
+                        <li><a href="#packages">Bespoke Packages</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>About</h4>
                     <ul>
                         <li><a href="#about">Our Science</a></li>
-                        <li><a href="#about-us">About Us</a></li>
-
+                        <li><a href="#about-us">Our Team</a></li>
+                        <li><a href="#clinic">Our Clinic</a></li>
+                        <li><a href="#prices">Prices</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
-                    <p>12 Upper Wimpole St, W1G 6LD, London, UK</p>
-                    <p>+447427746836</p>
+                    <p>12 Upper Wimpole St<br>London, W1G 6LD<br>United Kingdom</p>
+                    <p style="margin-top: 1rem;"><strong>Phone:</strong><br>+44 7427 746836</p>
+                    <p style="margin-top: 1rem;"><strong>Hours:</strong><br>Monday - Friday<br>9:00 AM - 6:00 PM</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Collagen Clinic London. All rights reserved.</p>
+                <p>&copy; 2025 Collagen Clinic London. All rights reserved.</p>
             </div>
         </div>
     </footer>

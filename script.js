@@ -9,12 +9,49 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.toggle('active');
         });
 
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(link => {
+        // Handle dropdown clicks on mobile
+        const dropdowns = document.querySelectorAll('.nav-item.dropdown');
+        dropdowns.forEach(dropdown => {
+            const link = dropdown.querySelector('.nav-link');
+            
+            link.addEventListener('click', function(e) {
+                // Only toggle dropdown on mobile
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    
+                    // Close all other dropdowns
+                    dropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current dropdown
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        // Close mobile menu when clicking on dropdown items (not parent links)
+        document.querySelectorAll('.dropdown-menu a').forEach(link => {
             link.addEventListener('click', function() {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
+                // Close all dropdowns
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
             });
+        });
+
+        // Close mobile menu when clicking on non-dropdown links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (!link.closest('.dropdown')) {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            }
         });
 
         // Close mobile menu when clicking outside
@@ -22,9 +59,64 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
+                // Close all dropdowns
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
             }
         });
     }
+});
+
+// Clinic carousel logic
+let clinicIndex = 0;
+
+function updateClinicDots() {
+    const track = document.getElementById('clinicTrack');
+    const slides = track ? Array.from(track.children) : [];
+    const dotsContainer = document.getElementById('clinicDots');
+    if (!dotsContainer || slides.length === 0) return;
+    dotsContainer.innerHTML = '';
+    slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === clinicIndex ? ' active' : '');
+        dot.setAttribute('aria-label', `Go to slide ${i+1}`);
+        dot.addEventListener('click', () => scrollClinicTo(i));
+        dotsContainer.appendChild(dot);
+    });
+}
+
+function scrollClinic(direction) {
+    const track = document.getElementById('clinicTrack');
+    const viewport = document.getElementById('clinicViewport');
+    if (!track || !viewport) return;
+    const slides = Array.from(track.children);
+    const maxIndex = slides.length - 1;
+    clinicIndex = direction === 'left' ? Math.max(0, clinicIndex - 1) : Math.min(maxIndex, clinicIndex + 1);
+    const offset = viewport.clientWidth * clinicIndex;
+    track.scrollTo({ left: offset, behavior: 'smooth' });
+    updateClinicDots();
+}
+
+function scrollClinicTo(index) {
+    const track = document.getElementById('clinicTrack');
+    const viewport = document.getElementById('clinicViewport');
+    if (!track || !viewport) return;
+    const slides = Array.from(track.children);
+    const maxIndex = slides.length - 1;
+    clinicIndex = Math.max(0, Math.min(maxIndex, index));
+    const offset = viewport.clientWidth * clinicIndex;
+    track.scrollTo({ left: offset, behavior: 'smooth' });
+    updateClinicDots();
+}
+
+window.addEventListener('resize', () => {
+    // Re-align on resize
+    scrollClinicTo(clinicIndex);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateClinicDots();
 });
 
 // Smooth scrolling for navigation links
@@ -534,7 +626,7 @@ function insertMedeskWidget() {
                     <button onclick="bookViaWhatsApp('wrinkled')" class="whatsapp-book-btn wrinkled">
                         <span class="service-icon">🔬</span>
                         <div class="service-details">
-                            <strong>Wrinkled Skin Protocol</strong>
+                            <strong>Skin Rejuvenation Protocol</strong>
                             <span class="price">£1,800</span>
                         </div>
                         <span class="whatsapp-icon">💬</span>
@@ -571,7 +663,7 @@ function insertMedeskWidget() {
                         <span class="service-icon">🔬</span>
                         <div class="service-details">
                             <strong>Beard Protocol</strong>
-                            <span class="price">£450</span>
+                            <span class="price">£400</span>
                         </div>
                         <span class="whatsapp-icon">💬</span>
                     </button>
