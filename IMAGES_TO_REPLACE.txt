@@ -1,0 +1,115 @@
+═══════════════════════════════════════════════════════════════
+  IMAGES TO REPLACE - QUICK REFERENCE
+═══════════════════════════════════════════════════════════════
+
+🔴 MUST REPLACE (High Priority):
+
+1. RECEPTION AREA (Missing/Placeholder)
+   File: Images/clinic-reception-placeholder.jpg
+   Location: Clinic showcase carousel - 3rd slide
+   Need: Professional reception area photo
+   Size: 1920x1080px
+
+═══════════════════════════════════════════════════════════════
+
+🟡 REVIEW & REPLACE IF NEEDED (Medium Priority):
+
+2. HERO - Dr. Zolman Photo
+   File: Images/WhatsApp Image 2025-09-28 at 15.16.05.jpeg
+   Location: Hero section (main page, right side)
+   Need: Professional portrait photo
+   Size: 800x1000px (portrait)
+
+3. CLINIC INTERIOR
+   File: Images/clinic-interior.jpg
+   Location: Clinic carousel - 1st slide
+   Need: Treatment room photo
+   Size: 1920x1080px
+
+4. CLINIC EXTERIOR
+   File: Images/clinic-exterior.jpg
+   Location: Hero overlay + Clinic carousel - 2nd slide
+   Need: Building exterior photo
+   Size: 1920x1080px
+
+5. SCIENCE IMAGE
+   File: Images/science.jpg
+   Location: "Our Science" section
+   Need: Science/research imagery
+   Size: 1200x800px
+
+6. DIAGNOSTIC IMAGING
+   File: Images/imaging.jpg
+   Location: Services section
+   Need: Equipment/imaging photo
+   Size: 1200x800px
+
+7. TREATMENT TECHNOLOGIES
+   File: Images/treat.jpg
+   Location: Services section
+   Need: Treatment room/equipment photo
+   Size: 1200x800px
+
+═══════════════════════════════════════════════════════════════
+
+🟢 OPTIONAL - Treatment Device Images (Replace if you have better):
+
+8-26. TREATMENT CARDS (Device/Product Images)
+   These are in the treatment cards section. Replace if you have:
+   - Higher quality versions
+   - Your own clinic photos of the devices
+   - Better product images from manufacturers
+   
+   Files:
+   - Images/visia.png
+   - Images/observ .png
+   - Images/qoves.png
+   - Images/whole body.jpeg
+   - Images/glycation.jpg
+   - Images/tixel.jpg
+   - Images/cutera.webp
+   - Images/candela.png
+   - Images/lutronic.jpg
+   - Images/ultraformer.jpg
+   - Images/exion.jpg
+   - Images/filler.jpg
+   - Images/botox.webp
+   - Images/julaine.jpg
+   - Images/rejuran.jpeg
+   - Images/Sculptra-Ploly-L-Milchsaure.jpg.webp
+   - Images/sunekos.png
+   - Images/peel.png
+   - Images/exosomes rose new.webp
+
+═══════════════════════════════════════════════════════════════
+
+📸 TEAM PHOTOS (Review for consistency):
+
+27-34. TEAM MEMBER PHOTOS
+   Review these for:
+   - Consistent style (same background/lighting)
+   - Professional quality
+   - Proper sizing
+   
+   Files:
+   - Images/dr-oliver-zolman.jpg
+   - Images/petya3.JPG
+   - Images/irina image.jpg
+   - Images/fajar.jpeg
+   - Images/helin.jpg
+   - Images/haryono.jpeg
+   - Images/dr vik.jpeg
+   - Images/Antonia Schultze-Mosgau - neu-5_jpg copy.jpg
+
+═══════════════════════════════════════════════════════════════
+
+📋 REPLACEMENT STEPS:
+
+1. Take/obtain professional photos
+2. Optimize images (compress for web)
+3. Save to Images/ folder with descriptive names
+4. Update file paths in index.html
+5. Test on website
+
+═══════════════════════════════════════════════════════════════
+
