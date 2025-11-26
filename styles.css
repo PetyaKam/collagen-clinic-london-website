@@ -410,7 +410,7 @@ h1, h2, h3, h4 {
     margin-bottom: 2.5rem;
     line-height: 1.7;
     font-weight: 400;
-    max-width: 600px;
+    max-width: 550px;
 }
 
 .hero-stats {
@@ -3764,7 +3764,7 @@ h1, h2, h3, h4 {
     }
     
     .hero-image-photo {
-        height: 500px;
+        height: 600px;
     }
     
     .hero-container {
