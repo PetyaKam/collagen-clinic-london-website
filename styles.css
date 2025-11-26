@@ -18,6 +18,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
+    font-size: 1.1rem;
 }
 
 .container {
@@ -47,7 +48,7 @@ h1, h2, h3, h4 {
 }
 
 .section-subtitle {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: #666666;
     text-align: left;
     margin-bottom: 4rem;
@@ -219,7 +220,7 @@ h1, h2, h3, h4 {
     padding: 0.8rem 1.5rem;
     color: #2c2c2c;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     transition: all 0.3s ease;
     border-left: 3px solid transparent;
 }
@@ -274,7 +275,7 @@ h1, h2, h3, h4 {
     padding: 0.6rem 0.5rem;
     color: #4a4a4a;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     transition: all 0.3s ease;
     border-left: 3px solid transparent;
     padding-left: 1rem;
@@ -375,7 +376,7 @@ h1, h2, h3, h4 {
 }
 
 .founder-media {
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: #666666;
     margin-bottom: 0;
     line-height: 1.5;
@@ -405,7 +406,7 @@ h1, h2, h3, h4 {
 }
 
 .hero-description {
-    font-size: 1rem;
+    font-size: 1.15rem;
     color: #666666;
     margin-bottom: 2.5rem;
     line-height: 1.7;
@@ -429,7 +430,7 @@ h1, h2, h3, h4 {
 
 .stat-number {
     display: block;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #000000;
     font-family: 'Inter', sans-serif;
@@ -827,7 +828,7 @@ h1, h2, h3, h4 {
 
 .package-subtitle {
     color: #666666;
-    font-size: 0.875rem;
+    font-size: 1rem;
     line-height: 1.6;
     font-weight: 400;
     margin-bottom: 2rem;
@@ -853,7 +854,7 @@ h1, h2, h3, h4 {
     padding-left: 1.5rem;
     color: #666666;
     line-height: 1.6;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
 }
 
 .package-features li::before {
@@ -994,7 +995,7 @@ h1, h2, h3, h4 {
     /* WhatsApp booking mobile styles */
     .whatsapp-book-btn {
         padding: 1rem;
-        font-size: 0.9rem;
+        font-size: 1.05rem;
     }
     
     .service-details strong {
@@ -1167,8 +1168,7 @@ h1, h2, h3, h4 {
 }
 
 .feature p {
-    color: #6b6b6b;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     line-height: 1.5;
 }
 
@@ -1226,8 +1226,7 @@ h1, h2, h3, h4 {
 }
 
 .service-item p {
-    color: #6b6b6b;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
 }
@@ -1315,7 +1314,7 @@ h1, h2, h3, h4 {
     font-weight: 400;
     color: #000000;
     flex: 1;
-    font-size: 0.9375rem;
+    font-size: 1.1rem;
     line-height: 1.5;
 }
 
@@ -1446,7 +1445,7 @@ h1, h2, h3, h4 {
 .option-type {
     color: #000000;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 1rem;
@@ -1733,7 +1732,7 @@ h1, h2, h3, h4 {
 .credentials-list li {
     padding: 0.5rem 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    font-size: 0.95rem;
+    font-size: 1.1rem;
 }
 
 .credentials-list li:last-child {
@@ -1880,7 +1879,7 @@ h1, h2, h3, h4 {
 
 .treatment-subtitle {
     color: #666666;
-    font-size: 0.875rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -2226,7 +2225,7 @@ h1, h2, h3, h4 {
 .trust-item span:last-child {
     font-weight: 600;
     color: #333;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
 }
 
 .founder-name {
@@ -2252,7 +2251,7 @@ h1, h2, h3, h4 {
     line-height: 1.7;
     margin-bottom: 1rem;
     text-align: left;
-    font-size: 0.9375rem;
+    font-size: 1.1rem;
     font-weight: 400;
 }
 
@@ -2383,7 +2382,7 @@ h1, h2, h3, h4 {
     background: #f8f9fa;
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     color: #2c3e50;
     border: 1px solid #e9ecef;
 }
@@ -2676,7 +2675,7 @@ h1, h2, h3, h4 {
 
 .ultrasound-type p {
     margin-bottom: 0.5rem;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
 }
 
 .warning-box {
@@ -2690,7 +2689,7 @@ h1, h2, h3, h4 {
 .warning-box p {
     margin: 0;
     color: #856404;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
 }
 
 .combination-philosophy {
@@ -2847,7 +2846,7 @@ h1, h2, h3, h4 {
 
 .press-description {
     color: #666;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     margin: 0;
 }
@@ -3028,7 +3027,7 @@ h1, h2, h3, h4 {
     color: #999999;
     text-decoration: none;
     transition: color 0.2s ease;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 400;
 }
 
@@ -3040,7 +3039,7 @@ h1, h2, h3, h4 {
     color: #999999;
     line-height: 1.7;
     margin-bottom: 0.5rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 400;
 }
 
@@ -3313,7 +3312,7 @@ h1, h2, h3, h4 {
 }
 
 .urgency-text {
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 400;
     color: #000000;
     text-transform: uppercase;
@@ -3321,7 +3320,7 @@ h1, h2, h3, h4 {
 }
 
 .urgency-cta {
-    font-size: 0.875rem;
+    font-size: 1rem;
     opacity: 1;
     font-style: normal;
     color: #666666;
@@ -3423,7 +3422,7 @@ h1, h2, h3, h4 {
 
 .testimonial-author span {
     color: #666;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
 }
 
 @media (max-width: 768px) {
@@ -3474,7 +3473,7 @@ h1, h2, h3, h4 {
 .item-value {
     color: #000000;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     float: right;
     background: rgba(0, 0, 0, 0.1);
     padding: 0.2rem 0.5rem;
@@ -3524,7 +3523,7 @@ h1, h2, h3, h4 {
 .guarantee-text {
     font-weight: 600;
     color: #000000;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
 }
 
 .package-bonus {
@@ -3546,7 +3545,7 @@ h1, h2, h3, h4 {
 .bonus-text {
     font-weight: 600;
     color: #4caf50;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
 }
 
 /* Sticky Book Appointment Button */
@@ -3719,7 +3718,7 @@ h1, h2, h3, h4 {
     }
     
     .mega-menu-column h4 {
-        font-size: 0.95rem;
+        font-size: 1.1rem;
         margin-bottom: 0.5rem;
         padding-bottom: 0.3rem;
     }
@@ -3727,7 +3726,7 @@ h1, h2, h3, h4 {
     .mega-menu-column a,
     .dropdown-menu a {
         padding: 0.7rem 2rem;
-        font-size: 0.9rem;
+        font-size: 1.05rem;
         text-align: center;
     }
     
@@ -3860,7 +3859,7 @@ h1, h2, h3, h4 {
 
 .founder-overlay-name {
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     color: #1a1a1a;
     margin-bottom: 0.2rem;
 }
@@ -3978,7 +3977,7 @@ h1, h2, h3, h4 {
     color: white;
     padding: 1rem;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     text-align: center;
 }
 
@@ -4278,7 +4277,7 @@ h1, h2, h3, h4 {
 .bespoke-package-features li {
     padding: 0.5rem 0;
     border-bottom: 1px solid #f0f0f0;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: #555;
 }
 
@@ -4445,7 +4444,7 @@ h1, h2, h3, h4 {
 .sunekos-pricing-features li {
     padding: 0.5rem 0;
     border-bottom: 1px solid #f0f0f0;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: #555;
 }
 
