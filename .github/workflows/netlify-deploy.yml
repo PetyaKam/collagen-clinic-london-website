@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch: # Allow manual triggering
 
 jobs:
   deploy:
@@ -15,8 +16,10 @@ jobs:
       - name: Deploy to Netlify
         uses: netlify/actions/cli@master
         with:
-          args: deploy --dir=. --prod
+          args: deploy --dir=. --prod --message="Auto-deploy from GitHub"
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+
 
