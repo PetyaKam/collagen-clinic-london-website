@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Consultation - Collagen Clinic London</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .survey-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        .survey-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .survey-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #000;
+        }
+        .survey-header p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        .survey-form {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+        .form-group {
+            margin-bottom: 2rem;
+        }
+        .form-group label {
+            display: block;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 0.75rem;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 0.75rem;
+        }
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .checkbox-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        .checkbox-item label {
+            font-size: 0.95rem;
+            font-weight: 400;
+            margin: 0;
+            cursor: pointer;
+        }
+        .survey-submit {
+            margin-top: 2.5rem;
+            text-align: center;
+        }
+        .survey-submit button {
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 1.2rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .survey-submit button:hover {
+            background: #333;
+        }
+        .required {
+            color: #d4af37;
+        }
+        @media (max-width: 768px) {
+            .survey-container {
+                padding: 2rem 1rem;
+            }
+            .survey-form {
+                padding: 2rem 1.5rem;
+            }
+            .survey-header h1 {
+                font-size: 2rem;
+            }
+            .checkbox-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="Images/cc-logo-horizontal.png" alt="Collagen Clinic London" class="logo-image">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="about.html" class="nav-link">About Us <span class="dropdown-arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html#science">Our Science</a></li>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="about.html#clinic">Our Clinic</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="packages.html" class="nav-link">Conditions <span class="dropdown-arrow">▾</span></a>
+                    <ul class="dropdown-menu mega-menu">
+                        <div class="mega-menu-column">
+                            <h4>Skin</h4>
+                            <li><a href="packages.html">Pigmentation</a></li>
+                            <li><a href="packages.html">Redness & Rosacea</a></li>
+                            <li><a href="packages.html">Lines & Wrinkles</a></li>
+                            <li><a href="packages.html">Loose Skin</a></li>
+                            <li><a href="packages.html">Uneven Skin Tone</a></li>
+                            <li><a href="packages.html">Blemished Skin</a></li>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h4>Face</h4>
+                            <li><a href="packages.html">Volume Loss</a></li>
+                            <li><a href="packages.html">Eye Concerns</a></li>
+                            <li><a href="packages.html">Facial Contouring</a></li>
+                            <li><a href="packages.html">Skin Tightening</a></li>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h4>Body & Hair</h4>
+                            <li><a href="packages.html">Hair Loss</a></li>
+                            <li><a href="packages.html">Beard Growth</a></li>
+                            <li><a href="packages.html">Body Skin</a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="treatments.html" class="nav-link">Treatments <span class="dropdown-arrow">▾</span></a>
+                    <ul class="dropdown-menu mega-menu">
+                        <div class="mega-menu-column">
+                            <h4>Diagnostics</h4>
+                            <li><a href="treatments.html#diagnostics">VISIA Scan</a></li>
+                            <li><a href="treatments.html#diagnostics">QOVES AI</a></li>
+                            <li><a href="treatments.html#diagnostics">Observ520</a></li>
+                            <li><a href="treatments.html#diagnostics">Glycation Analysis</a></li>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h4>Lasers & Devices</h4>
+                            <li><a href="treatments.html#lasers">Tixel Rejuvenation</a></li>
+                            <li><a href="treatments.html#lasers">LaseMD Ultra</a></li>
+                            <li><a href="treatments.html#lasers">Genesis Laser</a></li>
+                            <li><a href="treatments.html#lasers">Ultraformer HIFU</a></li>
+                            <li><a href="treatments.html#lasers">CoolView Vascular</a></li>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h4>Injectables</h4>
+                            <li><a href="treatments.html#injectables">Sunekos</a></li>
+                            <li><a href="treatments.html#injectables">Dermal Fillers</a></li>
+                            <li><a href="treatments.html#injectables">Botox</a></li>
+                            <li><a href="treatments.html#injectables">Sculptra</a></li>
+                            <li><a href="treatments.html#injectables">Julaine</a></li>
+                            <li><a href="treatments.html#injectables">Exosomes</a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="packages.html" class="nav-link">Packages</a>
+                </li>
+                <li class="nav-item">
+                    <a href="prices.html" class="nav-link">Prices</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="booking-survey.html" class="nav-link btn-appointment">Book Appointment</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Survey Section -->
+    <section class="survey-section" style="padding: 120px 0 80px; background: #fafafa; min-height: calc(100vh - 200px);">
+        <div class="survey-container">
+            <div class="survey-header">
+                <h1>Book Your Consultation</h1>
+                <p>Help us understand your skin goals so we can prepare the best consultation for you</p>
+            </div>
+            
+            <form class="survey-form" id="bookingSurvey" onsubmit="handleSurveySubmit(event)">
+                <div class="form-group">
+                    <label for="name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="concern">Primary Skin Concern <span class="required">*</span></label>
+                    <select id="concern" name="concern" required>
+                        <option value="">Please select...</option>
+                        <option value="skin-age-assessment">Skin Age Assessment & Diagnostics</option>
+                        <option value="pigmentation">Pigmentation & Sun Damage</option>
+                        <option value="redness">Redness & Rosacea</option>
+                        <option value="wrinkles">Lines & Wrinkles</option>
+                        <option value="volume-loss">Volume Loss & Sagging</option>
+                        <option value="eye-concerns">Eye Area Concerns</option>
+                        <option value="skin-tightening">Skin Tightening & Lifting</option>
+                        <option value="hair-loss">Hair Loss</option>
+                        <option value="blemishes">Blemished Skin</option>
+                        <option value="general-rejuvenation">General Skin Rejuvenation</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Areas of Interest (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="interest-diagnostics" name="interests" value="diagnostics">
+                            <label for="interest-diagnostics">Diagnostics (VISIA, QOVES AI)</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="interest-lasers" name="interests" value="lasers">
+                            <label for="interest-lasers">Laser Treatments</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="interest-injectables" name="interests" value="injectables">
+                            <label for="interest-injectables">Injectables (Fillers, Botox)</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="interest-biostimulators" name="interests" value="biostimulators">
+                            <label for="interest-biostimulators">Biostimulators (Sunekos, Polynucleotides)</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="interest-hair" name="interests" value="hair">
+                            <label for="interest-hair">Hair & Beard Rejuvenation</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="interest-packages" name="interests" value="packages">
+                            <label for="interest-packages">Bespoke Packages</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="experience">Previous Aesthetic Treatment Experience</label>
+                    <select id="experience" name="experience">
+                        <option value="">Please select...</option>
+                        <option value="none">None - First time</option>
+                        <option value="some">Some experience</option>
+                        <option value="experienced">Very experienced</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="goals">What are your main skin goals? <span class="required">*</span></label>
+                    <textarea id="goals" name="goals" placeholder="Tell us about your skin goals and what you hope to achieve..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="timeline">Preferred Consultation Timeline</label>
+                    <select id="timeline" name="timeline">
+                        <option value="">Please select...</option>
+                        <option value="asap">As soon as possible</option>
+                        <option value="within-week">Within a week</option>
+                        <option value="within-month">Within a month</option>
+                        <option value="flexible">Flexible</option>
+                    </select>
+                </div>
+                
+                <div class="survey-submit">
+                    <button type="submit">Continue to Booking</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="Images/logo CC Collagen Clinic London - бял цвят и прозрачен фон-шрифт НюЙорк голям размер (2).png" alt="Collagen Clinic London by Dr Oliver Zolman" class="footer-logo">
+                    <p style="color: #b8b8b8; margin-top: 1rem; line-height: 1.6;">
+                        World-leading skin rejuvenation and diagnostics clinic in the heart of London's private medical district.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Conditions</h4>
+                    <ul>
+                        <li><a href="packages.html">Pigmentation</a></li>
+                        <li><a href="packages.html">Redness & Rosacea</a></li>
+                        <li><a href="packages.html">Lines & Wrinkles</a></li>
+                        <li><a href="packages.html">Volume Loss</a></li>
+                        <li><a href="packages.html">Hair Loss</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Treatments</h4>
+                    <ul>
+                        <li><a href="treatments.html">VISIA Skin Analysis</a></li>
+                        <li><a href="treatments.html">Laser Treatments</a></li>
+                        <li><a href="treatments.html">Injectables</a></li>
+                        <li><a href="treatments.html">HIFU</a></li>
+                        <li><a href="packages.html">Bespoke Packages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="about.html#science">Our Science</a></li>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="about.html#clinic">Our Clinic</a></li>
+                        <li><a href="prices.html">Prices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>12 Upper Wimpole St<br>London, W1G 6LD<br>United Kingdom</p>
+                    <p style="margin-top: 1rem;"><strong>Phone:</strong><br>+44 7427 746836</p>
+                    <p style="margin-top: 1rem;"><strong>Hours:</strong><br>Monday - Friday<br>9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1rem;"><strong>Ready to age backwards?</strong></p>
+                <p style="font-size: 1rem; line-height: 1.6; margin-bottom: 2rem;">Consult the London clinic founded on the world's most advanced longevity principles.</p>
+                <p>&copy; 2025 Collagen Clinic London. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function handleSurveySubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = {};
+            formData.forEach((value, key) => {
+                if (key === 'interests') {
+                    if (!data[key]) data[key] = [];
+                    data[key].push(value);
+                } else {
+                    data[key] = value;
+                }
+            });
+            
+            // Store survey data in sessionStorage
+            sessionStorage.setItem('bookingSurvey', JSON.stringify(data));
+            
+            // Redirect to booking page
+            window.location.href = 'booking-survey.html';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+
