@@ -417,30 +417,48 @@ h1, h2, h3, h4 {
 
 .hero-stats {
     display: flex;
-    gap: 2rem;
-    margin-bottom: 2.5rem;
+    gap: 2.5rem;
+    margin: 2.5rem 0;
+    padding: 2rem 0;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
 }
 
 .stat-item {
-    text-align: center;
+    flex: 1;
+    text-align: left;
 }
 
 .stat-number {
     display: block;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: #000000;
     font-family: 'Inter', sans-serif;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
     margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.75rem;
+    color: #666;
 }
 
 .stat-label {
-    font-size: 0.95rem;
-    color: #333333;
+    font-size: 1.1rem;
+    color: #000000;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    display: block;
+}
+
+.stat-label small {
+    display: block;
+    font-size: 0.85rem;
     font-weight: 400;
+    color: #666;
+    margin-top: 0.25rem;
     line-height: 1.4;
-    letter-spacing: -0.01em;
 }
 
 .hero-buttons {
@@ -3729,7 +3747,13 @@ h1, h2, h3, h4 {
     }
     
     .hero-stats {
-        justify-content: center;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+    }
+    
+    .stat-item {
+        text-align: left;
     }
     
     .hero-image {
