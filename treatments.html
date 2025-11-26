@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treatments - Collagen Clinic London</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="Images/cc-logo-horizontal.png" alt="Collagen Clinic London" class="logo-image">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="about.html" class="nav-link">About Us <span class="dropdown-arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html#science">Our Science</a></li>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="about.html#clinic">Our Clinic</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="packages.html" class="nav-link">Conditions <span class="dropdown-arrow">▾</span></a>
+                    <ul class="dropdown-menu mega-menu">
+                        <div class="mega-menu-column">
+                            <h4>Skin</h4>
+                            <li><a href="packages.html">Pigmentation</a></li>
+                            <li><a href="packages.html">Redness & Rosacea</a></li>
+                            <li><a href="packages.html">Lines & Wrinkles</a></li>
+                            <li><a href="packages.html">Loose Skin</a></li>
+                            <li><a href="packages.html">Uneven Skin Tone</a></li>
+                            <li><a href="packages.html">Blemished Skin</a></li>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h4>Face</h4>
+                            <li><a href="packages.html">Volume Loss</a></li>
+                            <li><a href="packages.html">Eye Concerns</a></li>
+                            <li><a href="packages.html">Facial Contouring</a></li>
+                            <li><a href="packages.html">Skin Tightening</a></li>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h4>Body & Hair</h4>
+                            <li><a href="packages.html">Hair Loss</a></li>
+                            <li><a href="packages.html">Beard Growth</a></li>
+                            <li><a href="packages.html">Body Skin</a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="treatments.html" class="nav-link">Treatments <span class="dropdown-arrow">▾</span></a>
+                    <ul class="dropdown-menu mega-menu">
+                        <div class="mega-menu-column">
+                            <h4>Diagnostics</h4>
+                            <li><a href="treatments.html#diagnostics">VISIA Scan</a></li>
+                            <li><a href="treatments.html#diagnostics">QOVES AI</a></li>
+                            <li><a href="treatments.html#diagnostics">Observ520</a></li>
+                            <li><a href="treatments.html#diagnostics">Glycation Analysis</a></li>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h4>Lasers & Devices</h4>
+                            <li><a href="treatments.html#lasers">Tixel Rejuvenation</a></li>
+                            <li><a href="treatments.html#lasers">LaseMD Ultra</a></li>
+                            <li><a href="treatments.html#lasers">Genesis Laser</a></li>
+                            <li><a href="treatments.html#lasers">Ultraformer HIFU</a></li>
+                            <li><a href="treatments.html#lasers">CoolView Vascular</a></li>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h4>Injectables</h4>
+                            <li><a href="treatments.html#injectables">Sunekos</a></li>
+                            <li><a href="treatments.html#injectables">Dermal Fillers</a></li>
+                            <li><a href="treatments.html#injectables">Botox</a></li>
+                            <li><a href="treatments.html#injectables">Sculptra</a></li>
+                            <li><a href="treatments.html#injectables">Julaine</a></li>
+                            <li><a href="treatments.html#injectables">Exosomes</a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="packages.html" class="nav-link">Packages</a>
+                </li>
+                <li class="nav-item">
+                    <a href="prices.html" class="nav-link">Prices</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://londonlongevity.connect.e-clinic.co.uk/book/collegen_clinic" class="nav-link btn-appointment" target="_blank" rel="noopener">Book Appointment</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+<!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive diagnostic assessments and advanced treatment protocols for optimal skin health</p>
+            </div>
+            
+            <!-- Diagnostics Section -->
+            <div class="service-category">
+                <h3 class="category-title">Diagnostics</h3>
+                <p class="category-description">Advanced diagnostic technologies for comprehensive health and skin assessment</p>
+                
+                <!-- Diagnostic Categories -->
+                <div class="treatment-categories">
+                    <div class="category-tabs">
+                        <button class="category-tab active" id="diagnostics" data-category="skin-diagnostics">Skin Diagnostics</button>
+                    </div>
+                    </div>
+                    
+                <!-- Diagnostic Cards Showcase -->
+                <div class="treatments-showcase">
+                    <!-- Skin Diagnostics Category -->
+                    <div class="treatment-category-grid active" id="diagnostics" data-category="skin-diagnostics">
+                        <div class="treatment-card" onclick="showTreatmentDetail('visia-scan')">
+                            <div class="treatment-image">
+                                <img src="Images/visia.png" alt="VISIA Skin Analysis System" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">VISIA Scan</h3>
+                                <p class="treatment-subtitle">Skin Age Analysis</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Multi-Spectral</span>
+                                    <span class="highlight-tag">UV Damage Detection</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('observ520')">
+                            <div class="treatment-image">
+                                <img src="Images/observ .png" alt="SYLTON Observ520 Imaging" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">SYLTON Observ520</h3>
+                                <p class="treatment-subtitle">Multi-Spectral Imaging</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Polarized Light</span>
+                                    <span class="highlight-tag">Subsurface Analysis</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('qoves-ai')">
+                            <div class="treatment-image">
+                                <img src="Images/qoves.png" alt="QOVES AI Aesthetics Analysis" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">QOVES AI</h3>
+                                <p class="treatment-subtitle">Aesthetics Analysis</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">AI-Powered</span>
+                                    <span class="highlight-tag">Exclusive to CC</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('body-surface-analysis')">
+                            <div class="treatment-image">
+                                <img src="Images/whole body.jpeg" alt="Total Body Surface Area Analysis" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">Body Surface Analysis</h3>
+                                <p class="treatment-subtitle">Total Area Assessment</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Comprehensive</span>
+                                    <span class="highlight-tag">Age Mapping</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('glycation-analysis')">
+                            <div class="treatment-image">
+                                <img src="Images/glycation.jpg" alt="Glycation Skin Stiffness Analysis" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">Glycation Analysis</h3>
+                                <p class="treatment-subtitle">Skin Stiffness Age</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Non-Invasive</span>
+                                    <span class="highlight-tag">AGE Detection</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="service-image-container">
+                    <img src="Images/imaging.jpg" alt="Advanced Diagnostic Imaging" class="service-image">
+                </div>
+            </div>
+            
+            <!-- Treatments Section -->
+            <div class="service-category">
+                <h3 class="category-title">Treatments</h3>
+                <p class="category-description">Evidence-based therapeutic interventions for skin rejuvenation and aesthetic enhancement</p>
+                
+                <!-- Treatment Categories -->
+                <div class="treatment-categories">
+                    <div class="category-tabs">
+                        <button class="category-tab active" id="lasers" data-category="lasers-devices">Lasers & Devices</button>
+                        <button class="category-tab" id="injectables" data-category="injectables">Injectables & Peels</button>
+                    </div>
+                </div>
+                
+                <!-- Treatment Cards Showcase -->
+                <div class="treatments-showcase">
+                    <div class="treatment-category-grid active" id="lasers" data-category="lasers-devices">
+                        <div class="treatment-card" onclick="showTreatmentDetail('tixel')">
+                            <div class="treatment-image">
+                                <img src="Images/tixel.jpg" alt="TIXEL Treatment" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">TIXEL</h3>
+                                <p class="treatment-subtitle">Skin Rejuvenation</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Minimal Downtime</span>
+                                    <span class="highlight-tag">Fractional Technology</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('genesis')">
+                            <div class="treatment-image">
+                                <img src="Images/cutera.webp" alt="Genesis Treatment" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">Genesis</h3>
+                                <p class="treatment-subtitle">Laser Rejuvenation</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">No Downtime</span>
+                                    <span class="highlight-tag">Collagen Boost</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('gentlemax')">
+                            <div class="treatment-image">
+                                <img src="Images/candela.png" alt="GentleMax Treatment" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">GentleMax Pro Plus</h3>
+                                <p class="treatment-subtitle">Dual Wavelength Laser</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">All Skin Types</span>
+                                    <span class="highlight-tag">Hair Removal</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('lasemd')">
+                            <div class="treatment-image">
+                                <img src="Images/lutronic.jpg" alt="LaseMD Treatment" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">LaseMD Ultra</h3>
+                                <p class="treatment-subtitle">Fractional Thulium</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Customizable</span>
+                                    <span class="highlight-tag">Pigmentation</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('ultraformer-hifu')">
+                            <div class="treatment-image">
+                                <img src="Images/ultraformer.jpg" alt="Ultraformer HIFU Treatment" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">Ultraformer HIFU</h3>
+                                <p class="treatment-subtitle">Non-Surgical Lifting</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">SMAS Layer</span>
+                                    <span class="highlight-tag">No Downtime</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('keralase-hair')">
+                            <div class="treatment-image">
+                                <img src="Images/lutronic.jpg" alt="KeraLase Hair Treatment" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">KeraLase Hair</h3>
+                                <p class="treatment-subtitle">Hair Regeneration</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Hair Growth</span>
+                                    <span class="highlight-tag">Scalp Treatment</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('coolview')">
+                            <div class="treatment-image">
+                                <img src="Images/cutera.webp" alt="CoolView Treatment" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">CoolView</h3>
+                                <p class="treatment-subtitle">Vascular Laser</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Spider Veins</span>
+                                    <span class="highlight-tag">Precision</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('exion-tightening')">
+                            <div class="treatment-image">
+                                <img src="Images/exion.jpg" alt="EXION RF Tightening" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">EXION RF Tightening</h3>
+                                <p class="treatment-subtitle">Radiofrequency Tightening</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Non-Invasive</span>
+                                    <span class="highlight-tag">Skin Lifting</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('exion-microneedling')">
+                            <div class="treatment-image">
+                                <img src="Images/exion.jpg" alt="EXION RF Microneedling" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">EXION RF Microneedling</h3>
+                                <p class="treatment-subtitle">Radiofrequency Microneedling</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Deep Remodeling</span>
+                                    <span class="highlight-tag">Texture Improvement</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <!-- Injectables Category -->
+                    <div class="treatment-category-grid" id="injectables" data-category="injectables">
+                        <div class="treatment-card" onclick="showTreatmentDetail('dermal-fillers')">
+                            <div class="treatment-image">
+                                <img src="Images/filler.jpg" alt="Dermal Fillers" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">Dermal Fillers</h3>
+                                <p class="treatment-subtitle">Volume Restoration</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Hyaluronic Acid</span>
+                                    <span class="highlight-tag">Natural Results</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('botox')">
+                            <div class="treatment-image">
+                                <img src="Images/botox.webp" alt="Botox Treatment" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">Botox</h3>
+                                <p class="treatment-subtitle">Wrinkle Relaxation</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">FDA Approved</span>
+                                    <span class="highlight-tag">Proven Results</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('julaine')">
+                            <div class="treatment-image">
+                                <img src="Images/julaine.jpg" alt="Julaine Treatment" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">Julaine</h3>
+                                <p class="treatment-subtitle">Advanced Injectable</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Premium Formula</span>
+                                    <span class="highlight-tag">Long-Lasting</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('rejuran')">
+                            <div class="treatment-image">
+                                <img src="Images/rejuran.jpeg" alt="Rejuran Polynucleotides Treatment" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">Rejuran Polynucleotides</h3>
+                                <p class="treatment-subtitle">Skin Healer</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">DNA Repair</span>
+                                    <span class="highlight-tag">Healing</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('sculptra')">
+                            <div class="treatment-image">
+                                <img src="Images/Sculptra-Ploly-L-Milchsaure.jpg.webp" alt="Sculptra Treatment" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">Sculptra</h3>
+                                <p class="treatment-subtitle">Collagen Stimulator</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Long-Lasting</span>
+                                    <span class="highlight-tag">Natural Volume</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('sunekos')">
+                            <div class="treatment-image">
+                                <img src="Images/sunekos.png" alt="Sunekos Treatment" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">Sunekos</h3>
+                                <p class="treatment-subtitle">Skin Revitalisation</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">FDA Approved</span>
+                                    <span class="highlight-tag">Natural Results</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('peels')">
+                            <div class="treatment-image">
+                                <img src="Images/peel.png" alt="Chemical Peels" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">Chemical Peels</h3>
+                                <p class="treatment-subtitle">Skin Resurfacing</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Exfoliation</span>
+                                    <span class="highlight-tag">Renewal</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="treatment-card" onclick="showTreatmentDetail('exosomes')">
+                            <div class="treatment-image">
+                                <img src="Images/exosomes rose new.webp" alt="Exosomes Treatment" class="treatment-img">
+                            </div>
+                            <div class="treatment-info">
+                                <h3 class="treatment-name">Exosomes</h3>
+                                <p class="treatment-subtitle">Regenerative Medicine</p>
+                                <div class="treatment-highlights">
+                                    <span class="highlight-tag">Cell Communication</span>
+                                    <span class="highlight-tag">Regeneration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services-grid" style="display: none;">
+                    <div class="service-item">
+                        <h4>Candela GentleMax Pro Plus</h4>
+                        <p>Advanced dual-wavelength laser system combining Alexandrite and Nd:YAG technologies for treating pigmented lesions, vascular conditions, and unwanted hair with superior safety and efficacy.</p>
+                        <a href="treatments/candela-gentlemax-pro-plus.html" class="learn-more-link">Learn More</a>
+                    </div>
+                    
+
+                    
+                    <div class="service-item">
+                        <h4>Lutronic LaseMD Ultra</h4>
+                        <p>Precision laser technology for treating age spots, sun damage, and pigmentation disorders through selective photothermolysis with minimal downtime and excellent safety profile.</p>
+                        <a href="treatments/lutronic-lasemd-ultra.html" class="learn-more-link">Learn More</a>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h4>TIXEL Rejuvenation</h4>
+                        <p>Thermo-mechanical fractional treatment using heated titanium tips to create controlled micro-injuries, stimulating collagen production and skin renewal with minimal downtime.</p>
+                        <a href="treatments/tixel-rejuvenation.html" class="learn-more-link">Learn More</a>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h4>Genesis Rejuvenation</h4>
+                        <p>Non-invasive laser therapy promoting collagen synthesis and improving skin texture through gentle heating of dermal tissues, suitable for all skin types.</p>
+                        <a href="treatments/genesis-rejuvenation.html" class="learn-more-link">Learn More</a>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h4>COOLVIEW Vascular Laser</h4>
+                        <p>Advanced laser system targeting vascular conditions and redness using precise 532 nm and Nd:YAG 1064 nm wavelengths for optimal treatment of broken capillaries, spider veins, and facial redness.</p>
+                        <a href="treatments/coolview-vascular-laser.html" class="learn-more-link">Learn More</a>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h4>Dermal Fillers</h4>
+                        <p>Advanced hyaluronic acid and bio-stimulating fillers for facial contouring, volume restoration, and wrinkle reduction. Precise injection techniques for natural-looking results and facial rejuvenation.</p>
+                        <a href="treatments/dermal-fillers.html" class="learn-more-link">Learn More</a>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h4>TixelTox</h4>
+                        <p>Combined treatment protocol utilising Tixel thermo-mechanical ablative (TMA) technology with botulinum toxin application for enhanced penetration and improved aesthetic outcomes.</p>
+                        <a href="treatments/tixeltox.html" class="learn-more-link">Learn More</a>
+                    </div>
+                    
+
+                    
+
+                </div>
+                <div class="service-image-container">
+                    <img src="Images/treat.jpg" alt="Advanced Treatment Technologies" class="service-image">
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="Images/logo CC Collagen Clinic London - бял цвят и прозрачен фон-шрифт НюЙорк голям размер (2).png" alt="Collagen Clinic London by Dr Oliver Zolman" class="footer-logo">
+                    <p style="color: #b8b8b8; margin-top: 1rem; line-height: 1.6;">
+                        World-leading skin rejuvenation and diagnostics clinic in the heart of London's private medical district.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Conditions</h4>
+                    <ul>
+                        <li><a href="packages.html">Pigmentation</a></li>
+                        <li><a href="packages.html">Redness & Rosacea</a></li>
+                        <li><a href="packages.html">Lines & Wrinkles</a></li>
+                        <li><a href="packages.html">Volume Loss</a></li>
+                        <li><a href="packages.html">Hair Loss</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Treatments</h4>
+                    <ul>
+                        <li><a href="treatments.html">VISIA Skin Analysis</a></li>
+                        <li><a href="treatments.html">Laser Treatments</a></li>
+                        <li><a href="treatments.html">Injectables</a></li>
+                        <li><a href="treatments.html">HIFU</a></li>
+                        <li><a href="packages.html">Bespoke Packages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="about.html#science">Our Science</a></li>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="about.html#clinic">Our Clinic</a></li>
+                        <li><a href="prices.html">Prices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>12 Upper Wimpole St<br>London, W1G 6LD<br>United Kingdom</p>
+                    <p style="margin-top: 1rem;"><strong>Phone:</strong><br>+44 7427 746836</p>
+                    <p style="margin-top: 1rem;"><strong>Hours:</strong><br>Monday - Friday<br>9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Collagen Clinic London. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<!-- Sticky Book Appointment Button -->
+    <div class="sticky-book-btn">
+        <a href="https://londonlongevity.connect.e-clinic.co.uk/book/collegen_clinic" class="sticky-btn" target="_blank" rel="noopener">
+            <span class="sticky-btn-text">Book Appointment</span>
+        </a>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
