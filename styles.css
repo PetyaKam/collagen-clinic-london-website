@@ -326,15 +326,13 @@ h1, h2, h3, h4 {
     padding: 140px 0 100px;
     background: #ffffff;
     min-height: auto;
-    display: flex;
-    align-items: flex-start;
 }
 
 .hero-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 5rem;
+    align-items: start;
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -471,8 +469,9 @@ h1, h2, h3, h4 {
     position: relative;
     margin-top: 0;
     width: 100%;
+    height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -487,10 +486,9 @@ h1, h2, h3, h4 {
 
 .hero-image-photo {
     width: 100%;
-    height: auto;
-    max-height: 700px;
+    height: 650px;
     object-fit: cover;
-    object-position: center center;
+    object-position: center top;
     border-radius: 12px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
@@ -3766,7 +3764,11 @@ h1, h2, h3, h4 {
     }
     
     .hero-image-photo {
-        height: 600px;
+        height: 500px;
+    }
+    
+    .hero-container {
+        gap: 3rem;
     }
     
     .about-content {
@@ -3826,7 +3828,7 @@ h1, h2, h3, h4 {
 .hero-image-container {
     position: relative;
     width: 100%;
-    max-width: 100%;
+    height: 100%;
 }
 
 .founder-image-overlay {
