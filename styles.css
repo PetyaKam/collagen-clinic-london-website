@@ -427,19 +427,20 @@ h1, h2, h3, h4 {
 
 .stat-number {
     display: block;
-    font-size: 2.5rem;
-    font-weight: 400;
+    font-size: 1.1rem;
+    font-weight: 600;
     color: #000000;
     font-family: 'Inter', sans-serif;
     letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
 }
 
 .stat-label {
-    font-size: 0.875rem;
-    color: #666666;
+    font-size: 0.95rem;
+    color: #333333;
     font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
 }
 
 .hero-buttons {
