@@ -136,6 +136,12 @@ h1, h2, h3, h4 {
     margin: 0 auto;
 }
 
+.nav-logo {
+    display: flex;
+    align-items: center;
+    margin-left: -1rem;
+}
+
 .logo-image {
     height: 60px;
     width: auto;
