@@ -11,14 +11,14 @@ html {
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
-    line-height: 1.6;
+    line-height: 1.8;
     color: #000000;
     background-color: #ffffff;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
 }
 
 .container {
@@ -31,29 +31,29 @@ body {
 h1, h2, h3, h4 {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 500;
-    line-height: 1.3;
+    line-height: 1.4;
     color: #000000;
     letter-spacing: -0.02em;
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1.5rem;
     text-align: left;
     color: #000000;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 400;
     letter-spacing: -0.02em;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 .section-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #666666;
     text-align: left;
     margin-bottom: 4rem;
     max-width: 700px;
-    line-height: 1.7;
+    line-height: 1.9;
     font-weight: 400;
     letter-spacing: 0.01em;
 }
@@ -61,8 +61,8 @@ h1, h2, h3, h4 {
 /* Buttons */
 .btn-primary, .btn-secondary {
     display: inline-block;
-    padding: 16px 32px;
-    font-size: 1rem;
+    padding: 18px 36px;
+    font-size: 1.05rem;
     font-weight: 600;
     text-decoration: none;
     border-radius: 8px;
@@ -70,6 +70,8 @@ h1, h2, h3, h4 {
     border: 2px solid transparent;
     cursor: pointer;
     text-align: center;
+    min-height: 48px;
+    line-height: 1.5;
 }
 
 .btn-primary {
@@ -79,10 +81,11 @@ h1, h2, h3, h4 {
     font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-size: 0.75rem;
-    padding: 14px 28px;
+    font-size: 0.875rem;
+    padding: 16px 32px;
     border: 1px solid #000000;
     border-radius: 0;
+    min-height: 48px;
 }
 
 .btn-primary:hover {
@@ -99,9 +102,10 @@ h1, h2, h3, h4 {
     font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-size: 0.75rem;
-    padding: 14px 28px;
+    font-size: 0.875rem;
+    padding: 16px 32px;
     border-radius: 0;
+    min-height: 48px;
 }
 
 .btn-secondary:hover {
@@ -164,13 +168,15 @@ h1, h2, h3, h4 {
     text-decoration: none;
     color: #000000;
     font-weight: 400;
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     transition: color 0.2s ease;
     display: flex;
     align-items: center;
     gap: 0.25rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    min-height: 44px;
+    padding: 0.5rem 0;
 }
 
 .nav-link:hover {
@@ -309,15 +315,19 @@ h1, h2, h3, h4 {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    padding: 0.5rem;
+    padding: 0.75rem;
     z-index: 1000;
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    align-items: center;
 }
 
 .bar {
-    width: 25px;
+    width: 28px;
     height: 3px;
     background: #1a1a1a;
-    margin: 3px 0;
+    margin: 4px 0;
     transition: 0.3s;
     border-radius: 2px;
 }
@@ -360,35 +370,36 @@ h1, h2, h3, h4 {
 }
 
 .founder-name-hero {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 400;
     margin-bottom: 0.75rem;
     color: #000000;
     font-family: 'Inter', sans-serif;
     letter-spacing: 0;
-}
-
-.founder-credentials {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 0.5rem;
     line-height: 1.4;
 }
 
+.founder-credentials {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
 .founder-media {
-    font-size: 1rem;
+    font-size: 1.15rem;
     color: #666666;
     margin-bottom: 0;
-    line-height: 1.5;
+    line-height: 1.7;
     font-style: normal;
     font-weight: 400;
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 400;
     margin-bottom: 2rem;
-    line-height: 1.15;
+    line-height: 1.25;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     color: #000000;
     letter-spacing: -0.03em;
@@ -406,10 +417,10 @@ h1, h2, h3, h4 {
 }
 
 .hero-description {
-    font-size: 1.15rem;
+    font-size: 1.35rem;
     color: #666666;
     margin-bottom: 2.5rem;
-    line-height: 1.7;
+    line-height: 1.9;
     font-weight: 400;
     max-width: 550px;
 }
@@ -443,21 +454,21 @@ h1, h2, h3, h4 {
 }
 
 .stat-label {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #000000;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 1.6;
     letter-spacing: -0.02em;
     display: block;
 }
 
 .stat-label small {
     display: block;
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: 400;
     color: #666;
-    margin-top: 0.25rem;
-    line-height: 1.4;
+    margin-top: 0.35rem;
+    line-height: 1.6;
 }
 
 .hero-buttons {
@@ -526,10 +537,10 @@ h1, h2, h3, h4 {
 }
 
 .about-description {
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: #666666;
     margin-bottom: 2rem;
-    line-height: 1.7;
+    line-height: 1.9;
     font-weight: 400;
 }
 
@@ -541,17 +552,19 @@ h1, h2, h3, h4 {
 }
 
 .feature-item h4 {
-    font-size: 1rem;
+    font-size: 1.35rem;
     color: #000000;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
+    line-height: 1.4;
 }
 
 .feature-item p {
     color: #666666;
-    line-height: 1.6;
+    line-height: 1.9;
     font-weight: 400;
+    font-size: 1.2rem;
 }
 
 .about-image-placeholder {
@@ -809,12 +822,13 @@ h1, h2, h3, h4 {
 }
 
 .package-title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 400;
     color: #000000;
     margin-bottom: 1.5rem;
     font-family: 'Inter', sans-serif;
     letter-spacing: -0.01em;
+    line-height: 1.4;
 }
 
 .package-price {
@@ -828,8 +842,8 @@ h1, h2, h3, h4 {
 
 .package-subtitle {
     color: #666666;
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1.2rem;
+    line-height: 1.8;
     font-weight: 400;
     margin-bottom: 2rem;
 }
@@ -849,12 +863,12 @@ h1, h2, h3, h4 {
 }
 
 .package-features li {
-    padding: 0.5rem 0;
+    padding: 0.6rem 0;
     position: relative;
     padding-left: 1.5rem;
     color: #666666;
-    line-height: 1.6;
-    font-size: 1.05rem;
+    line-height: 1.8;
+    font-size: 1.2rem;
 }
 
 .package-features li::before {
@@ -883,7 +897,7 @@ h1, h2, h3, h4 {
     display: block;
     width: 100%;
     text-align: center;
-    padding: 0.875rem 1.5rem;
+    padding: 1rem 1.5rem;
     border-radius: 0;
     text-decoration: none;
     font-weight: 400;
@@ -893,8 +907,10 @@ h1, h2, h3, h4 {
     background: #000000;
     color: #ffffff;
     text-transform: uppercase;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     letter-spacing: 0.1em;
+    min-height: 52px;
+    line-height: 1.5;
 }
 
 /* Responsive grid for packages */
@@ -1218,16 +1234,17 @@ h1, h2, h3, h4 {
 }
 
 .service-item h4 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #1a1a1a;
     margin-bottom: 1rem;
     font-family: 'Inter', sans-serif;
+    line-height: 1.4;
 }
 
 .service-item p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1.25rem;
+    line-height: 1.8;
     margin-bottom: 1rem;
 }
 
@@ -1314,14 +1331,14 @@ h1, h2, h3, h4 {
     font-weight: 400;
     color: #000000;
     flex: 1;
-    font-size: 1.1rem;
-    line-height: 1.5;
+    font-size: 1.3rem;
+    line-height: 1.7;
 }
 
 .price-amount {
     font-weight: 400;
     color: #000000;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-family: 'Inter', sans-serif;
     letter-spacing: -0.01em;
 }
@@ -1504,18 +1521,19 @@ h1, h2, h3, h4 {
 }
 
 .treatment-cta h2 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     margin-bottom: 1.5rem;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 400;
     letter-spacing: -0.02em;
+    line-height: 1.3;
 }
 
 .treatment-cta p {
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin-bottom: 2.5rem;
     color: #666666;
-    line-height: 1.7;
+    line-height: 1.9;
 }
 
 .cta-buttons {
@@ -2248,10 +2266,10 @@ h1, h2, h3, h4 {
 
 .founder-description {
     color: #666666;
-    line-height: 1.7;
+    line-height: 1.9;
     margin-bottom: 1rem;
     text-align: left;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 400;
 }
 
@@ -3027,8 +3045,9 @@ h1, h2, h3, h4 {
     color: #999999;
     text-decoration: none;
     transition: color 0.2s ease;
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 400;
+    line-height: 1.8;
 }
 
 .footer-section ul li a:hover {
@@ -3037,9 +3056,9 @@ h1, h2, h3, h4 {
 
 .footer-section p {
     color: #999999;
-    line-height: 1.7;
+    line-height: 1.8;
     margin-bottom: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 400;
 }
 
@@ -3048,8 +3067,9 @@ h1, h2, h3, h4 {
     padding-top: 2rem;
     text-align: left;
     color: #999999;
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 400;
+    line-height: 1.8;
 }
 
 /* Booking UX Enhancements */
@@ -3312,19 +3332,21 @@ h1, h2, h3, h4 {
 }
 
 .urgency-text {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 400;
     color: #000000;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    line-height: 1.6;
 }
 
 .urgency-cta {
-    font-size: 1rem;
+    font-size: 1.1rem;
     opacity: 1;
     font-style: normal;
     color: #666666;
     font-weight: 400;
+    line-height: 1.6;
 }
 
 @keyframes pulse-urgency {
@@ -3635,6 +3657,15 @@ h1, h2, h3, h4 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+    
+    .container {
+        padding: 0 1.25rem;
+    }
+    
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -3662,9 +3693,18 @@ h1, h2, h3, h4 {
     }
     
     .nav-link {
-        font-size: 1.1rem;
-        padding: 1rem;
+        font-size: 1.2rem;
+        padding: 1.25rem;
         justify-content: center;
+        min-height: 56px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .btn-appointment {
+        min-height: 56px;
+        padding: 1.25rem 1.5rem;
+        font-size: 0.875rem;
     }
     
     .hamburger {
@@ -3702,15 +3742,15 @@ h1, h2, h3, h4 {
         opacity: 1;
         visibility: visible;
         max-height: 500px;
-        padding: 0.5rem 0;
+        padding: 0.75rem 0;
     }
     
     .mega-menu {
         flex-direction: column;
         min-width: 100%;
-        padding: 1rem;
+        padding: 1.25rem;
         transform: none;
-        gap: 1rem;
+        gap: 1.25rem;
     }
     
     .dropdown.active .mega-menu {
@@ -3718,16 +3758,17 @@ h1, h2, h3, h4 {
     }
     
     .mega-menu-column h4 {
-        font-size: 1.1rem;
-        margin-bottom: 0.5rem;
-        padding-bottom: 0.3rem;
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.5rem;
     }
     
     .mega-menu-column a,
     .dropdown-menu a {
-        padding: 0.7rem 2rem;
-        font-size: 1.05rem;
+        padding: 0.9rem 2rem;
+        font-size: 1.15rem;
         text-align: center;
+        line-height: 1.6;
     }
     
     .mega-menu-column a:hover,
@@ -3741,21 +3782,43 @@ h1, h2, h3, h4 {
     
     .hero-container {
         grid-template-columns: 1fr;
-        text-align: center;
+        text-align: left;
+        gap: 2rem;
+        padding: 0 1.25rem;
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.75rem;
+        line-height: 1.3;
+    }
+    
+    .hero-description {
+        font-size: 1.2rem;
+        line-height: 1.8;
     }
     
     .hero-stats {
         flex-direction: column;
-        gap: 1.5rem;
-        padding: 1.5rem 0;
+        gap: 1.75rem;
+        padding: 2rem 0;
     }
     
     .stat-item {
         text-align: left;
+    }
+    
+    .stat-number {
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+        font-size: 1.2rem;
+    }
+    
+    .stat-label small {
+        font-size: 1rem;
+        margin-top: 0.4rem;
     }
     
     .hero-image {
@@ -3772,55 +3835,223 @@ h1, h2, h3, h4 {
     
     .about-content {
         grid-template-columns: 1fr;
+        gap: 2.5rem;
     }
     
     .services-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.75rem;
     }
     
     .service-item {
-        padding: 1.5rem;
-        margin-bottom: 1rem;
+        padding: 2rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .service-item h4 {
+        font-size: 1.35rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .service-item p {
+        font-size: 1.15rem;
     }
     
     .category-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     
     .founders-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .founding-team-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .founder-card {
+        padding: 2rem;
     }
     
     .contact-content {
         grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .contact-item {
+        margin-bottom: 1.75rem;
+    }
+    
+    .contact-item strong {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .contact-item p {
+        font-size: 1.15rem;
+        line-height: 1.8;
     }
     
     .section-title {
-        font-size: 2rem;
+        font-size: 2.25rem;
+        line-height: 1.3;
+        margin-bottom: 1.25rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        margin-bottom: 2.5rem;
+    }
+    
+    .about-description {
+        font-size: 1.15rem;
+        line-height: 1.8;
+    }
+    
+    .feature-item h4 {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+    
+    .feature-item p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+    
+    .founder-description {
+        font-size: 1.15rem;
+        line-height: 1.8;
+    }
+    
+    .price-name {
+        font-size: 1.2rem;
+        line-height: 1.7;
+    }
+    
+    .price-amount {
+        font-size: 1.35rem;
+    }
+    
+    .package-title {
+        font-size: 1.4rem;
+    }
+    
+    .package-subtitle {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+    
+    .package-features li {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+    
+    .treatment-title {
+        font-size: 2.25rem;
+    }
+    
+    .treatment-subtitle {
+        font-size: 1.2rem;
+        line-height: 1.7;
     }
     
     .container {
-        padding: 0 15px;
+        padding: 0 1.25rem;
     }
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 2rem;
+    
+    .hero {
+        padding: 120px 0 60px;
+    }
+    
+    .about, .services, .packages, .prices, .contact {
+        padding: 60px 0;
+    }
+    
+    .btn-primary, .btn-secondary {
+        font-size: 0.875rem;
+        padding: 18px 28px;
+        min-height: 52px;
+        width: 100%;
+        display: block;
     }
     
     .hero-buttons {
         flex-direction: column;
-        align-items: center;
+        gap: 1rem;
+    }
+    
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 1.05rem;
+    }
+    
+    .hero-title {
+        font-size: 2.25rem;
+        line-height: 1.3;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+    
+    .section-title {
+        font-size: 1.9rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        font-size: 0.875rem;
+        padding: 20px 24px;
+        min-height: 56px;
     }
     
     .service-package {
-        padding: 2rem;
+        padding: 1.75rem;
     }
     
     .contact-form {
         padding: 1.5rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .founder-name {
+        font-size: 1.35rem;
+    }
+    
+    .founder-description {
+        font-size: 1.1rem;
+    }
+    
+    .price-name {
+        font-size: 1.15rem;
+    }
+    
+    .price-amount {
+        font-size: 1.3rem;
     }
 }
 /* Hero Image Overlay */
@@ -3877,7 +4108,8 @@ h1, h2, h3, h4 {
     }
     
     .hero {
-        min-height: 90vh;
+        min-height: auto;
+        padding: 120px 0 60px;
     }
     
     .founder-image-overlay {
@@ -3893,11 +4125,39 @@ h1, h2, h3, h4 {
     }
     
     .founder-overlay-name {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     
     .founder-overlay-title {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+    }
+    
+    .founder-name-hero {
+        font-size: 1.5rem;
+    }
+    
+    .founder-credentials {
+        font-size: 1.15rem;
+    }
+    
+    .founder-media {
+        font-size: 1.05rem;
+    }
+    
+    .stat-label {
+        font-size: 1.15rem;
+    }
+    
+    .stat-label small {
+        font-size: 0.95rem;
+    }
+    
+    .urgency-text {
+        font-size: 1.05rem;
+    }
+    
+    .urgency-cta {
+        font-size: 1rem;
     }
 }
 
