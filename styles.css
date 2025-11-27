@@ -409,6 +409,14 @@ h1, h2, h3, h4 {
     font-weight: 400;
 }
 
+.founder-intro-description {
+    font-size: 1.2rem;
+    color: #666666;
+    line-height: 1.8;
+    margin-top: 1rem;
+    font-weight: 400;
+}
+
 .hero-title {
     font-size: 4rem;
     font-weight: 400;
