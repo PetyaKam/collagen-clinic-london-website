@@ -231,7 +231,11 @@
                 <p>Help us understand your skin goals so we can prepare the best consultation for you</p>
             </div>
             
-            <form class="survey-form" id="bookingSurvey" onsubmit="handleSurveySubmit(event)">
+            <form class="survey-form" id="bookingSurvey" name="booking-survey" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSurveySubmit(event)">
+                <input type="hidden" name="form-name" value="booking-survey">
+                <p style="display: none;">
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
                 <div class="form-group">
                     <label for="name">Full Name <span class="required">*</span></label>
                     <input type="text" id="name" name="name" required>
@@ -386,23 +390,50 @@
         function handleSurveySubmit(event) {
             event.preventDefault();
             
+            const form = event.target;
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            
+            // Show loading state
+            submitButton.textContent = 'Submitting...';
+            submitButton.disabled = true;
+            
             // Get form data
-            const formData = new FormData(event.target);
+            const formData = new FormData(form);
+            
+            // Store survey data in sessionStorage for reference
             const data = {};
             formData.forEach((value, key) => {
                 if (key === 'interests') {
                     if (!data[key]) data[key] = [];
                     data[key].push(value);
-                } else {
+                } else if (key !== 'bot-field' && key !== 'form-name') {
                     data[key] = value;
                 }
             });
-            
-            // Store survey data in sessionStorage
             sessionStorage.setItem('bookingSurvey', JSON.stringify(data));
             
-            // Redirect to booking page
-            window.location.href = 'https://londonlongevity.connect.e-clinic.co.uk/book/collegen_clinic';
+            // Submit to Netlify Forms
+            fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(() => {
+                // Success - redirect to booking page
+                window.location.href = 'https://londonlongevity.connect.e-clinic.co.uk/book/collegen_clinic';
+            })
+            .catch((error) => {
+                console.error('Error submitting form:', error);
+                // Even if submission fails, still redirect to booking
+                // (form data is in sessionStorage if needed)
+                window.location.href = 'https://londonlongevity.connect.e-clinic.co.uk/book/collegen_clinic';
+            })
+            .finally(() => {
+                // Reset button (though we're redirecting)
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+            });
         }
     </script>
     <script src="script.js"></script>
