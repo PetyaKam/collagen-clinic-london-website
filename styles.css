@@ -404,7 +404,7 @@ h1, h2, h3, h4 {
 }
 
 .founder-media {
-    font-size: 1.15rem;
+    font-size: 1.45rem;
     color: #666666;
     margin-bottom: 0;
     line-height: 1.7;
@@ -413,7 +413,7 @@ h1, h2, h3, h4 {
 }
 
 .founder-intro-description {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #666666;
     line-height: 1.8;
     margin-top: 1rem;
@@ -4321,7 +4321,7 @@ h1, h2, h3, h4 {
     }
     
     .founder-media {
-        font-size: 1.05rem;
+        font-size: 1.25rem;
     }
     
     .stat-label {
