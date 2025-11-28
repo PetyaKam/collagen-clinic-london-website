@@ -450,10 +450,21 @@ h1, h2, h3, h4 {
     max-width: 550px;
 }
 
+.hero-stats-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 5rem;
+    align-items: start;
+}
+
 .hero-stats {
     display: flex;
     gap: 2.5rem;
-    margin: 2.5rem 0;
+    margin: 0;
     padding: 2rem 0;
     border-top: 1px solid #e8e8e8;
     border-bottom: 1px solid #e8e8e8;
@@ -3880,6 +3891,13 @@ h1, h2, h3, h4 {
     .hero-description {
         font-size: 1.2rem;
         line-height: 1.8;
+    }
+    
+    .hero-stats-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1.25rem;
+        margin-top: 2rem;
     }
     
     .hero-stats {
