@@ -2300,6 +2300,7 @@ h1, h2, h3, h4 {
     color: #1a1a1a;
     margin-bottom: 2rem;
     font-weight: 600;
+    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 }
 
 .trust-highlights {
@@ -2814,6 +2815,7 @@ h1, h2, h3, h4 {
 .combination-philosophy h3 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 }
 
 .combination-philosophy p {
@@ -3485,6 +3487,7 @@ h1, h2, h3, h4 {
     font-size: 2.5rem;
     color: #1a1a1a;
     margin-bottom: 1rem;
+    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 }
 
 .social-proof-header p {
