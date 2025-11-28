@@ -368,13 +368,13 @@ h1, h2, h3, h4 {
 /* Founder Introduction */
 .founder-intro {
     margin-bottom: 3rem;
-    text-align: left;
+    text-align: center;
     padding-top: 0;
     margin-top: 1rem;
 }
 
 .founder-badge {
-    display: inline-block;
+    display: block;
     background: transparent;
     color: #000000;
     padding: 0;
@@ -382,7 +382,7 @@ h1, h2, h3, h4 {
     font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 0.15em;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
     border: none;
 }
@@ -390,12 +390,13 @@ h1, h2, h3, h4 {
 .founder-name-hero {
     font-size: 1.2rem;
     font-weight: 500;
-    margin-bottom: 0.75rem;
+    margin: 0.5rem 0 0.75rem 0;
     color: #000000;
     font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
     letter-spacing: 0.15em;
     line-height: 1.4;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .founder-credentials {
