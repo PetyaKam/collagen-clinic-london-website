@@ -56,6 +56,7 @@ h1, h2, h3, h4 {
     line-height: 1.9;
     font-weight: 400;
     letter-spacing: 0.01em;
+    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 }
 
 /* Buttons */
@@ -887,6 +888,7 @@ h1, h2, h3, h4 {
     line-height: 1.8;
     font-weight: 400;
     margin-bottom: 2rem;
+    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 }
 
 .package-features h4 {
@@ -1188,6 +1190,7 @@ h1, h2, h3, h4 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
     color: #1a1a1a;
+    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 }
 
 .package-price {
@@ -1201,6 +1204,7 @@ h1, h2, h3, h4 {
 .package-subtitle {
     color: #6b6b6b;
     font-size: 1rem;
+    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 }
 
 .package-features {
@@ -1453,6 +1457,7 @@ h1, h2, h3, h4 {
     color: #6b6b6b;
     margin-bottom: 3rem;
     line-height: 1.6;
+    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 }
 
 .treatment-highlights {
@@ -2349,6 +2354,7 @@ h1, h2, h3, h4 {
     font-size: 0.75rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 }
 
 .founder-description {
