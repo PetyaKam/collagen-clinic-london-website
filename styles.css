@@ -388,13 +388,14 @@ h1, h2, h3, h4 {
 }
 
 .founder-name-hero {
-    font-size: 1.75rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 500;
     margin-bottom: 0.75rem;
     color: #000000;
     font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-    letter-spacing: 0;
+    letter-spacing: 0.15em;
     line-height: 1.4;
+    text-transform: uppercase;
 }
 
 .founder-credentials {
@@ -4332,7 +4333,7 @@ h1, h2, h3, h4 {
     }
     
     .founder-name-hero {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
     
     .founder-credentials {
