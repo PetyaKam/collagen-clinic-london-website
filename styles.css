@@ -414,6 +414,7 @@ h1, h2, h3, h4 {
     line-height: 1.7;
     font-style: italic;
     font-weight: 400;
+    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 }
 
 .founder-intro-description {
@@ -422,6 +423,7 @@ h1, h2, h3, h4 {
     line-height: 1.8;
     margin-top: 1rem;
     font-weight: 400;
+    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 }
 
 .hero-title {
