@@ -349,7 +349,7 @@ h1, h2, h3, h4 {
     display: grid;
     grid-template-columns: 0.75fr 1.25fr;
     gap: 5rem;
-    align-items: stretch;
+    align-items: start;
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -358,25 +358,28 @@ h1, h2, h3, h4 {
 .hero-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    min-height: 1000px;
+    justify-content: flex-start;
+    height: auto;
+    min-height: auto;
+    padding-top: 0;
 }
 
 /* Founder Introduction */
 .founder-intro {
     margin-bottom: 3rem;
     text-align: left;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 .founder-badge {
     display: inline-block;
     background: transparent;
-    color: #666666;
+    color: #000000;
     padding: 0;
     border-radius: 0;
-    font-size: 0.75rem;
-    font-weight: 400;
+    font-size: 0.9rem;
+    font-weight: 500;
     letter-spacing: 0.15em;
     margin-bottom: 1rem;
     text-transform: uppercase;
@@ -503,7 +506,7 @@ h1, h2, h3, h4 {
     position: relative;
     margin-top: 0;
     width: 100%;
-    height: 1000px;
+    height: 900px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -520,7 +523,7 @@ h1, h2, h3, h4 {
 
 .hero-image-photo {
     width: 100%;
-    height: 1000px;
+    height: 900px;
     object-fit: cover;
     object-position: center center;
     border-radius: 12px;
