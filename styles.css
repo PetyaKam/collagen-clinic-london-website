@@ -3159,6 +3159,24 @@ h1, h2, h3, h4 {
     line-height: 1.8;
 }
 
+.footer-media {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #999999;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom > div {
+        flex-direction: column !important;
+    }
+    
+    .footer-bottom > div > div:last-child {
+        text-align: left !important;
+        margin-top: 1.5rem;
+    }
+}
+
 /* Booking UX Enhancements */
 @keyframes pulse-gold {
     0% {
