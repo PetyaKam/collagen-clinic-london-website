@@ -1328,10 +1328,10 @@ h1, h2, h3, h4 {
 
 .prices-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: 1fr;
     gap: 3rem;
     margin-bottom: 4rem;
-    max-width: 1400px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
