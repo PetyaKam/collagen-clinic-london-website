@@ -182,8 +182,176 @@
             <div style="margin-top: 4rem; padding-top: 4rem; border-top: 1px solid #e0e0e0;">
                 <h3 style="text-align: center; font-size: 1.8rem; font-weight: 600; margin-bottom: 1.5rem; color: #1a1a1a;">Evidence-Based Packages</h3>
                 <p style="text-align: center; color: #666; margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">Dr. Zolman's bespoke treatment protocols designed to address your specific concerns</p>
-                <div style="text-align: center;">
-                    <a href="packages.html" class="btn-primary" style="display: inline-block; font-size: 1.1rem; padding: 20px 40px; text-decoration: none;">View All Packages</a>
+                
+                <!-- Carousel Container -->
+                <div class="packages-carousel-container" style="position: relative; max-width: 1200px; margin: 0 auto; padding: 0 50px;">
+                    <button class="carousel-btn carousel-prev" onclick="moveCarousel(-1)" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); background: #d4af37; color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; z-index: 10; display: flex; align-items: center; justify-content: center;">‹</button>
+                    
+                    <div class="packages-carousel-wrapper" style="overflow: hidden; position: relative;">
+                        <div class="packages-carousel" id="packagesCarousel" style="display: flex; transition: transform 0.5s ease; gap: 2rem;">
+                            <!-- Package cards will be inserted here -->
+                            <div class="package-card" style="min-width: 350px; flex-shrink: 0;">
+                                <div class="package-badge">🔬 Evidence-Based</div>
+                                <div class="package-header">
+                                    <h3 class="package-title">Redness Protocol</h3>
+                                    <div class="package-price"><span class="current-price">£1,200</span></div>
+                                    <p class="package-subtitle">treating facial redness, rosacea, and vascular concerns</p>
+                                </div>
+                                <div class="package-features">
+                                    <ul>
+                                        <li><strong>Sunekos HA biostimulator</strong> with the world's smallest needles for minimal discomfort</li>
+                                        <li><strong>Excel V Genesis Laser</strong></li>
+                                        <li><strong>Excel V CoolView Laser</strong></li>
+                                    </ul>
+                                </div>
+                                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                                    <a href="treatments/redness-protocol.html" class="package-btn btn-secondary" style="flex: 1;">Learn More</a>
+                                    <a href="https://londonlongevity.connect.e-clinic.co.uk/book/collegen_clinic" class="package-btn btn-primary" style="flex: 1;" target="_blank" rel="noopener">Book Now</a>
+                                </div>
+                            </div>
+                            
+                            <div class="package-card" style="min-width: 350px; flex-shrink: 0;">
+                                <div class="package-badge">🔬 Evidence-Based</div>
+                                <div class="package-header">
+                                    <h3 class="package-title">Pigmentation Protocol</h3>
+                                    <div class="package-price"><span class="current-price">£1,100</span></div>
+                                    <p class="package-subtitle">treating hyperpigmentation, sun damage, and uneven skin tone</p>
+                                </div>
+                                <div class="package-features">
+                                    <ul>
+                                        <li><strong>Sunekos HA biostimulator</strong> with the world's smallest needles for minimal discomfort</li>
+                                        <li><strong>LaseMD Laser with drug delivery</strong></li>
+                                    </ul>
+                                </div>
+                                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                                    <a href="treatments/pigmentation-protocol.html" class="package-btn btn-secondary" style="flex: 1;">Learn More</a>
+                                    <a href="https://londonlongevity.connect.e-clinic.co.uk/book/collegen_clinic" class="package-btn btn-primary" style="flex: 1;" target="_blank" rel="noopener">Book Now</a>
+                                </div>
+                            </div>
+                            
+                            <div class="package-card" style="min-width: 350px; flex-shrink: 0;">
+                                <div class="package-badge">🔬 Evidence-Based</div>
+                                <div class="package-header">
+                                    <h3 class="package-title">Skin Rejuvenation Protocol</h3>
+                                    <div class="package-price"><span class="current-price">£1,800</span></div>
+                                    <p class="package-subtitle">treating fine lines, wrinkles, and skin texture concerns</p>
+                                </div>
+                                <div class="package-features">
+                                    <ul>
+                                        <li><strong>Sunekos HA biostimulator (full face + eyes)</strong> with the world's smallest needles for minimal discomfort</li>
+                                        <li><strong>Tixel thermo-mechanical ablative (TMA) technology with drug delivery (full face + eyes)</strong></li>
+                                        <li><strong>Botox Long-Acting 2 areas</strong></li>
+                                    </ul>
+                                </div>
+                                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                                    <a href="treatments/skin-rejuvenation-protocol.html" class="package-btn btn-secondary" style="flex: 1;">Learn More</a>
+                                    <a href="https://londonlongevity.connect.e-clinic.co.uk/book/collegen_clinic" class="package-btn btn-primary" style="flex: 1;" target="_blank" rel="noopener">Book Now</a>
+                                </div>
+                            </div>
+                            
+                            <div class="package-card" style="min-width: 350px; flex-shrink: 0;">
+                                <div class="package-badge">🔬 Evidence-Based</div>
+                                <div class="package-header">
+                                    <h3 class="package-title">Tightening Protocol</h3>
+                                    <div class="package-price"><span class="current-price">£1,700</span></div>
+                                    <p class="package-subtitle">treating sagging skin, volume loss, and facial contouring</p>
+                                </div>
+                                <div class="package-features">
+                                    <ul>
+                                        <li><strong>Sunekos HA biostimulator</strong> with the world's smallest needles for minimal discomfort</li>
+                                        <li><strong>Ultraformer in non-fat loss mode</strong> (1 session)</li>
+                                    </ul>
+                                </div>
+                                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                                    <a href="treatments/tightening-lifting-protocol.html" class="package-btn btn-secondary" style="flex: 1;">Learn More</a>
+                                    <a href="https://londonlongevity.connect.e-clinic.co.uk/book/collegen_clinic" class="package-btn btn-primary" style="flex: 1;" target="_blank" rel="noopener">Book Now</a>
+                                </div>
+                            </div>
+                            
+                            <div class="package-card" style="min-width: 350px; flex-shrink: 0;">
+                                <div class="package-badge">🔬 Evidence-Based</div>
+                                <div class="package-header">
+                                    <h3 class="package-title">Eye Rejuvenation Protocol</h3>
+                                    <div class="package-price"><span class="current-price">£900</span></div>
+                                    <p class="package-subtitle">treating eye area concerns including fine lines, dark circles, and sagging</p>
+                                </div>
+                                <div class="package-features">
+                                    <ul>
+                                        <li><strong>Sunekos HA biostimulator</strong> with the world's smallest needles for minimal discomfort</li>
+                                        <li><strong>LaseMD or Excel V Coolview Laser</strong> (skin-dependant)</li>
+                                        <li><strong>Tixel thermo-mechanical ablative (TMA) technology for upper eye non-surgical blepharoplasty</strong></li>
+                                    </ul>
+                                </div>
+                                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                                    <a href="treatments/eye-rejuvenation-protocol.html" class="package-btn btn-secondary" style="flex: 1;">Learn More</a>
+                                    <a href="https://londonlongevity.connect.e-clinic.co.uk/book/collegen_clinic" class="package-btn btn-primary" style="flex: 1;" target="_blank" rel="noopener">Book Now</a>
+                                </div>
+                            </div>
+                            
+                            <div class="package-card" style="min-width: 350px; flex-shrink: 0;">
+                                <div class="package-badge">🔬 Evidence-Based</div>
+                                <div class="package-header">
+                                    <h3 class="package-title">Hair Protocol</h3>
+                                    <div class="package-price"><span class="current-price">£500</span></div>
+                                    <p class="package-subtitle">treating hair loss, thinning, and scalp health using KeraLase technology</p>
+                                </div>
+                                <div class="package-features">
+                                    <ul>
+                                        <li><strong>KeraLase Scalp Laser + drug delivery Hair Rejuvenation</strong></li>
+                                        <li><strong>Dr Zolman's recommended Topicals, Supplements and Medications</strong></li>
+                                    </ul>
+                                </div>
+                                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                                    <a href="treatments/hair-protocol.html" class="package-btn btn-secondary" style="flex: 1;">Learn More</a>
+                                    <a href="https://londonlongevity.connect.e-clinic.co.uk/book/collegen_clinic" class="package-btn btn-primary" style="flex: 1;" target="_blank" rel="noopener">Book Now</a>
+                                </div>
+                            </div>
+                            
+                            <div class="package-card" style="min-width: 350px; flex-shrink: 0;">
+                                <div class="package-badge">🔬 Evidence-Based</div>
+                                <div class="package-header">
+                                    <h3 class="package-title">Beard Protocol</h3>
+                                    <div class="package-price"><span class="current-price">£400</span></div>
+                                    <p class="package-subtitle">treating beard growth, thickness, and facial hair health using KeraLase technology</p>
+                                </div>
+                                <div class="package-features">
+                                    <ul>
+                                        <li><strong>KeraLase Laser + drug delivery Hair Rejuvenation</strong></li>
+                                        <li><strong>Dr Zolman's recommended Topicals, Supplements and Medications</strong></li>
+                                    </ul>
+                                </div>
+                                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                                    <a href="treatments/beard-protocol.html" class="package-btn btn-secondary" style="flex: 1;">Learn More</a>
+                                    <a href="https://londonlongevity.connect.e-clinic.co.uk/book/collegen_clinic" class="package-btn btn-primary" style="flex: 1;" target="_blank" rel="noopener">Book Now</a>
+                                </div>
+                            </div>
+                            
+                            <div class="package-card" style="min-width: 350px; flex-shrink: 0;">
+                                <div class="package-badge">🔬 Evidence-Based</div>
+                                <div class="package-header">
+                                    <h3 class="package-title">Blemishes Protocol</h3>
+                                    <div class="package-price"><span class="current-price">£750</span></div>
+                                    <p class="package-subtitle">treating problematic skin</p>
+                                </div>
+                                <div class="package-features">
+                                    <ul>
+                                        <li><strong>Tixel thermo-mechanical ablative (TMA) technology with drug delivery</strong></li>
+                                        <li><strong>Fusion Meso F-ACN</strong> based on Hyaluronic acid, Niacinamide, ZnPCA, and Panthenol</li>
+                                    </ul>
+                                </div>
+                                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                                    <a href="treatments/blemished-skin-protocol.html" class="package-btn btn-secondary" style="flex: 1;">Learn More</a>
+                                    <a href="https://londonlongevity.connect.e-clinic.co.uk/book/collegen_clinic" class="package-btn btn-primary" style="flex: 1;" target="_blank" rel="noopener">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-btn carousel-next" onclick="moveCarousel(1)" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background: #d4af37; color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; z-index: 10; display: flex; align-items: center; justify-content: center;">›</button>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="packages.html" class="btn-secondary" style="display: inline-block; font-size: 1rem; padding: 15px 30px; text-decoration: none;">View All Packages</a>
                 </div>
             </div>
         </div>

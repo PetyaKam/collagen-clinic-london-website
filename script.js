@@ -865,4 +865,54 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Contact form removed - using WhatsApp booking system
-// Dr. Lamiche style treatment modals active 
+// Dr. Lamiche style treatment modals active
+
+// Packages Carousel Function
+let currentCarouselIndex = 0;
+
+function moveCarousel(direction) {
+    const carousel = document.getElementById('packagesCarousel');
+    if (!carousel) return;
+    
+    const cards = carousel.querySelectorAll('.package-card');
+    const totalCards = cards.length;
+    
+    // Calculate how many cards to show at once based on screen size
+    let cardsToShow = 3;
+    if (window.innerWidth <= 768) {
+        cardsToShow = 1;
+    } else if (window.innerWidth <= 1024) {
+        cardsToShow = 2;
+    }
+    
+    // Calculate max index
+    const maxIndex = Math.max(0, totalCards - cardsToShow);
+    
+    // Update index
+    currentCarouselIndex += direction;
+    
+    // Clamp index
+    if (currentCarouselIndex < 0) {
+        currentCarouselIndex = 0;
+    } else if (currentCarouselIndex > maxIndex) {
+        currentCarouselIndex = maxIndex;
+    }
+    
+    // Calculate translateX value (each card is 350px + 2rem gap = ~382px)
+    const cardWidth = 382; // 350px + 32px gap
+    const translateX = -currentCarouselIndex * cardWidth;
+    
+    carousel.style.transform = `translateX(${translateX}px)`;
+}
+
+// Initialize carousel on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('packagesCarousel');
+    if (carousel) {
+        // Reset position on window resize
+        window.addEventListener('resize', function() {
+            currentCarouselIndex = 0;
+            moveCarousel(0);
+        });
+    }
+});
