@@ -877,25 +877,14 @@ function moveCarousel(direction) {
     const cards = carousel.querySelectorAll('.package-card');
     const totalCards = cards.length;
     
-    // Calculate how many cards to show at once based on screen size
-    let cardsToShow = 3;
-    if (window.innerWidth <= 768) {
-        cardsToShow = 1;
-    } else if (window.innerWidth <= 1024) {
-        cardsToShow = 2;
-    }
-    
-    // Calculate max index
-    const maxIndex = Math.max(0, totalCards - cardsToShow);
-    
-    // Update index
+    // Update index - scroll one card at a time
     currentCarouselIndex += direction;
     
-    // Clamp index
+    // Clamp index to allow scrolling through all cards
     if (currentCarouselIndex < 0) {
         currentCarouselIndex = 0;
-    } else if (currentCarouselIndex > maxIndex) {
-        currentCarouselIndex = maxIndex;
+    } else if (currentCarouselIndex >= totalCards) {
+        currentCarouselIndex = totalCards - 1;
     }
     
     // Calculate translateX value (each card is 320px + 2rem gap = ~352px)
@@ -903,12 +892,38 @@ function moveCarousel(direction) {
     const translateX = -currentCarouselIndex * cardWidth;
     
     carousel.style.transform = `translateX(${translateX}px)`;
+    
+    // Update button visibility
+    updateCarouselButtons();
+}
+
+function updateCarouselButtons() {
+    const carousel = document.getElementById('packagesCarousel');
+    if (!carousel) return;
+    
+    const cards = carousel.querySelectorAll('.package-card');
+    const totalCards = cards.length;
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    
+    if (prevBtn) {
+        prevBtn.style.opacity = currentCarouselIndex === 0 ? '0.5' : '1';
+        prevBtn.style.cursor = currentCarouselIndex === 0 ? 'not-allowed' : 'pointer';
+    }
+    
+    if (nextBtn) {
+        nextBtn.style.opacity = currentCarouselIndex >= totalCards - 1 ? '0.5' : '1';
+        nextBtn.style.cursor = currentCarouselIndex >= totalCards - 1 ? 'not-allowed' : 'pointer';
+    }
 }
 
 // Initialize carousel on page load
 document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.getElementById('packagesCarousel');
     if (carousel) {
+        // Initialize button states
+        updateCarouselButtons();
+        
         // Reset position on window resize
         window.addEventListener('resize', function() {
             currentCarouselIndex = 0;
