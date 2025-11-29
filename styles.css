@@ -4874,7 +4874,7 @@ h1, h2, h3, h4 {
 }
 
 .packages-carousel-container .carousel-btn:hover {
-    background: #C4B5A0;
+    background: #000000;
     transform: translateY(-50%) scale(1.1);
 }
 

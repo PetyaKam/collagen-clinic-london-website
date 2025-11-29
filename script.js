@@ -276,7 +276,7 @@ function showNotification(message, type = 'success') {
             max-width: 400px;
             transform: translateX(100%);
             transition: transform 0.3s ease;
-            border-left: 4px solid #D4C4B0;
+            border-left: 4px solid #000000;
         }
         
         .notification--error {
@@ -508,7 +508,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     serviceSelect.value = packageType;
                     
                     // Add visual feedback with golden highlight
-                    serviceSelect.style.border = '2px solid #D4C4B0';
+                    serviceSelect.style.border = '2px solid #000000';
                     serviceSelect.style.boxShadow = '0 0 10px rgba(212, 175, 55, 0.3)';
                     
                     // Focus on first name field for better UX
@@ -563,7 +563,7 @@ function loadMedeskWidget() {
                 width: 40px;
                 height: 40px;
                 border: 4px solid #f3f3f3;
-                border-top: 4px solid #D4C4B0;
+                border-top: 4px solid #000000;
                 border-radius: 50%;
                 animation: spin 1s linear infinite;
                 margin: 0 auto 1rem;
@@ -589,7 +589,7 @@ function insertMedeskWidget() {
     const whatsappBookingCode = `
         <div class="whatsapp-booking-widget">
             <div style="padding: 2rem; text-align: center; background: linear-gradient(135deg, #f8f9fa, #ffffff); border-radius: 12px;">
-                <h3 style="color: #D4C4B0; margin-bottom: 1rem;">📱 Instant WhatsApp Booking</h3>
+                <h3 style="color: #000000; margin-bottom: 1rem;">📱 Instant WhatsApp Booking</h3>
                 <p style="margin-bottom: 2rem; color: #666; font-size: 1.1rem;">
                     Book your appointment instantly via WhatsApp<br>
                     Get immediate confirmation and personalized service
@@ -669,7 +669,7 @@ function insertMedeskWidget() {
                     </button>
                 </div>
                 
-                <div style="margin-top: 2rem; padding: 1rem; background: rgba(212, 196, 176, 0.1); border-radius: 8px; border-left: 4px solid #D4C4B0;">
+                <div style="margin-top: 2rem; padding: 1rem; background: rgba(0, 0, 0, 0.1); border-radius: 8px; border-left: 4px solid #000000;">
                     <p style="margin: 0; color: #666; font-size: 0.9rem;">
                         <strong>📞 Direct Contact:</strong> +447427746836<br>
                         <em>Available Monday - Friday: 9:00 AM - 6:00 PM</em>
