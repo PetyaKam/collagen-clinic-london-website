@@ -898,8 +898,8 @@ function moveCarousel(direction) {
         currentCarouselIndex = maxIndex;
     }
     
-    // Calculate translateX value (each card is 350px + 2rem gap = ~382px)
-    const cardWidth = 382; // 350px + 32px gap
+    // Calculate translateX value (each card is 320px + 2rem gap = ~352px)
+    const cardWidth = 352; // 320px + 32px gap
     const translateX = -currentCarouselIndex * cardWidth;
     
     carousel.style.transform = `translateX(${translateX}px)`;

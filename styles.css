@@ -4867,6 +4867,17 @@ h1, h2, h3, h4 {
     border-color: #000000;
 }
 
+/* Packages Carousel Hover Effects */
+.packages-carousel-container .package-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.packages-carousel-container .carousel-btn:hover {
+    background: #c19d26;
+    transform: translateY(-50%) scale(1.1);
+}
+
 .bespoke-package-header {
     margin-bottom: 1.5rem;
     text-align: center;
