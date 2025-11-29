@@ -4063,6 +4063,27 @@ h1, h2, h3, h4 {
         font-size: 2rem;
     }
     
+    .diagnostic-detail-section {
+        padding: 1.5rem !important;
+    }
+    
+    .diagnostic-detail-section > div {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    .diagnostic-detail-section h3 {
+        font-size: 1.6rem !important;
+    }
+    
+    .diagnostic-detail-section p {
+        font-size: 1.1rem !important;
+    }
+    
+    .diagnostic-detail-section li {
+        font-size: 1rem !important;
+    }
+    
     .founders-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
