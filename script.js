@@ -1097,10 +1097,9 @@ const treatmentDetails = {
     'gentlemax': {
         title: 'GentleMax Pro Plus',
         image: 'Images/candela.png',
-        description: 'Advanced dual-wavelength laser system combining Alexandrite and Nd:YAG technologies for treating pigmented lesions, vascular conditions, and unwanted hair with superior safety and efficacy.',
+        description: 'Advanced dual-wavelength laser system combining Alexandrite and Nd:YAG technologies for treating pigmented lesions and vascular conditions with superior safety and efficacy.',
         features: [
             { title: 'All Skin Types', text: 'Safe and effective treatment for all skin types' },
-            { title: 'Hair Removal', text: 'Permanent hair reduction with advanced laser technology' },
             { title: 'Pigmentation Treatment', text: 'Effectively treats age spots, sun damage, and pigmentation issues' }
         ],
         conclusion: 'GentleMax Pro Plus offers versatile treatment options for multiple skin concerns with proven safety and effectiveness.'
