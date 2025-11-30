@@ -931,3 +931,439 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Treatment Carousel Functions
+let treatmentCarouselIndices = {
+    'diagnostics': 0,
+    'lasers': 0,
+    'injectables': 0
+};
+
+function moveTreatmentCarousel(carouselId, direction) {
+    const carousel = document.getElementById(carouselId + 'Carousel');
+    if (!carousel) return;
+    
+    const cards = carousel.querySelectorAll('.package-card');
+    const totalCards = cards.length;
+    
+    // Update index
+    treatmentCarouselIndices[carouselId] += direction;
+    
+    // Clamp index
+    if (treatmentCarouselIndices[carouselId] < 0) {
+        treatmentCarouselIndices[carouselId] = 0;
+    } else if (treatmentCarouselIndices[carouselId] >= totalCards) {
+        treatmentCarouselIndices[carouselId] = totalCards - 1;
+    }
+    
+    // Calculate translateX value
+    const cardWidth = 352; // 320px + 32px gap
+    const translateX = -treatmentCarouselIndices[carouselId] * cardWidth;
+    
+    carousel.style.transform = `translateX(${translateX}px)`;
+    
+    // Update button visibility
+    updateTreatmentCarouselButtons(carouselId);
+}
+
+function updateTreatmentCarouselButtons(carouselId) {
+    const carousel = document.getElementById(carouselId + 'Carousel');
+    if (!carousel) return;
+    
+    const cards = carousel.querySelectorAll('.package-card');
+    const totalCards = cards.length;
+    const prevBtn = document.querySelector('.' + carouselId + '-prev');
+    const nextBtn = document.querySelector('.' + carouselId + '-next');
+    
+    if (prevBtn) {
+        prevBtn.style.opacity = treatmentCarouselIndices[carouselId] === 0 ? '0.5' : '1';
+        prevBtn.style.cursor = treatmentCarouselIndices[carouselId] === 0 ? 'not-allowed' : 'pointer';
+    }
+    
+    if (nextBtn) {
+        nextBtn.style.opacity = treatmentCarouselIndices[carouselId] >= totalCards - 1 ? '0.5' : '1';
+        nextBtn.style.cursor = treatmentCarouselIndices[carouselId] >= totalCards - 1 ? 'not-allowed' : 'pointer';
+    }
+}
+
+// Initialize treatment carousels on page load
+document.addEventListener('DOMContentLoaded', function() {
+    ['diagnostics', 'lasers', 'injectables'].forEach(function(carouselId) {
+        const carousel = document.getElementById(carouselId + 'Carousel');
+        if (carousel) {
+            updateTreatmentCarouselButtons(carouselId);
+            
+            // Reset position on window resize
+            window.addEventListener('resize', function() {
+                treatmentCarouselIndices[carouselId] = 0;
+                moveTreatmentCarousel(carouselId, 0);
+            });
+        }
+    });
+});
+
+// Treatment Details Data
+const treatmentDetails = {
+    'visia-scan': {
+        title: 'VISIA Skin Analysis System',
+        image: 'Images/visia.png',
+        description: 'The VISIA Skin Analysis System is the world\'s most advanced multi-spectral skin imaging technology, providing comprehensive assessment of your skin\'s biological age and health. This cutting-edge diagnostic tool captures high-resolution images using multiple wavelengths of light to reveal skin conditions that are invisible to the naked eye.',
+        features: [
+            { title: 'UV Damage', text: 'Detects sun damage and pigmentation issues beneath the skin surface' },
+            { title: 'Wrinkles & Fine Lines', text: 'Maps facial wrinkles and analyzes skin texture' },
+            { title: 'Pores & Texture', text: 'Evaluates pore size and skin smoothness' },
+            { title: 'Pigmentation', text: 'Identifies brown spots, melasma, and uneven skin tone' },
+            { title: 'Redness & Vascular', text: 'Maps broken capillaries, rosacea, and vascular concerns' },
+            { title: 'Porphyrins', text: 'Detects bacteria in pores that can lead to acne' }
+        ],
+        conclusion: 'VISIA provides objective, quantifiable data that allows Dr. Zolman to create a personalized treatment protocol targeting your specific skin concerns. The system tracks your progress over time, measuring improvements in skin health and biological age reversal.'
+    },
+    'observ520': {
+        title: 'SYLTON Observ520 Multi-Spectral Imaging',
+        image: 'Images/observ .png',
+        description: 'The SYLTON Observ520 is a revolutionary multi-spectral imaging system that uses advanced polarized light technology to visualize subsurface skin structures and conditions. This non-invasive diagnostic tool provides detailed analysis of skin layers that cannot be seen with standard photography.',
+        features: [
+            { title: 'Polarized Light Analysis', text: 'Reveals subsurface pigmentation, vascular structures, and skin texture' },
+            { title: 'Multi-Spectral Imaging', text: 'Captures images at multiple wavelengths for comprehensive skin assessment' },
+            { title: 'Subsurface Visualization', text: 'Detects conditions beneath the skin surface before they become visible' },
+            { title: 'Progress Tracking', text: 'Monitors treatment effectiveness and skin health improvements over time' },
+            { title: 'High Resolution', text: 'Provides detailed imaging for precise diagnosis and treatment planning' }
+        ],
+        conclusion: 'The Observ520 complements VISIA analysis by providing additional insights into skin structure and subsurface conditions, enabling Dr. Zolman to develop even more targeted and effective treatment protocols.'
+    },
+    'qoves-ai': {
+        title: 'QOVES AI Aesthetics Analysis',
+        image: 'Images/qoves.png',
+        description: 'QOVES AI is an exclusive artificial intelligence-powered facial aesthetics analysis system available only at Collagen Clinic London. This cutting-edge technology uses advanced machine learning algorithms to analyze facial features, proportions, and aesthetic harmony, providing objective insights into facial beauty and aging patterns.',
+        features: [
+            { title: 'Facial Proportions', text: 'Evaluates golden ratio and facial symmetry' },
+            { title: 'Aging Patterns', text: 'Identifies areas of volume loss, sagging, and structural changes' },
+            { title: 'Skin Quality', text: 'Assesses texture, tone, and overall skin health' },
+            { title: 'Facial Contouring', text: 'Analyzes bone structure and soft tissue distribution' },
+            { title: 'Treatment Recommendations', text: 'Suggests personalized interventions based on AI analysis' }
+        ],
+        conclusion: 'QOVES AI provides Dr. Zolman with data-driven insights to create highly personalized treatment plans that optimize both skin health and facial aesthetics, ensuring natural-looking results that enhance your unique features.',
+        video: '<iframe width="100%" height="400" src="https://www.youtube.com/embed/_gV3w8lm_z8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px; max-width: 100%; margin-top: 2rem;"></iframe>'
+    },
+    'body-surface-analysis': {
+        title: 'Total Body Surface Area Analysis',
+        image: 'Images/whole body.jpeg',
+        description: 'Our comprehensive body surface area analysis provides a complete mapping of your skin\'s biological age across your entire body. This innovative diagnostic approach goes beyond facial assessment to evaluate skin health, sun damage, and aging patterns across all body regions.',
+        features: [
+            { title: 'Full Body Mapping', text: 'Evaluates skin condition across all body surfaces' },
+            { title: 'Age Mapping', text: 'Identifies areas of accelerated aging and sun damage' },
+            { title: 'Pigmentation Analysis', text: 'Maps hyperpigmentation and uneven skin tone across the body' },
+            { title: 'Texture Evaluation', text: 'Assesses skin smoothness and quality in different body regions' },
+            { title: 'Treatment Prioritization', text: 'Helps identify which areas need the most attention' }
+        ],
+        conclusion: 'This comprehensive analysis ensures that your treatment protocol addresses not just facial concerns, but optimizes skin health across your entire body, providing a truly holistic approach to skin rejuvenation.'
+    },
+    'glycation-analysis': {
+        title: 'Glycation Skin Stiffness Analysis',
+        image: 'Images/glycation.jpg',
+        description: 'Glycation is a key biomarker of skin aging, where sugar molecules attach to collagen and elastin fibers, causing them to become stiff and brittle. Our non-invasive glycation analysis measures Advanced Glycation End-products (AGEs) in your skin, providing crucial insights into your skin\'s biological age and structural integrity.',
+        features: [
+            { title: 'Skin Stiffness', text: 'Measures the rigidity of collagen and elastin fibers' },
+            { title: 'AGE Accumulation', text: 'Detects advanced glycation end-products that accelerate aging' },
+            { title: 'Structural Integrity', text: 'Evaluates the health of your skin\'s support matrix' },
+            { title: 'Biological Age', text: 'Provides a more accurate measure of skin aging than chronological age' },
+            { title: 'Treatment Response', text: 'Tracks how interventions reduce glycation and improve skin elasticity' }
+        ],
+        conclusion: 'By measuring glycation, Dr. Zolman can identify the root causes of skin aging and develop targeted interventions to reduce AGE accumulation, restore skin elasticity, and reverse your skin\'s biological age.'
+    },
+    // Lasers & Devices
+    'tixel': {
+        title: 'TIXEL Rejuvenation',
+        image: 'Images/tixel.jpg',
+        description: 'TIXEL is a thermo-mechanical fractional treatment using heated titanium tips to create controlled micro-injuries, stimulating collagen production and skin renewal with minimal downtime.',
+        features: [
+            { title: 'Minimal Downtime', text: 'Quick recovery with minimal disruption to daily activities' },
+            { title: 'Fractional Technology', text: 'Precise, controlled treatment targeting specific skin areas' },
+            { title: 'Collagen Stimulation', text: 'Promotes natural collagen production for improved skin texture' }
+        ],
+        conclusion: 'TIXEL offers an effective solution for skin rejuvenation with minimal downtime, making it ideal for those seeking visible improvements without extended recovery periods.'
+    },
+    'genesis': {
+        title: 'Genesis Laser Rejuvenation',
+        image: 'Images/cutera.webp',
+        description: 'Non-invasive laser therapy promoting collagen synthesis and improving skin texture through gentle heating of dermal tissues, suitable for all skin types.',
+        features: [
+            { title: 'No Downtime', text: 'Immediate return to normal activities after treatment' },
+            { title: 'Collagen Boost', text: 'Stimulates natural collagen production for firmer, smoother skin' },
+            { title: 'All Skin Types', text: 'Safe and effective for all skin types and tones' }
+        ],
+        conclusion: 'Genesis provides gentle yet effective skin rejuvenation with no downtime, perfect for maintaining healthy, youthful-looking skin.'
+    },
+    'gentlemax': {
+        title: 'GentleMax Pro Plus',
+        image: 'Images/candela.png',
+        description: 'Advanced dual-wavelength laser system combining Alexandrite and Nd:YAG technologies for treating pigmented lesions, vascular conditions, and unwanted hair with superior safety and efficacy.',
+        features: [
+            { title: 'All Skin Types', text: 'Safe and effective treatment for all skin types' },
+            { title: 'Hair Removal', text: 'Permanent hair reduction with advanced laser technology' },
+            { title: 'Pigmentation Treatment', text: 'Effectively treats age spots, sun damage, and pigmentation issues' }
+        ],
+        conclusion: 'GentleMax Pro Plus offers versatile treatment options for multiple skin concerns with proven safety and effectiveness.'
+    },
+    'lasemd': {
+        title: 'LaseMD Ultra',
+        image: 'Images/lutronic.jpg',
+        description: 'Precision laser technology for treating age spots, sun damage, and pigmentation disorders through selective photothermolysis with minimal downtime and excellent safety profile.',
+        features: [
+            { title: 'Customizable', text: 'Treatment parameters can be tailored to individual skin needs' },
+            { title: 'Pigmentation', text: 'Effectively targets and removes unwanted pigmentation' },
+            { title: 'Minimal Downtime', text: 'Quick recovery with excellent safety profile' }
+        ],
+        conclusion: 'LaseMD Ultra provides precise, customizable treatment for pigmentation concerns with minimal downtime and excellent results.'
+    },
+    'ultraformer-hifu': {
+        title: 'Ultraformer HIFU',
+        image: 'Images/ultraformer.jpg',
+        description: 'Non-surgical lifting treatment using High-Intensity Focused Ultrasound (HIFU) to target the SMAS layer, providing natural-looking skin tightening and lifting.',
+        features: [
+            { title: 'SMAS Layer', text: 'Targets the deep structural layer for natural lifting' },
+            { title: 'No Downtime', text: 'Immediate return to normal activities' },
+            { title: 'Non-Surgical', text: 'Achieves surgical-like results without surgery' }
+        ],
+        conclusion: 'Ultraformer HIFU offers non-surgical skin tightening and lifting with natural, long-lasting results.'
+    },
+    'keralase-hair': {
+        title: 'KeraLase Hair Regeneration',
+        image: 'Images/lutronic.jpg',
+        description: 'Advanced laser treatment for hair regeneration and scalp health, promoting natural hair growth and improving scalp condition.',
+        features: [
+            { title: 'Hair Growth', text: 'Stimulates natural hair growth and regeneration' },
+            { title: 'Scalp Treatment', text: 'Improves scalp health and condition' },
+            { title: 'Non-Invasive', text: 'Safe, non-invasive treatment option' }
+        ],
+        conclusion: 'KeraLase provides effective hair regeneration treatment with proven results for hair loss and scalp health.'
+    },
+    'coolview': {
+        title: 'CoolView Vascular Laser',
+        image: 'Images/cutera.webp',
+        description: 'Advanced laser system targeting vascular conditions and redness using precise 532 nm and Nd:YAG 1064 nm wavelengths for optimal treatment of broken capillaries, spider veins, and facial redness.',
+        features: [
+            { title: 'Spider Veins', text: 'Effectively treats spider veins and broken capillaries' },
+            { title: 'Precision', text: 'Precise targeting of vascular lesions' },
+            { title: 'Redness Reduction', text: 'Reduces facial redness and vascular concerns' }
+        ],
+        conclusion: 'CoolView provides precise, effective treatment for vascular conditions with minimal discomfort and excellent results.'
+    },
+    'exion-tightening': {
+        title: 'EXION RF Tightening',
+        image: 'Images/exion.jpg',
+        description: 'Radiofrequency treatment for non-invasive skin tightening and lifting, promoting collagen production for firmer, more youthful skin.',
+        features: [
+            { title: 'Non-Invasive', text: 'No surgery required for skin tightening' },
+            { title: 'Skin Lifting', text: 'Provides natural lifting and tightening effects' },
+            { title: 'Collagen Production', text: 'Stimulates natural collagen for long-term results' }
+        ],
+        conclusion: 'EXION RF offers effective non-invasive skin tightening with natural, long-lasting results.'
+    },
+    'exion-microneedling': {
+        title: 'EXION RF Microneedling',
+        image: 'Images/exion.jpg',
+        description: 'Combined radiofrequency and microneedling technology for deep skin remodeling and texture improvement, targeting multiple skin concerns simultaneously.',
+        features: [
+            { title: 'Deep Remodeling', text: 'Targets deep skin layers for comprehensive improvement' },
+            { title: 'Texture Improvement', text: 'Significantly improves skin texture and smoothness' },
+            { title: 'Combined Technology', text: 'RF and microneedling work synergistically for enhanced results' }
+        ],
+        conclusion: 'EXION RF Microneedling provides deep skin remodeling with significant texture and appearance improvements.'
+    },
+    // Injectables & Peels
+    'dermal-fillers': {
+        title: 'Dermal Fillers',
+        image: 'Images/filler.jpg',
+        description: 'Advanced hyaluronic acid and bio-stimulating fillers for facial contouring, volume restoration, and wrinkle reduction. Precise injection techniques for natural-looking results and facial rejuvenation.',
+        features: [
+            { title: 'Hyaluronic Acid', text: 'Natural, safe filler material that integrates with your skin' },
+            { title: 'Natural Results', text: 'Achieves natural-looking volume and contour improvements' },
+            { title: 'Volume Restoration', text: 'Restores lost volume for a more youthful appearance' }
+        ],
+        conclusion: 'Dermal fillers provide natural-looking volume restoration and wrinkle reduction with immediate, visible results.'
+    },
+    'botox': {
+        title: 'Botox',
+        image: 'Images/botox.webp',
+        description: 'FDA-approved botulinum toxin treatment for wrinkle relaxation and facial rejuvenation, providing smooth, natural-looking results.',
+        features: [
+            { title: 'FDA Approved', text: 'Proven safe and effective with FDA approval' },
+            { title: 'Proven Results', text: 'Clinically proven to reduce wrinkles and fine lines' },
+            { title: 'Wrinkle Relaxation', text: 'Smooth, natural-looking wrinkle reduction' }
+        ],
+        conclusion: 'Botox offers safe, effective wrinkle reduction with proven, natural-looking results.'
+    },
+    'julaine': {
+        title: 'Julaine',
+        image: 'Images/julaine.jpg',
+        description: 'Premium advanced injectable treatment for facial rejuvenation and volume enhancement, providing long-lasting, natural results.',
+        features: [
+            { title: 'Premium Formula', text: 'High-quality, advanced formulation' },
+            { title: 'Long-Lasting', text: 'Extended duration of results' },
+            { title: 'Natural Enhancement', text: 'Achieves natural-looking facial improvements' }
+        ],
+        conclusion: 'Julaine provides premium facial enhancement with long-lasting, natural results.'
+    },
+    'rejuran': {
+        title: 'Rejuran Polynucleotides',
+        image: 'Images/rejuran.jpeg',
+        description: 'Advanced skin healing and regeneration treatment using polynucleotides to promote DNA repair and cellular rejuvenation.',
+        features: [
+            { title: 'DNA Repair', text: 'Promotes cellular DNA repair and regeneration' },
+            { title: 'Healing', text: 'Accelerates skin healing and recovery' },
+            { title: 'Skin Healer', text: 'Comprehensive skin health improvement' }
+        ],
+        conclusion: 'Rejuran promotes deep skin healing and regeneration for improved overall skin health and appearance.'
+    },
+    'sculptra': {
+        title: 'Sculptra',
+        image: 'Images/Sculptra-Ploly-L-Milchsaure.jpg.webp',
+        description: 'Collagen stimulator for natural volume restoration and facial contouring, providing gradual, long-lasting results through natural collagen production.',
+        features: [
+            { title: 'Long-Lasting', text: 'Results last up to 2 years or more' },
+            { title: 'Natural Volume', text: 'Stimulates your body\'s own collagen for natural volume' },
+            { title: 'Collagen Stimulator', text: 'Promotes natural collagen production' }
+        ],
+        conclusion: 'Sculptra provides natural, long-lasting volume restoration through your body\'s own collagen production.'
+    },
+    'sunekos': {
+        title: 'Sunekos',
+        image: 'Images/sunekos.png',
+        description: 'Injectable biostimulator combining amino acids and hyaluronic acid to regenerate the skin\'s Extracellular Matrix (ECM), stimulating natural collagen and elastin production.',
+        features: [
+            { title: 'FDA Approved', text: 'Proven safe and effective treatment' },
+            { title: 'Natural Results', text: 'Stimulates your body\'s natural regenerative processes' },
+            { title: 'Skin Revitalisation', text: 'Comprehensive skin health and appearance improvement' }
+        ],
+        conclusion: 'Sunekos promotes natural skin regeneration and revitalization for improved skin health and youthful appearance.'
+    },
+    'peels': {
+        title: 'Chemical Peels',
+        image: 'Images/peel.png',
+        description: 'Advanced chemical exfoliation treatments for skin resurfacing, renewal, and improvement of texture, tone, and overall skin appearance.',
+        features: [
+            { title: 'Exfoliation', text: 'Removes dead skin cells for smoother texture' },
+            { title: 'Renewal', text: 'Promotes skin cell renewal and regeneration' },
+            { title: 'Texture Improvement', text: 'Significantly improves skin texture and appearance' }
+        ],
+        conclusion: 'Chemical peels provide effective skin resurfacing and renewal for improved texture and appearance.'
+    },
+    'exosomes': {
+        title: 'Exosomes',
+        image: 'Images/exosomes rose new.webp',
+        description: 'Regenerative medicine treatment using exosomes to promote cell communication and skin regeneration, providing advanced anti-aging benefits.',
+        features: [
+            { title: 'Cell Communication', text: 'Enhances cellular communication for improved skin function' },
+            { title: 'Regeneration', text: 'Promotes deep skin regeneration and repair' },
+            { title: 'Regenerative Medicine', text: 'Cutting-edge regenerative treatment technology' }
+        ],
+        conclusion: 'Exosomes represent the future of regenerative medicine, promoting deep skin regeneration and anti-aging benefits.'
+    }
+};
+
+// Treatment Modal Functions
+function showTreatmentModal(treatmentId) {
+    const modal = document.getElementById('treatmentModal');
+    const modalContent = document.getElementById('treatmentModalContent');
+    
+    if (!modal || !modalContent) return;
+    
+    const treatment = treatmentDetails[treatmentId];
+    
+    if (!treatment) {
+        modalContent.innerHTML = '<p>Treatment details coming soon...</p>';
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        return;
+    }
+    
+    // Build the modal content
+    let html = `
+        <div style="display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; align-items: start;">
+            <div>
+                <img src="${treatment.image}" alt="${treatment.title}" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+            <div>
+                <h3 style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem; color: #1a1a1a;">${treatment.title}</h3>
+                <p style="font-size: 1.3rem; line-height: 1.8; color: #2c2c2c; margin-bottom: 1.5rem;">
+                    ${treatment.description}
+                </p>
+    `;
+    
+    if (treatment.features && treatment.features.length > 0) {
+        // Determine the section title based on treatment type
+        let sectionTitle = 'Key Features:';
+        if (treatment.features[0].title.includes('UV') || treatment.features[0].title.includes('Wrinkles')) {
+            sectionTitle = 'What VISIA Measures:';
+        } else if (treatment.features[0].title.includes('Polarized')) {
+            sectionTitle = 'Key Features:';
+        } else if (treatment.features[0].title.includes('Facial')) {
+            sectionTitle = 'What QOVES AI Analyzes:';
+        } else if (treatment.features[0].title.includes('Full') || treatment.features[0].title.includes('Age Mapping')) {
+            sectionTitle = 'Comprehensive Assessment:';
+        } else if (treatment.features[0].title.includes('Skin Stiffness')) {
+            sectionTitle = 'What Glycation Analysis Reveals:';
+        }
+        
+        html += `
+                <div style="margin-top: 2rem;">
+                    <h4 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 1rem; color: #1a1a1a;">${sectionTitle}</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+        `;
+        
+        treatment.features.forEach((feature, index) => {
+            html += `
+                <li style="padding: 0.75rem 0; ${index < treatment.features.length - 1 ? 'border-bottom: 1px solid #f0f0f0;' : ''} font-size: 1.2rem; line-height: 1.6;">
+                    <strong style="color: #1a1a1a;">${feature.title}:</strong> ${feature.text}
+                </li>
+            `;
+        });
+        
+        html += `
+                    </ul>
+                </div>
+        `;
+    }
+    
+    if (treatment.conclusion) {
+        html += `
+                <p style="font-size: 1.3rem; line-height: 1.8; color: #2c2c2c; margin-top: 2rem;">
+                    ${treatment.conclusion}
+                </p>
+        `;
+    }
+    
+    if (treatment.video) {
+        html += treatment.video;
+    }
+    
+    html += `
+            </div>
+        </div>
+    `;
+    
+    modalContent.innerHTML = html;
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeTreatmentModal() {
+    const modal = document.getElementById('treatmentModal');
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+}
+
+// Close modal when clicking outside
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('treatmentModal');
+    if (modal) {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeTreatmentModal();
+            }
+        });
+    }
+});
