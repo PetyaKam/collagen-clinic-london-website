@@ -18,7 +18,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 1rem; /* Mobile-first: start with smaller base font */
+    -webkit-text-size-adjust: 100%; /* Prevent iOS font scaling */
+    text-size-adjust: 100%;
 }
 
 /* Ensure all text elements use Proxima Nova */
@@ -29,7 +31,8 @@ p, span, a, li, td, th, label, input, textarea, select, button, div {
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem; /* Mobile-first: smaller padding */
+    width: 100%;
 }
 
 /* Typography */

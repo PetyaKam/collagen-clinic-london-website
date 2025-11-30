@@ -929,7 +929,84 @@ document.addEventListener('DOMContentLoaded', function() {
             currentCarouselIndex = 0;
             moveCarousel(0);
         });
+        
+        // Mobile touch swipe support
+        initializeTouchSwipe(carousel);
     }
+});
+
+// ============================================
+// MOBILE TOUCH SWIPE FOR CAROUSELS
+// ============================================
+
+function initializeTouchSwipe(carousel) {
+    if (!carousel) return;
+    
+    let touchStartX = 0;
+    let touchEndX = 0;
+    let touchStartY = 0;
+    let touchEndY = 0;
+    let isSwiping = false;
+    
+    const minSwipeDistance = 50; // Minimum swipe distance in pixels
+    const maxVerticalSwipe = 75; // Maximum vertical movement to still count as horizontal swipe
+    
+    carousel.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+        isSwiping = true;
+    }, { passive: true });
+    
+    carousel.addEventListener('touchmove', function(e) {
+        if (!isSwiping) return;
+        
+        const currentX = e.changedTouches[0].screenX;
+        const currentY = e.changedTouches[0].screenY;
+        const diffX = Math.abs(currentX - touchStartX);
+        const diffY = Math.abs(currentY - touchStartY);
+        
+        // If horizontal swipe is dominant, prevent vertical scroll
+        if (diffX > diffY && diffX > 10) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+    
+    carousel.addEventListener('touchend', function(e) {
+        if (!isSwiping) return;
+        
+        touchEndX = e.changedTouches[0].screenX;
+        touchEndY = e.changedTouches[0].screenY;
+        
+        const diffX = touchStartX - touchEndX;
+        const diffY = Math.abs(touchStartY - touchEndY);
+        
+        // Only trigger swipe if horizontal movement is significant and vertical is minimal
+        if (Math.abs(diffX) > minSwipeDistance && diffY < maxVerticalSwipe) {
+            if (diffX > 0) {
+                // Swipe left - go to next
+                moveCarousel(1);
+            } else {
+                // Swipe right - go to previous
+                moveCarousel(-1);
+            }
+        }
+        
+        isSwiping = false;
+    }, { passive: true });
+    
+    // Prevent default drag behavior on images
+    carousel.querySelectorAll('img').forEach(img => {
+        img.addEventListener('dragstart', e => e.preventDefault());
+    });
+}
+
+// Initialize touch swipe for all carousels on the page
+document.addEventListener('DOMContentLoaded', function() {
+    // Find all carousel wrappers and initialize touch support
+    const carouselWrappers = document.querySelectorAll('.packages-carousel, [id$="Carousel"]');
+    carouselWrappers.forEach(wrapper => {
+        initializeTouchSwipe(wrapper);
+    });
 });
 
 // Treatment Carousel Functions
@@ -1365,4 +1442,291 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
+    // Initialize lazy loading for images
+    initializeLazyLoading();
+    
+    // Initialize accessibility enhancements
+    initializeAccessibility();
+});
+
+// ============================================
+// LAZY LOADING FOR IMAGES AND COMPONENTS
+// ============================================
+
+function initializeLazyLoading() {
+    // Use native lazy loading if supported, otherwise use Intersection Observer
+    if ('loading' in HTMLImageElement.prototype) {
+        // Native lazy loading supported
+        const images = document.querySelectorAll('img[data-src]');
+        images.forEach(img => {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+            img.loading = 'lazy';
+        });
+    } else {
+        // Fallback to Intersection Observer
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    
+                    // Handle data-src attribute
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                    }
+                    
+                    // Handle srcset for responsive images
+                    if (img.dataset.srcset) {
+                        img.srcset = img.dataset.srcset;
+                        img.removeAttribute('data-srcset');
+                    }
+                    
+                    // Handle sizes attribute
+                    if (img.dataset.sizes) {
+                        img.sizes = img.dataset.sizes;
+                        img.removeAttribute('data-sizes');
+                    }
+                    
+                    img.classList.add('loaded');
+                    observer.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '50px' // Start loading 50px before image enters viewport
+        });
+        
+        // Observe all images with data-src attribute
+        const lazyImages = document.querySelectorAll('img[data-src]');
+        lazyImages.forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
+    
+    // Lazy load background images using Intersection Observer
+    const backgroundImageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                if (element.dataset.bgImage) {
+                    element.style.backgroundImage = `url(${element.dataset.bgImage})`;
+                    element.removeAttribute('data-bg-image');
+                    element.classList.add('loaded');
+                }
+                observer.unobserve(element);
+            }
+        });
+    }, {
+        rootMargin: '100px'
+    });
+    
+    const lazyBackgrounds = document.querySelectorAll('[data-bg-image]');
+    lazyBackgrounds.forEach(el => {
+        backgroundImageObserver.observe(el);
+    });
+    
+    // Lazy load iframes (videos, embeds)
+    const iframeObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const iframe = entry.target;
+                if (iframe.dataset.src) {
+                    iframe.src = iframe.dataset.src;
+                    iframe.removeAttribute('data-src');
+                    iframe.classList.add('loaded');
+                }
+                observer.unobserve(iframe);
+            }
+        });
+    }, {
+        rootMargin: '200px'
+    });
+    
+    const lazyIframes = document.querySelectorAll('iframe[data-src]');
+    lazyIframes.forEach(iframe => {
+        iframeObserver.observe(iframe);
+    });
+}
+
+// ============================================
+// ACCESSIBILITY ENHANCEMENTS
+// ============================================
+
+function initializeAccessibility() {
+    // Add skip to main content link if it doesn't exist
+    if (!document.querySelector('.skip-to-main')) {
+        const skipLink = document.createElement('a');
+        skipLink.href = '#main-content';
+        skipLink.className = 'skip-to-main';
+        skipLink.textContent = 'Skip to main content';
+        document.body.insertBefore(skipLink, document.body.firstChild);
+    }
+    
+    // Add main landmark if it doesn't exist
+    if (!document.querySelector('main, [role="main"]')) {
+        const mainContent = document.querySelector('.hero, .container, body > section');
+        if (mainContent && !mainContent.closest('main')) {
+            const mainElement = document.createElement('main');
+            mainElement.id = 'main-content';
+            mainElement.setAttribute('role', 'main');
+            
+            // Wrap first section in main
+            const firstSection = document.querySelector('body > section, .hero');
+            if (firstSection) {
+                firstSection.parentNode.insertBefore(mainElement, firstSection);
+                let nextSibling = firstSection;
+                while (nextSibling && nextSibling !== document.querySelector('footer')) {
+                    const current = nextSibling;
+                    nextSibling = current.nextElementSibling;
+                    mainElement.appendChild(current);
+                }
+            }
+        }
+    }
+    
+    // Enhance navigation with ARIA labels
+    const nav = document.querySelector('nav');
+    if (nav && !nav.getAttribute('aria-label')) {
+        nav.setAttribute('aria-label', 'Main navigation');
+    }
+    
+    // Enhance buttons with proper ARIA labels
+    const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+    buttons.forEach(button => {
+        if (!button.textContent.trim() && button.querySelector('span')) {
+            button.setAttribute('aria-label', button.querySelector('span').textContent);
+        }
+    });
+    
+    // Enhance hamburger menu
+    const hamburger = document.querySelector('.hamburger');
+    if (hamburger) {
+        hamburger.setAttribute('aria-label', 'Toggle navigation menu');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-controls', 'nav-menu');
+        
+        hamburger.addEventListener('click', function() {
+            const isExpanded = this.classList.contains('active');
+            this.setAttribute('aria-expanded', isExpanded);
+        });
+    }
+    
+    // Add keyboard navigation improvements
+    document.addEventListener('keydown', function(e) {
+        // Escape key closes mobile menu
+        if (e.key === 'Escape') {
+            const navMenu = document.querySelector('.nav-menu');
+            const hamburger = document.querySelector('.hamburger');
+            if (navMenu && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                if (hamburger) {
+                    hamburger.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            }
+        }
+    });
+    
+    // Improve focus management for modals
+    const modals = document.querySelectorAll('[role="dialog"], .modal');
+    modals.forEach(modal => {
+        modal.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const closeButton = modal.querySelector('[aria-label*="close"], .close-button, button');
+                if (closeButton) {
+                    closeButton.click();
+                }
+            }
+        });
+    });
+    
+    // Announce dynamic content changes to screen readers
+    const announcementRegion = document.createElement('div');
+    announcementRegion.setAttribute('role', 'status');
+    announcementRegion.setAttribute('aria-live', 'polite');
+    announcementRegion.setAttribute('aria-atomic', 'true');
+    announcementRegion.className = 'sr-only';
+    announcementRegion.id = 'announcements';
+    document.body.appendChild(announcementRegion);
+    
+    // Function to announce messages
+    window.announceToScreenReader = function(message) {
+        announcementRegion.textContent = message;
+        setTimeout(() => {
+            announcementRegion.textContent = '';
+        }, 1000);
+    };
+}
+
+// ============================================
+// PERFORMANCE OPTIMIZATION
+// ============================================
+
+// Defer non-critical scripts
+document.addEventListener('DOMContentLoaded', function() {
+    // Load external resources after initial render
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(function() {
+            // Load non-critical resources here
+            loadExternalResources();
+        });
+    } else {
+        // Fallback for browsers without requestIdleCallback
+        setTimeout(loadExternalResources, 2000);
+    }
+});
+
+function loadExternalResources() {
+    // Load fonts if not already loaded
+    // Load analytics scripts
+    // Load social media widgets
+    // etc.
+}
+
+// ============================================
+// RESPONSIVE IMAGE HANDLING
+// ============================================
+
+function createResponsiveImage(img, srcset, sizes) {
+    if (!img || !srcset) return;
+    
+    // Set srcset for responsive images
+    img.srcset = srcset;
+    
+    // Set sizes attribute for responsive breakpoints
+    if (sizes) {
+        img.sizes = sizes;
+    } else {
+        // Default sizes
+        img.sizes = '(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw';
+    }
+    
+    // Add loading attribute
+    img.loading = 'lazy';
+}
+
+// Auto-generate responsive image sets
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img:not([srcset])');
+    images.forEach(img => {
+        const src = img.src || img.dataset.src;
+        if (src && !src.includes('data:image')) {
+            // Create responsive srcset (simplified - in production, generate multiple sizes)
+            const baseName = src.replace(/\.[^/.]+$/, '');
+            const extension = src.split('.').pop();
+            
+            // Check if image supports responsive loading
+            if (img.hasAttribute('data-responsive') || img.classList.contains('responsive-image')) {
+                img.srcset = `
+                    ${baseName}-480w.${extension} 480w,
+                    ${baseName}-768w.${extension} 768w,
+                    ${baseName}-1024w.${extension} 1024w,
+                    ${baseName}-1400w.${extension} 1400w
+                `.replace(/\s+/g, ' ').trim();
+                
+                img.sizes = '(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 50vw, 1400px';
+            }
+        }
+    });
 });

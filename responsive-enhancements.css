@@ -1,0 +1,1192 @@
+/* ============================================
+   MOBILE-FIRST RESPONSIVE ENHANCEMENTS
+   Modern responsive design with accessibility
+   Collagen Clinic London - Comprehensive Mobile Optimization
+   Last Updated: 2025
+   ============================================ */
+
+/* ============================================
+   CSS CUSTOM PROPERTIES FOR RESPONSIVENESS
+   ============================================ */
+:root {
+    /* Breakpoints */
+    --mobile: 480px;
+    --tablet: 768px;
+    --desktop: 1024px;
+    --large-desktop: 1400px;
+    
+    /* Spacing - Mobile-first */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+    --spacing-3xl: 6rem;
+    
+    /* Typography - Mobile-first (starting small) */
+    --font-size-xs: 0.75rem;
+    --font-size-base: 1rem;
+    --font-size-sm: 0.875rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+    --font-size-4xl: 2.5rem;
+    --font-size-5xl: 3rem;
+    
+    /* Touch targets - Minimum 44x44px for accessibility (WCAG 2.1) */
+    --touch-target-min: 44px;
+    --touch-target-comfortable: 48px;
+    
+    /* Contrast ratios for accessibility */
+    --contrast-ratio-text: 4.5; /* WCAG AA */
+    --contrast-ratio-large: 3; /* WCAG AA for large text */
+    
+    /* Animation timing */
+    --transition-fast: 0.15s;
+    --transition-normal: 0.3s;
+    --transition-slow: 0.5s;
+    
+    /* Z-index scale */
+    --z-dropdown: 100;
+    --z-sticky: 500;
+    --z-fixed: 1000;
+    --z-modal-backdrop: 1400;
+    --z-modal: 1500;
+    --z-tooltip: 1600;
+    
+    /* Safe area insets for notched devices */
+    --safe-area-top: env(safe-area-inset-top, 0px);
+    --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+    --safe-area-left: env(safe-area-inset-left, 0px);
+    --safe-area-right: env(safe-area-inset-right, 0px);
+}
+
+/* ============================================
+   MOBILE-FIRST BASE STYLES
+   ============================================ */
+
+/* Base typography scales from mobile */
+body {
+    font-size: var(--font-size-base);
+}
+
+h1 { font-size: var(--font-size-3xl); }
+h2 { font-size: var(--font-size-2xl); }
+h3 { font-size: var(--font-size-xl); }
+h4 { font-size: var(--font-size-lg); }
+
+.section-title {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Container - Mobile-first padding */
+.container {
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+}
+
+/* ============================================
+   TOUCH-FRIENDLY INTERACTIVE ELEMENTS
+   ============================================ */
+
+/* Ensure all clickable elements meet minimum touch target size */
+a, button, input[type="button"], input[type="submit"], 
+.btn-primary, .btn-secondary, .nav-link {
+    min-height: var(--touch-target-min);
+    min-width: var(--touch-target-min);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    touch-action: manipulation; /* Prevent double-tap zoom on buttons */
+}
+
+/* Improved touch feedback */
+button:active, a:active, .btn-primary:active, .btn-secondary:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+}
+
+/* ============================================
+   IMAGE OPTIMIZATION & LAZY LOADING
+   ============================================ */
+
+/* Base image styles for lazy loading */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Loading state for lazy-loaded images */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Placeholder blur effect while loading */
+img[data-src] {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+}
+
+img[data-src].loaded {
+    filter: blur(0);
+}
+
+/* Responsive image containers */
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.image-wrapper::before {
+    content: '';
+    display: block;
+    padding-top: 56.25%; /* 16:9 aspect ratio placeholder */
+}
+
+.image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============================================
+   ACCESSIBILITY ENHANCEMENTS
+   ============================================ */
+
+/* Focus indicators for keyboard navigation */
+*:focus {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+}
+
+/* Skip to main content link for screen readers */
+.skip-to-main {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000000;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    z-index: 10000;
+}
+
+.skip-to-main:focus {
+    top: 0;
+}
+
+/* Screen reader only text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    body {
+        background: #ffffff;
+        color: #000000;
+    }
+    
+    a, button {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ============================================
+   MOBILE-FIRST RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Mobile: Base styles (up to 479px) - Already defined above */
+
+/* Tablet: 480px and up */
+@media (min-width: 480px) {
+    body {
+        font-size: var(--font-size-lg);
+    }
+    
+    .container {
+        padding-left: var(--spacing-md);
+        padding-right: var(--spacing-md);
+    }
+    
+    h1 { font-size: var(--font-size-4xl); }
+    h2 { font-size: var(--font-size-3xl); }
+    .section-title {
+        font-size: var(--font-size-3xl);
+    }
+}
+
+/* Tablet Landscape / Small Desktop: 768px and up */
+@media (min-width: 768px) {
+    body {
+        font-size: var(--font-size-xl);
+    }
+    
+    .container {
+        padding-left: var(--spacing-lg);
+        padding-right: var(--spacing-lg);
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+    
+    /* Navigation - Show full menu on tablet+ */
+    .nav-menu {
+        display: flex !important;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+}
+
+/* Desktop: 1024px and up */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* Large Desktop: 1400px and up */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* ============================================
+   RESPONSIVE GRID IMPROVEMENTS
+   ============================================ */
+
+/* Mobile-first grid - single column by default */
+.quick-links-grid,
+.packages-grid,
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 768px) {
+    .quick-links-grid,
+    .packages-grid,
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
+    .quick-links-grid,
+    .packages-grid,
+    .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Auto-fit grids - mobile-first */
+.auto-fit-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+@media (min-width: 480px) {
+    .auto-fit-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+/* ============================================
+   RESPONSIVE NAVIGATION ENHANCEMENTS
+   ============================================ */
+
+/* Mobile menu improvements */
+@media (max-width: 767px) {
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: #ffffff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--spacing-lg);
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-link {
+        width: 100%;
+        padding: var(--spacing-md);
+        justify-content: space-between;
+    }
+    
+    /* Larger touch targets for mobile */
+    .hamburger {
+        min-width: var(--touch-target-min);
+        min-height: var(--touch-target-min);
+        padding: 0.5rem;
+    }
+}
+
+/* ============================================
+   RESPONSIVE TYPOGRAPHY SCALE
+   ============================================ */
+
+/* Fluid typography using clamp for better scaling */
+.hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.section-title {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* Contain content for better rendering performance */
+.hero,
+.section,
+.navbar {
+    contain: layout style paint;
+}
+
+/* Will-change hints for animations */
+.animate-on-scroll {
+    will-change: transform, opacity;
+}
+
+/* ============================================
+   RESPONSIVE SPACING UTILITIES
+   ============================================ */
+
+/* Mobile-first spacing */
+.section {
+    padding: var(--spacing-xl) 0;
+}
+
+@media (min-width: 768px) {
+    .section {
+        padding: calc(var(--spacing-xl) * 1.5) 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section {
+        padding: calc(var(--spacing-xl) * 2) 0;
+    }
+}
+
+/* ============================================
+   RESPONSIVE IMAGE CONTAINERS
+   ============================================ */
+
+.hero-image-container,
+.package-card-image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+/* Aspect ratio containers */
+.aspect-16-9 {
+    padding-bottom: 56.25%;
+}
+
+.aspect-4-3 {
+    padding-bottom: 75%;
+}
+
+.aspect-1-1 {
+    padding-bottom: 100%;
+}
+
+/* ============================================
+   MOBILE-SPECIFIC IMPROVEMENTS
+   ============================================ */
+
+@media (max-width: 767px) {
+    /* Reduce padding on mobile */
+    .section {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    /* Stack buttons vertically on mobile */
+    .cta-buttons,
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+    
+    /* Full-width cards on mobile */
+    .package-card,
+    .treatment-card {
+        width: 100%;
+        margin: 0;
+    }
+    
+    /* Improved text readability on mobile */
+    p, li {
+        font-size: var(--font-size-base);
+        line-height: 1.7;
+    }
+    
+    /* Better spacing for touch */
+    .nav-link,
+    .dropdown-menu a {
+        padding: var(--spacing-md);
+        font-size: var(--font-size-base);
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+    .navbar,
+    .hamburger,
+    .btn-primary,
+    .btn-secondary,
+    .footer {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+    
+    img {
+        max-width: 100%;
+        page-break-inside: avoid;
+    }
+}
+
+/* ============================================
+   HERO SECTION - MOBILE-FIRST RESPONSIVE
+   ============================================ */
+
+.hero {
+    padding-top: calc(70px + var(--safe-area-top)); /* Account for fixed navbar + notch */
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md);
+}
+
+.hero-content {
+    order: 1;
+    text-align: center;
+}
+
+.hero-image {
+    order: 2;
+    width: 100%;
+}
+
+.hero-image-photo {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Tablet and up: side-by-side hero layout */
+@media (min-width: 768px) {
+    .hero-container {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-xl);
+        padding: var(--spacing-xl);
+    }
+    
+    .hero-content {
+        flex: 1;
+        order: 1;
+        text-align: left;
+    }
+    
+    .hero-image {
+        flex: 1;
+        order: 2;
+    }
+}
+
+/* Desktop: larger hero */
+@media (min-width: 1024px) {
+    .hero-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: var(--spacing-2xl);
+    }
+    
+    .hero-content {
+        flex: 0 0 55%;
+    }
+    
+    .hero-image {
+        flex: 0 0 45%;
+    }
+}
+
+/* ============================================
+   CAROUSEL - TOUCH-FRIENDLY MOBILE
+   ============================================ */
+
+.packages-carousel-container {
+    position: relative;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 0 var(--spacing-sm);
+}
+
+.packages-carousel-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+.packages-carousel-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.packages-carousel {
+    display: flex;
+    gap: var(--spacing-md);
+    scroll-snap-type: x mandatory;
+}
+
+.package-card {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/* Hide carousel buttons on mobile - use touch swipe instead */
+@media (max-width: 767px) {
+    .carousel-btn,
+    .carousel-prev,
+    .carousel-next {
+        display: none !important;
+    }
+    
+    .packages-carousel-container {
+        padding: 0;
+    }
+    
+    .package-card {
+        flex: 0 0 85vw;
+        max-width: 320px;
+    }
+}
+
+/* Tablet: Show carousel buttons, adjust card size */
+@media (min-width: 768px) {
+    .package-card {
+        flex: 0 0 320px;
+    }
+    
+    .carousel-btn {
+        display: flex !important;
+        width: 44px;
+        height: 44px;
+        min-width: var(--touch-target-min);
+        min-height: var(--touch-target-min);
+    }
+}
+
+/* Desktop: Larger cards */
+@media (min-width: 1024px) {
+    .package-card {
+        flex: 0 0 350px;
+    }
+}
+
+/* ============================================
+   FOOTER - MOBILE-FIRST
+   ============================================ */
+
+.footer {
+    padding-bottom: calc(var(--spacing-xl) + var(--safe-area-bottom));
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+.footer-section {
+    text-align: center;
+}
+
+@media (min-width: 480px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-section {
+        text-align: left;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 2fr repeat(4, 1fr);
+    }
+}
+
+/* ============================================
+   FORMS - MOBILE-FIRST
+   ============================================ */
+
+input, select, textarea {
+    width: 100%;
+    padding: var(--spacing-md);
+    font-size: var(--font-size-base);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    min-height: var(--touch-target-min);
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Prevent zoom on input focus on iOS */
+@media (max-width: 767px) {
+    input, select, textarea {
+        font-size: 16px !important; /* Prevents iOS zoom */
+    }
+}
+
+/* ============================================
+   TREATMENT CARDS - MOBILE-FIRST
+   ============================================ */
+
+.treatment-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+.option-card {
+    padding: var(--spacing-lg);
+    background: #f9f9f9;
+    border-radius: 12px;
+}
+
+@media (min-width: 768px) {
+    .treatment-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .treatment-options {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ============================================
+   MODALS - MOBILE-FIRST
+   ============================================ */
+
+.modal,
+#treatmentModal {
+    padding: var(--spacing-sm);
+    padding-top: calc(var(--spacing-sm) + var(--safe-area-top));
+    padding-bottom: calc(var(--spacing-sm) + var(--safe-area-bottom));
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100vh - 2rem);
+    max-height: calc(100dvh - 2rem);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 16px;
+    padding: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+    .modal-content {
+        max-width: 90%;
+        padding: var(--spacing-xl);
+    }
+}
+
+@media (min-width: 1024px) {
+    .modal-content {
+        max-width: 900px;
+    }
+}
+
+/* ============================================
+   NAVIGATION DROPDOWN - MOBILE
+   ============================================ */
+
+@media (max-width: 767px) {
+    .dropdown-menu {
+        position: static;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height var(--transition-normal) ease;
+        background: #f9f9f9;
+        border-radius: 8px;
+        margin-top: var(--spacing-sm);
+    }
+    
+    .nav-item.dropdown.active .dropdown-menu {
+        max-height: 500px;
+    }
+    
+    .mega-menu {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+    
+    .mega-menu-column {
+        width: 100%;
+    }
+    
+    .mega-menu-column h4 {
+        font-size: var(--font-size-sm);
+        margin-bottom: var(--spacing-sm);
+        color: #666;
+    }
+    
+    .mega-menu-column li {
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .mega-menu-column a {
+        display: block;
+        min-height: var(--touch-target-min);
+        padding: var(--spacing-sm);
+        font-size: var(--font-size-base);
+    }
+}
+
+/* ============================================
+   BUTTON IMPROVEMENTS - MOBILE
+   ============================================ */
+
+@media (max-width: 767px) {
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        padding: var(--spacing-md);
+        font-size: var(--font-size-base);
+        min-height: var(--touch-target-comfortable);
+    }
+    
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        width: 100%;
+    }
+}
+
+/* ============================================
+   BENEFITS GRID - MOBILE-FIRST
+   ============================================ */
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+.benefit-item {
+    padding: var(--spacing-lg);
+    background: #f9f9f9;
+    border-radius: 12px;
+}
+
+@media (min-width: 480px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ============================================
+   TREATMENT HIGHLIGHTS - MOBILE-FIRST
+   ============================================ */
+
+.treatment-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+.highlight-item {
+    padding: var(--spacing-md);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .treatment-highlights {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--spacing-md);
+    }
+}
+
+/* ============================================
+   QUICK LINKS GRID - MOBILE-FIRST
+   ============================================ */
+
+.quick-links-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+.quick-link-card {
+    padding: var(--spacing-lg);
+    min-height: var(--touch-target-min);
+}
+
+@media (min-width: 480px) {
+    .quick-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .quick-links-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ============================================
+   CONTENT SECTIONS - MOBILE-FIRST
+   ============================================ */
+
+.content-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.treatment-content {
+    padding: var(--spacing-lg) 0;
+}
+
+@media (min-width: 768px) {
+    .treatment-content {
+        padding: var(--spacing-2xl) 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .treatment-content {
+        padding: var(--spacing-3xl) 0;
+    }
+}
+
+/* ============================================
+   CTA SECTION - MOBILE-FIRST
+   ============================================ */
+
+.treatment-cta {
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+    .treatment-cta {
+        padding: var(--spacing-2xl) 0;
+    }
+}
+
+/* ============================================
+   VIDEO CONTAINERS - RESPONSIVE
+   ============================================ */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: var(--spacing-lg) 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+}
+
+/* ============================================
+   LOADING STATES
+   ============================================ */
+
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+    border-radius: 8px;
+}
+
+@keyframes skeleton-loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ============================================
+   IMAGE LOADING PLACEHOLDERS
+   ============================================ */
+
+.img-placeholder {
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img.loading {
+    opacity: 0;
+}
+
+img.loaded {
+    opacity: 1;
+    transition: opacity var(--transition-normal) ease;
+}
+
+/* ============================================
+   LANDSCAPE MOBILE SPECIFIC
+   ============================================ */
+
+@media (max-width: 896px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .hero-container {
+        flex-direction: row;
+    }
+    
+    .hero-content {
+        flex: 1;
+    }
+    
+    .hero-image {
+        flex: 0 0 40%;
+    }
+    
+    .hero-image-photo {
+        min-height: 200px;
+    }
+}
+
+/* ============================================
+   DARK MODE SUPPORT (for system preference)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+    /* Only activate if body has dark-mode-enabled class */
+    body.dark-mode-enabled {
+        background: #1a1a1a;
+        color: #ffffff;
+    }
+    
+    body.dark-mode-enabled .navbar {
+        background: #1a1a1a;
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* ============================================
+   SMOOTH SCROLL BEHAVIOR
+   ============================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ============================================
+   TOUCH FEEDBACK IMPROVEMENTS
+   ============================================ */
+
+@media (hover: none) and (pointer: coarse) {
+    /* Touch device specific styles */
+    .btn-primary:active,
+    .btn-secondary:active,
+    .package-card:active,
+    .quick-link-card:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+    }
+    
+    /* Disable hover effects on touch devices */
+    .btn-primary:hover,
+    .btn-secondary:hover {
+        transform: none;
+    }
+}
+
+/* ============================================
+   SAFE AREA PADDING (for notched devices)
+   ============================================ */
+
+@supports (padding: max(0px)) {
+    .navbar {
+        padding-left: max(1rem, var(--safe-area-left));
+        padding-right: max(1rem, var(--safe-area-right));
+    }
+    
+    .footer {
+        padding-left: max(1rem, var(--safe-area-left));
+        padding-right: max(1rem, var(--safe-area-right));
+        padding-bottom: max(2rem, var(--safe-area-bottom));
+    }
+}
+
+/* ============================================
+   PERFORMANCE: CONTENT VISIBILITY
+   ============================================ */
+
+/* Apply content-visibility for off-screen sections */
+.section:not(.hero) {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+}
+
+.footer {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 400px;
+}
+
