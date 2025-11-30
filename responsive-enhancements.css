@@ -362,6 +362,7 @@ img[data-src].loaded {
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         z-index: 999;
+        display: flex !important;
     }
     
     .nav-menu.active {
@@ -379,11 +380,40 @@ img[data-src].loaded {
         justify-content: space-between;
     }
     
-    /* Larger touch targets for mobile */
+    /* Show hamburger on mobile */
     .hamburger {
+        display: flex !important;
         min-width: var(--touch-target-min);
         min-height: var(--touch-target-min);
         padding: 0.5rem;
+    }
+    
+    /* Mobile carousel fixes */
+    .packages-carousel-container {
+        padding: 0 10px !important;
+    }
+    
+    .packages-carousel {
+        gap: 1rem !important;
+    }
+    
+    .packages-carousel .package-card {
+        min-width: 280px !important;
+        max-width: 85vw;
+    }
+    
+    .carousel-btn {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 1.2rem !important;
+    }
+    
+    .carousel-prev {
+        left: 0 !important;
+    }
+    
+    .carousel-next {
+        right: 0 !important;
     }
 }
 
@@ -648,21 +678,63 @@ img[data-src].loaded {
     scroll-snap-stop: always;
 }
 
-/* Hide carousel buttons on mobile - use touch swipe instead */
+/* Mobile carousel - smaller buttons + touch swipe */
 @media (max-width: 767px) {
     .carousel-btn,
     .carousel-prev,
     .carousel-next {
-        display: none !important;
+        display: flex !important;
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 1rem !important;
+        opacity: 0.8;
+        left: 2px !important;
+        right: auto !important;
+    }
+    
+    .carousel-next {
+        left: auto !important;
+        right: 2px !important;
     }
     
     .packages-carousel-container {
-        padding: 0;
+        padding: 0 35px !important;
+        overflow: visible !important;
+        max-width: 100% !important;
     }
     
-    .package-card {
-        flex: 0 0 85vw;
-        max-width: 320px;
+    .packages-carousel-wrapper {
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE/Edge */
+    }
+    
+    .packages-carousel-wrapper::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
+    }
+    
+    .packages-carousel,
+    #packagesCarousel {
+        scroll-snap-type: x mandatory;
+        gap: 1rem !important;
+        transform: none !important; /* Disable JS transform on mobile - use scroll */
+    }
+    
+    .packages-carousel .package-card,
+    #packagesCarousel .package-card {
+        min-width: 260px !important;
+        max-width: 280px !important;
+        flex: 0 0 auto !important;
+        scroll-snap-align: center;
+    }
+    
+    /* Reduce image height on mobile */
+    .packages-carousel .package-card > div:first-child,
+    #packagesCarousel .package-card > div:first-child {
+        height: 180px !important;
     }
 }
 
