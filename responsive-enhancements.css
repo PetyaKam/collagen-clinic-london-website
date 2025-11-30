@@ -121,13 +121,8 @@ img {
     display: block;
 }
 
-/* Loading state for lazy-loaded images */
+/* Lazy-loaded images - native browser handling */
 img[loading="lazy"] {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-img[loading="lazy"].loaded {
     opacity: 1;
 }
 
