@@ -373,7 +373,9 @@ img[data-src].loaded {
     }
     
     .nav-menu.active {
-        left: 0;
+        left: 0 !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     .nav-item {
@@ -755,7 +757,7 @@ img[data-src].loaded {
     #packagesCarousel {
         scroll-snap-type: x mandatory;
         gap: 1rem !important;
-        transform: none !important; /* Disable JS transform on mobile - use scroll */
+        /* Allow JS transform for carousel navigation */
     }
     
     .packages-carousel .package-card,
@@ -1342,6 +1344,14 @@ html {
     
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-11px) rotate(-45deg) !important;
+    }
+    
+    /* Mobile navigation menu - CRITICAL */
+    .nav-menu.active {
+        left: 0 !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        display: flex !important;
     }
 }
 
